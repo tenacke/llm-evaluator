@@ -178,3 +178,9 @@ models/
 
 # Research papers
 papers/
+
+# Jupyter lab workspace
+.jupyter/
+
+# Datasets
+datasets/
