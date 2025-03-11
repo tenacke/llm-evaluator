@@ -1,4 +1,5 @@
 import ollama
+import os
 
 example_data = {
     "id": "dm-test-8764fb95bfad8ee849274873a92fb8d6b400eee2",
@@ -31,8 +32,10 @@ example_data = {
     "model_id": "M1",
     "filepath": "cnndm/dailymail/stories/8764fb95bfad8ee849274873a92fb8d6b400eee2.story",
 }
+example_text = ""
+with open(os.path.join("datasets", example_data["filepath"]), "r") as f:
+    example_text = f.read()
 
-example_text = "".join(example_data["references"])
 example_summary = example_data["decoded"]
 
 query = (
