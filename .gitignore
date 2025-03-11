@@ -173,9 +173,6 @@ poetry.toml
 # LSP config files
 pyrightconfig.json
 
-# Pretrained models
-models/
-
 # Research papers
 papers/
 
