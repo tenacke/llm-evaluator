@@ -2,14 +2,14 @@
 
 Authors: [Emre Kılıç](https://github.com/tenacke), [Kristina Trajkovski](https://github.com/kristinatrajkovski), [Bilge Kaan Güneyli](https://github.com/kaanguneyli)
 
-The LLM Evaluator. An evaluator model which analyses and scores of a LMM in terms of their performance in summarization task.
+The LLM Evaluator. An evaluator model which analyses and scores an LMM in terms of their performance in the summarization task.
 
 ## Dataset
 
 #### SummEval
 
-We use [SummEval](https://github.com/Yale-LILY/SummEval) project in our tests. It uses the CNN and Daily Mail stories as data source. The summaries of the stories are created by different LLMs and annotated by human evaluators.
-To recreate the dataset follow the instructions:
+We use [SummEval](https://github.com/Yale-LILY/SummEval) project in our tests. It uses the CNN and Daily Mail stories as data sources. The summaries of the stories are created by different LLMs and annotated by human evaluators.
+To recreate the dataset, follow the instructions:
 
 1. Download CNN Stories and Daily Mail Stories from [here](https://cs.nyu.edu/~kcho/DMQA/).
 2. Create a cnndm directory and unpack downloaded files into the directory.
@@ -20,9 +20,9 @@ To recreate the dataset follow the instructions:
 
 #### Ollama
 
-It is necessary to install Ollama to recreate the EvalLM models. You can install Ollama from [here](https://ollama.com/download).
+We use Ollama to form our evaluation models. To recreate the EvalLM models, you must install Ollama. You'll be able to do so from [here](https://ollama.com/download).
 
-We will also use the Ollama's `python` package to run the tests. You can install it by running:
+We also use the Ollama's `python` package to run the tests. You can install it by running:
 
 ```bash
 pip install ollama
@@ -38,7 +38,7 @@ bash models/<version>/model-compose.sh
 
 #### Running the tests
 
-After recreating the dataset and composing a model, you can run the test of the model in order to make sure everything goes well.
+After recreating the dataset and composing a model, you can run the model's test to ensure everything goes well.
 To run the test of a model, you can use the following command:
 
 ```bash
