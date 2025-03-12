@@ -16,8 +16,8 @@ Evaluation Steps:
 1. Read the news article carefully and identify the main topic and key points.
 2. Read the summary and compare it to the news article. Check if the summary covers the main
 topic and key points of the news article, and if it presents them in a clear and logical order.
-3. Create an explanation of why you gave the summary the score you did. Be sure to reference
-specific parts of the summary that influenced your decision.
-4. Assign a score for coherence on a scale of 1 to 5, where 1 is the lowest and 5 is the highest
+3. Assign a score for coherence on a scale of 1 to 5, where 1 is the lowest and 5 is the highest
 based on the Evaluation Criteria.
+4. Provide only the score for coherence in the response box.
 """
+
