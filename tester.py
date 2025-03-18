@@ -63,7 +63,11 @@ exception_file = open("exceptions.txt", "w")
 # Evaluate the model
 results = pd.DataFrame(columns=["coherence", "fluency", "relevance", "consistency"])
 for index, row in test_data.iterrows():
-    query = "Summary\n" + row["decoded"] + "\n\nText\n" + row["text"]
+    text_file = row["filepath"]
+    with open(os.path.join(datasets_path, text_file), "r") as f:
+        text = f.read()
+
+    query = "Summary\n" + row["decoded"] + "\n\nText\n" + text
 
     repetition_results = {
         "coherence": 0,
@@ -90,6 +94,8 @@ for index, row in test_data.iterrows():
         except:
             print(f"Error parsing response index {index} repetition {i}")
             exception_file.write(f'{index},{i},"{response.replace(",", ";")}"\n')
+            exception_count += 1
+            exception_file.flush()
 
     for key in repetition_results:
         repetition_results[key] /= count
