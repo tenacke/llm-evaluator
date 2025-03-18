@@ -67,11 +67,8 @@ TEMPLATE """{{- if .System }}<|start_header_id|>system<|end_header_id|>
 
 {{ .System }}<|eot_id|>
 {{- end }}
-{{- range .Messages }}<|start_header_id|>{{ .Role }}<|end_header_id|>
 
-{{ .Content }}<|eot_id|>
-{{- end }}
-
+<|start_header_id|>evaluation<|end_header_id|>
 """
 
 PARAMETER stop <|start_header_id|>
