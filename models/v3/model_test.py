@@ -14,22 +14,9 @@ with open(
 
 example_summary = "paul merson has restarted his row with andros townsend after the tottenham midfielder was brought on with only seven minutes remaining in his team 's 0-0 draw with burnley on sunday . townsend was brought on in the 83rd minute for tottenham as they drew 0-0 against burnley . townsend hit back at merson on twitter after scoring for england against italy ."
 
-query = (
-    "What is the evaluation of the summary of this given text?\nText:\n"
-    + example_text
-    + "\n\nSummary:\n"
-    + example_summary
-    + "Score: \n"
-)
+query = "summary\n" + example_summary + "\ntext\n" + example_text + "\n"
 
 model_name = "evallm:v3"
 
-response = ollama.chat(
-    model=model_name,
-    messages=[
-        {"role": "user", "content": query},
-    ],
-)
-
-print("Response:")
-print(response.message.content)
+for part in ollama.generate(model_name, query, stream=True):
+    print(part["response"], end="", flush=True)
