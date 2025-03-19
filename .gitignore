@@ -181,3 +181,6 @@ papers/
 
 # Datasets
 datasets/
+
+# exception files
+*exceptions.txt

@@ -58,7 +58,9 @@ except:
 client = ollama.Client()
 
 exception_count = 0
-exception_file = open("exceptions.txt", "w")
+exception_file = open(
+    f"{model_name.split(":")[1]}_{evaluation_type}_exceptions.txt", "w"
+)
 
 # Evaluate the model
 results = pd.DataFrame(columns=["coherence", "fluency", "relevance", "consistency"])
@@ -106,9 +108,11 @@ for index, row in test_data.iterrows():
     for key in repetition_results:
         repetition_results[key] /= count
 
-    results[index] = repetition_results
+    results.loc[index] = repetition_results
 
 results.to_csv(
-    os.path.join(csv_files_path, f"{evaluation_type}_{model_name}_results.csv")
+    os.path.join(
+        csv_files_path, f"{model_name.split(":")[1]}_{evaluation_type}_results.csv"
+    )
 )
 print("Results saved to csv file.")
