@@ -59,7 +59,7 @@ client = ollama.Client()
 
 exception_count = 0
 exception_file = open(
-    f"{model_name.split(":")[1]}_{evaluation_type}_exceptions.txt", "w"
+    f"{model_name.split(':')[1]}_{evaluation_type}_exceptions.txt", "w"
 )
 
 # Evaluate the model
