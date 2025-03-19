@@ -179,8 +179,6 @@ papers/
 # Jupyter lab workspace
 .jupyter/
 
-# Datasets
-datasets/
-
 # exception files
 *exceptions.txt
+excluded/

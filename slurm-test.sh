@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=slurm-test
-#SBATCH --container-image ghcr.io/tenacke/evallm:latest
+#SBATCH --container-image ghcr.io\#tenacke/llm-evaluator
 #SBATCH --gpus=1
 #SBATCH --cpus-per-gpu=8
 #SBATCH --mem-per-gpu=40G
