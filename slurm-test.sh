@@ -9,10 +9,15 @@
 #SBATCH --mem-per-gpu=40G
 
 source /opt/llm-evaluator/venv/bin/activate
-git fetch --all
-git checkout container
+git fetch --all && \
+git checkout container && \
 git merge origin container
 ollama serve > /dev/null 2>&1 < /dev/null &
+echo "Waiting for the server to start..."
+until nc -z localhost 11434; do 
+    sleep 1
+done
+echo "Server is up! Proceeding with the next command."
 bash models/v3/model-compose.sh
 python3 models/v3/model_test.py
 python3 tester.py evallm:v3 poor 3
