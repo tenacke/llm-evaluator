@@ -1,3 +1,11 @@
+FROM ubuntu:latest AS builder
+
+ARG GIT_TOKEN
+RUN apt-get update && apt-get install -y git
+
+RUN git clone https://$GIT_TOKEN@github.com/tenacke/llm-evaluator.git /opt/evallm
+RUN rm -rf /opt/evallm/.git
+
 FROM ollama/ollama
 
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
@@ -14,11 +22,13 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
         python-is-python3 \
     && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/* 
 
-RUN python3 -m pip install --upgrade pip && \
-    python3 -m venv /opt/python3/venv/base
+WORKDIR /opt/evallm
+COPY --from=builder /opt/evallm /opt/evallm
 
-COPY requirements.txt /opt/python3/venv/base/requirements.txt
-RUN /opt/python3/venv/base/bin/pip install --no-cache-dir -r /opt/python3/venv/base/requirements.txt
+RUN python3 -m pip install --upgrade pip && \
+    python3 -m venv venv
+
+RUN venv/bin/pip install --no-cache-dir -r requirements.txt
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
