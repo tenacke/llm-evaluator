@@ -9,6 +9,9 @@
 #SBATCH --mem-per-gpu=40G
 
 source /opt/llm-evaluator/venv/bin/activate
+git fetch --all
+git checkout container
+git merge origin container
 ollama serve > /dev/null 2>&1 < /dev/null &
 bash models/v3/model-compose.sh
 python3 models/v3/model_test.py

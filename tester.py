@@ -112,7 +112,7 @@ for index, row in test_data.iterrows():
 
 results.to_csv(
     os.path.join(
-        csv_files_path, f"{model_name.split(":")[1]}_{evaluation_type}_results.csv"
+        csv_files_path, f"{model_name.split(':')[1]}_{evaluation_type}_results.csv"
     )
 )
 print("Results saved to csv file.")
