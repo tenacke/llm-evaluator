@@ -65,7 +65,7 @@ exception_file = open(
 # Evaluate the model
 results = pd.DataFrame(columns=["coherence", "fluency", "relevance", "consistency"])
 for index, row in test_data.iterrows():
-    print(f"Evaluating index {index+1}...")
+    print(f"Evaluating index {index+1}...", flush=True)
 
     text_file = row["filepath"]
     with open(os.path.join(datasets_path, text_file), "r") as f:
@@ -81,7 +81,7 @@ for index, row in test_data.iterrows():
     }
     count = 0
     for i in range(number_of_repetitions):
-        print(f"Repetition {i+1}...")
+        print(f"Repetition {i+1}...", flush=True)
         response = client.generate(model_name, query).response
 
         try:
@@ -97,13 +97,13 @@ for index, row in test_data.iterrows():
 
             count += 1
         except:
-            print(f"Error parsing response index {index} repetition {i}")
+            print(f"Error parsing response index {index} repetition {i}", flush=True)
             exception_file.write(f'{index},{i},"{response.replace(",", ";")}"\n')
             exception_count += 1
             exception_file.flush()
 
     if count == 3:
-        print(f"Successfully evaluated index {index+1}")
+        print(f"Successfully evaluated index {index+1}", flush=True)
 
     for key in repetition_results:
         repetition_results[key] /= count
@@ -115,4 +115,4 @@ results.to_csv(
         csv_files_path, f"{model_name.split(':')[1]}_{evaluation_type}_results.csv"
     )
 )
-print("Results saved to csv file.")
+print("Results saved to csv file.", flush=True)
