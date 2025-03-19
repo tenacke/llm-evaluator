@@ -1,3 +1,4 @@
 #!/bin/bash
-source /opt/python3/venv/base/bin/activate
+source /opt/evallm/venv/bin/activate
+ollama serve > /dev/null 2>&1 < /dev/null &
 exec "$@"
