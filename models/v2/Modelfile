@@ -52,17 +52,23 @@ Evaluation Criteria.
 5. Provide a brief explanation for each score in the response box.
 
 Please rate the summary based on the above metrics and provide your scores and explanations in the response box.
+Please use the following format for your response:
+Coherence: score
+Explanation: explanation
+Fluency: score
+Explanation: explanation
+Relevance: score
+Explanation: explanation
+Consistency: score
+Explanation: explanation
 """
 
 TEMPLATE """{{- if .System }}<|start_header_id|>system<|end_header_id|>
 
 {{ .System }}<|eot_id|>
 {{- end }}
-{{- range .Messages }}<|start_header_id|>{{ .Role }}<|end_header_id|>
 
-{{ .Content }}<|eot_id|>
-{{- end }}
-
+<|start_header_id|>evaluation<|end_header_id|>
 """
 
 PARAMETER stop <|start_header_id|>
