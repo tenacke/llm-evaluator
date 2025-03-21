@@ -1,0 +1,52 @@
+By
+David Kent
+
+Ashley Cole will complete his move to Roma on Monday, according to reports in Italy.
+
+The Rome-based newspaper Il Romanista ran the headline 'Yes we Cole' on their Sunday edition and reported that a two-year deal for the experienced left-back is sewn up.
+
+Cole's agent, Jonathan Barnett, confirmed: 'At the moment it is only clubs based abroad - there may be other developments, but for the moment, that is all we are talking.
+
+Italian job: Ashley Cole will complete his move to Roma on Monday, according to reports in the Italian press
+
+Front page news: Rome newspaper Il Romanista showing enthusiasm over the move
+
+Servant: Cole became a free agent when Chelsea released him at the end of the season after eight years at Stamford Bridge
+
+'The situation is that we are talking to several clubs.'
+
+The 33-year-old former England 
+international is a free agent after leaving Chelsea and has had interest
+ from Monaco and various Major League Soccer franchises.
+
+But Cole, who spent eight years at Stamford Bridge after moving there from Arsenal, is set to move to Serie A.
+
+He went on holiday after retiring from England duty when Roy Hodgson omitted him from the world Cup squad.
+
+Hodgson preferred Leighton Baines and Luke Shaw to the 107-cap veteran, though England's dire performances out in Brazil didn't vindicate his decision.
+
+Gone: Cole will become just the second player to play for Roma following John Charles
+
+@highlight
+
+Ashley Cole set to arrive in Italian capital to sign deal on Monday
+
+@highlight
+
+Ex-England and Chelsea left-back agrees two-year deal, say Italian media
+
+@highlight
+
+Cole was released by Chelsea at the end of last season
+
+@highlight
+
+Roy Hodgson overlooked him for England World Cup squad in Brazil
+
+@highlight
+
+Cole's agent Jonathan Barnett says 'we are talking to several clubs'
+
+@highlight
+
+Barnett confirms 'at the moment it is only clubs based abroad'

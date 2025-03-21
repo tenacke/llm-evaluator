@@ -1,0 +1,45 @@
+It's the fight that the world has been waiting for almost six years. Floyd Mayweather and Manny Pacquiao are just days away from stepping into the ring for what promises to be a monumental clash.
+
+Billed as the fight of the century, the MGM Grand bout in Las Vegas has engaged fans inside and out of the sport of boxing.
+
+And those devoted to the upcoming bout will be pleased to know they can immerse themselves in the fight further.
+
+Boxing fans will be able to buy commemorative jewellery ahead of Floyd Mayweather vs Manny Pacquiao
+
+Mayweather (left) will put his undefeated professional career on the line against Pacquaio on Saturday
+
+18ct Gold, diamond & emerald cuff links
+
+Diamonds (approx) 1.50cts
+
+Emeralds (approx) 2.20cts
+
+18ct Gold, diamond & emerald Mayweather /Pacquiao Ring
+
+Diamonds (appeox) 1.60 cts
+
+Emeralds (approx) 1.00cts
+
+The World Boxing Council in association with BWA (London) are launching a limited-edition jewellery range to mark the upcoming bout on Friday, with the price yet to be revealed.
+
+Commissioned by the WBC, fans will be able to buy one of the 1,000 18ct gold Pacquiao or Mayweather commemorative rings among a whole range of other items including 1,000 18ct gold, diamond and emerald cufflinks to be made.
+
+The two welterweight champions themselves will be given their own unique ring, presented by WBC president Mauricio Sulaiman.
+
+As well as rings, commemorative USB pen drives and silver gilt pendants are on offer in addition too silver gilt commemorative key rings for those keen to invest in the mega-fight's memorabilia.
+
+Pacquiao was last in action when he dominated Chris Algieri over 12 rounds in Macau in November last year
+
+Mayweather's last fight came when he beat Marcos Maidana in Las Vegas in September 2014
+
+@highlight
+
+Floyd Mayweather will be fighting Manny Pacquaio on May 2 
+
+@highlight
+
+The welterweight unification bout will take place at the MGM Grand 
+
+@highlight
+
+Fans will be able to buy commemorative jewellery from Friday 

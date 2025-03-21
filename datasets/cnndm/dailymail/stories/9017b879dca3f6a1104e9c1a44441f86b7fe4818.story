@@ -1,0 +1,43 @@
+The body of a dead sperm whale that washed up on a California beach last week was covered in graffiti spelling out the name of a Bay Area motorcycle gang.
+
+The 50-foot whale was still on the Pacifica State Beach on Wednesday after washing up on the sand the week before. 
+
+Before the tide came in, beachgoers took photos of where 'East Bay Rats Motorcycle Club' was  on the whale.
+
+Scroll down for video 
+
+The body of the 50-foot whale was tagged after it washed up on Pacifica State Beach in California last week
+
+It's unclear how the whale died but it doesn't appear to have broken bones or signs of blunt force trauma
+
+The name was erased by Wednesday's high tide, NBC Bay Area reported. 
+
+The club did not respond to a request for comment. 
+
+It is unknown how the whale died but it does not appear to have any broken bones or show signs of blunt force trauma. 
+
+The results of an autopsy are pending.  
+
+The body might be burned or dragged out to sea. 
+
+A man who took pictures of the whale, Alan Grinberg, said: 'The East Bay Rats Motorcycle Club, or whoever did this, stinks more than this whale's rotting flesh.'
+
+ 
+
+ 
+
+@highlight
+
+50-foot whale washed up on Pacifica State Beach in California last week 
+
+@highlight
+
+It was sprayed with name of East Bay Rats Motorcycle Club at some point
+
+@highlight
+
+It is unknown how the whale died and results of an autopsy are pending
+
+@highlight
+
+Witness said 'Whoever did this, stinks more than  whale's rotting flesh'

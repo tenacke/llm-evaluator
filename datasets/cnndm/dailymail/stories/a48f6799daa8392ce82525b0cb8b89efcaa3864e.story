@@ -1,0 +1,47 @@
+Health authorities are searching hospital patient records to clarify what drugs people may have been given after a man was charged with posing as a nurse for six weeks. 
+
+A 30-year-old Darwin man is accused of using someone else's employee registration number at the Aurukun Primary Health Centre on Cape York during February and March.
+
+He was charged on Saturday with one count of fraud after Cairns detectives made contact with him in the Northern Territory.
+
+A 30-year-old Darwin man is accused of using someone else's employee registration number to pose as a fake nurse at the Aurukun Primary Health Centre on Cape York during February and March (file photo)
+
+Queensland health authorities are now sifting through patient records after it was revealed the man did not have the correct qualifications, the Cairns Post reports.
+
+They hope to identify which patients the man interacted with and what drugs may have been administered.
+
+He was allegedly using the registration number of a female nurse who had handed it back a few years ago.
+
+The man was receiving a $100,000 annual salary and accommodation from Queensland Health in the six weeks he was at the hospital.
+
+The alarm was raised by payroll workers when they noticed the registration number.
+
+He posed as a nurse for six weeks Aurukun Primary Health Centre on Cape York during February and March
+
+The matter was subsequently referred to the Queensland Police Service, the Crime and Misconduct Commission and the Health Ombudsman.
+
+A departmental taskforce was also established to investigate how the man slipped through the screening process.
+
+Health Minister Cameron Dick said last week the health employee responsible for the oversight has been stood down but maintains vetting methods at Queensland's hospitals are 'robust'.
+
+The man will appear in the Cairns Magistrates court on April 24.
+
+ 
+
+ 
+
+@highlight
+
+Man, 30, is accused of using a female nurse's employee number to work
+
+@highlight
+
+He worked for six weeks at Aurukun Primary Health Centre on Cape York
+
+@highlight
+
+Man was charged with fraud after payroll raised the alarm with hospital
+
+@highlight
+
+Authorities are checking patient records to see who he interacted with  

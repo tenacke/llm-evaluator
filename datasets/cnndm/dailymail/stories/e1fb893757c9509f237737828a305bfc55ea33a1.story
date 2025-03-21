@@ -1,0 +1,103 @@
+January, it is said, is a bad time to do business. Either prices are inflated or you’re picking up problem players other clubs don’t want.
+
+This year, it seems, has proved no different. Big-money buys have struggled to impact, while loan signings, too, have not had the desired effect.
+
+Here, Sportsmail looks at five winter-window arrivals who have disappointed for their new employers…
+
+Juan Cuardrado arrived at Chelsea for £23m from Fiorentina but has failed to impress at Stamford Bridge
+
+Juan Cuadrado (Chelsea)
+
+For a fee in the region of £23m and arriving from Fiorentina with a reputation bloated by his impressive performance for Colombia at last summer’s World Cup, Cuadrado was expected to help fire Chelsea towards the Premier League and Champions League crowns.
+
+In nearly three months, however, he has played just over three hours of top-flight football, failing to score or create a goal in that period.
+
+The Colombian winger arrived with a big reputation after starring at the 2014 World Cup
+
+Meanwhile, during the Champions League exit to PSG, Cuadrado appeared for just 11 minutes and remained a spectator as they were eliminated following the second leg at Stamford Bridge.
+
+Perhaps next season was always pencilled in for the explosive winger to make his impact, but the jury remains very much out based on his early efforts.
+
+Wilfried Bony (Man City)
+
+With Sergio Aguero perennially troubled by injury problems and Edin Dzeko about as reliable as his team-mate’s hamstrings, £28m Swansea striker Bony was supposed to be the man to take on the scoring mantle and see home City’s defence of their title.
+
+Wilfried Bony has netted only one goal as Manchester City have slipped out of the title race
+
+His arrival, of course, was delayed by participation at the Africa Cup of Nations, but Bony has done little to breathe new life into City’s stuttering season.
+
+There has been just one goal – the opener in a routine 3-0 home win over West Brom – and he has missed the last two matches – including the derby defeat at Manchester United – after turning an ankle in training.
+
+The former Swansea striker scored more Premier League goals than any other player in 2014
+
+He has started just two games and his involvement during the Champions League defeat to Barcelona was restricted to 18 minutes at the Nou Camp.
+
+Bony will have to hit the ground running next season or his days at City could soon be numbered.
+
+Mauro Zarate (QPR)
+
+Perhaps the Argentinian should have taken the hint when Harry Redknapp tried to send him back to West Ham before he had even kicked a ball for the R’s.
+
+Mauro Zarate has failed to make an impression at Loftus Road during his loan
+
+Premier League rules meant he had to stay and, four substitute appearances later, Zarate is yet to score or lay on a goal for his latest employers.
+
+Zarate fared slightly better at Birmingham City in 2008 when, during another loan stay, he netted four times.
+
+Zarate scored two goals in seven appearances for West Ham before being farmed out on loan
+
+That, though, was not enough to keep the Blues in the Premier League and it looks as if he’ll have a second relegation on his C.V. come May.
+
+Callum McManaman (West Brom)
+
+The £4.75m capture of McManaman from Wigan was hailed as something of a coup given how he had impressed for the Latics on occasion.
+
+Callum McManaman's move to the Hawthorns has coincided with West Brom's slip into relegation battle
+
+But therein lies the problem with the combative forward – getting him on the pitch and keeping him there.
+
+Talented, no doubt, but McManaman’s progress at The Hawthorns has been curtailed by an ankle problem and six appearances later he is yet to trouble the scorers.
+
+The Scotland international was one of the stars of Wigan's unlikely FA Cup victory in 2013
+
+He hasn’t featured for over a month and, in that time, West Brom have slid back towards the relegation mire.
+
+McManaman’s arrival was intended to help safeguard against such a scenario, so in that respect the signing has disappointed.
+
+Filip Djuricic (Southampton)
+
+Big things were expected of the Serbia international given Ronald Koeman’s prior knowledge of the skilful winger – who played for Heerenveen in Holland - and Southampton’s recent record in the transfer market.
+
+Ronald Koeman brought in the talented forward, but Filip Djuricic is yet to complete 90mins for the Saints
+
+There have been flashes of promise but the 23-year-old is yet to play a full 90 minutes for the Saints and now finds himself sidelined with an ankle problem.
+
+Djuricic – on loan from Benfica – wants to make permanent his stay on the south coast, but injury could rob him of the chance to impress.
+
+The on-loan Benfica winger (left) will have to do more to make his move to St Mary's permanent
+
+ 
+
+@highlight
+
+Several January signings have failed to impress in the Premier League
+
+@highlight
+
+Chelsea winger Juan Cuardrado has barely played since Fiorentina move
+
+@highlight
+
+Wilfried Bony has scored one goal after leaving Swansea for Man City
+
+@highlight
+
+QPR tried to send Mauro Zarate back to West Ham before he flopped
+
+@highlight
+
+Callum McManaman has failed to show his Wigan form at West Brom
+
+@highlight
+
+Benfica's Filip Djuricic has struggled with injuries at Southampton

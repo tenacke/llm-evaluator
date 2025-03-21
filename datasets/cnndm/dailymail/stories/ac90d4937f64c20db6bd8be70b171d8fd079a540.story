@@ -1,0 +1,49 @@
+Manchester United scouts are due to watch Inter Milan striker Mauro Icardi against Verona at the weekend.
+
+United have had staff at Inter's games with Sampdoria and Parma. Icardi has turned down Inter's latest contract offer but talks with the former Barcelona junior are continuing.
+
+Chelsea, Manchester City and Arsenal have also watched the 22-year-old.
+
+Mauro Icardi pictured during an Inter Milan training session in Appiano Gentile Como on Tuesday
+
+Icardi on the ball during a Serie A match between Sampdoria and Inter Milan in Genoa last month
+
+Icardi (left) takes a selfie with team-mates Fredy Guarin (centre) and Gary Medel at Celtic Park in February
+
+Icardi is reportedly on an £11,000-a-week salary and is looking to increase that to £43,000 a week.
+
+The Argentine last week admitted, though, that he is willing to move this summer.
+
+Icardi told CNN: 'If there are other clubs who want me, they should discuss this with Inter. If Inter decide to sell me, I’ll pack up and go away.
+
+'If they don’t want to, I will stay in Milan where I am really good and I’m happy. My family here feels like home.
+
+Icardi (centre) stands beside Inter Milan head coach Roberto Mancini (right) during training earlier this month
+
+Icardi gives the thumbs up after scoring for Inter Milan against Palermo at the San Siro in February
+
+'Regarding my pay, my salary, that I don’t "earn a lot", these are things that are a result of two years ago when I came to Inter.'
+
+Icardi moved to Inter from Sampdoria in the summer of 2013 and is the joint-third top scorer in Serie A this season with 15 goals.
+
+ 
+
+@highlight
+
+Manchester United scouts will watch Mauro Icardi this weekend
+
+@highlight
+
+Inter Milan travel to take on Verona in a Serie A match on Saturday
+
+@highlight
+
+Chelsea, Manchester City and Arsenal have also watched the Argentine
+
+@highlight
+
+READ: Manchester United consider Edinson Cavani transfer 
+
+@highlight
+
+CLICK HERE for the latest Manchester United news 

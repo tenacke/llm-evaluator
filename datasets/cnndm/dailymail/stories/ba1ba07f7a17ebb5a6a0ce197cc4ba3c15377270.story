@@ -1,0 +1,121 @@
+It may look like a model-makers dream, but this collection of components will travel at more than 1,000 mph when put together.
+
+This is how the Bloodhound Supersonic Car when broken down into its 3,500 components.
+
+It includes a state of the art Rolls-Royce EJ200 jet engine that is normally used in a Eurofighter Typhoon, Nammo hybrid rockets and its titanium skinned chassis.
+
+Scroll down for video showing what all the components are
+
+Engineers will piece together 3,500 components to build the Bloodhound Supersonic Car ahead of its attempt to break the world land speed record and to be the first land vehicle to go faster than 1,000 mph (1,600km/h)
+
+The Rolls Royce jet engine generates 135,000 horsepower - the equivalent to 180 Formula 1 cars.
+
+It needs a 550bhp Supercharged Jaguar V8 engine to pump the fuel into the rocket.
+
+The team behind the Bloodhound SSC also revealed how they intend to slow it from 1,000mph (1,600km/h) to zero. 
+
+After the car reaches its top speed, air brakes and parachutes slow it to 160mph (260km/h).
+
+Breaking to this speed is done at a constant 3G deceleration - equivalent to going from 60mph (95km/h) in a normal car to zero in just one second - for 20 seconds.
+
+At this speed the cars wheels are still spinning 10,000 times per minute.
+
+Attempts to use carbon rotors from a jet fighter in the form of car-like disc brakes shattered at speeds of just half this, so the team needed a new approach.
+
+Instead, they switched to steel rotors. 
+
+In tests, these could withstand temperatures of up to 850°C (1,560°F), and be used again.
+
+The next step will be to test these brakes out at the full 10,000rpm that will be experienced.
+
+The carbon fibre and titanium chassis and canopy will be fitted together using 22,500 aerospace grade rivets, which are fixed by hand by the teams engineers.
+
+However, at £10 million the rocket-powered vehicle is probably a little out the price range of most model car enthusiasts.
+
+In 2016 driver RAF fighter pilot Andy Green will travel with the vehicle to the desert of the Hakskeen Pan in north west South Africa where they will attempt to break the 1,000mph (1,600km/h) barrier.
+
+Wing Commander Green currently holds the land speed record of 763mph (1,223km/h) in the Trust Supersonic Car.
+
+A spokesman for the Bloodhound project said they were confident of breaking this record and going faster than 1,000mph for the first time on land.
+
+The project has been seven years in the making and has been a dream of former RAF pilot Andy Green since he set the current record in 1997. 
+
+The spokesman said: 'The Bloodhound Supersonic Car kit contains over 3,500 components, many custom-made.
+
+'One hundred and ten man-years have been invested in the design, build and manufacture of the Bloodhound SSC which is on track to challenge the Land Speed Record later this year in the Kalahari Desert, South Africa.'
+
+During the record-chasing run in South Africa, Bloodhound (pictured) will cover 12 miles (19km) in two minutes, exerting an acceleration force of almost 2G, and peak deceleration force of 3G on the driver
+
+Earlier this month the Bloodhound team's rocket partner Nammo carried out tests on the first of three large hybrid rocket motors that will be included in the vehicle.
+
+Initially Bloodhound will use one Nammo hybrid rocket in high speed testing scheduled for 2015 and a cluster of three rockets in its 1,000mph campaign in 2016.
+
+This is addition to main the main engine, which is normally found powering a Eurofighter Typhoon, weighs a tonne and produces 20,000lbs (90kN) - or nine tonnes of thrust. 
+
+The two power plants together produce 135,000 thrust horse power, or the equivalent to 180 Formula 1 cars. 
+
+Earlier this year, designers of the supersonic car revealed the vehicle’s futuristic cockpit.
+
+It has been made from five different types of carbon fibre weave, and two different resins. It has taken more than 10,000 hours to design and manufacture in total.
+
+Sandwiched between the layers of carbon fibre are three different thicknesses of aluminium honeycomb core, which provide additional strength.
+
+At its thickest point the material is made up of 13 layers, but measures just 0.9-inches (24mm) thick.
+
+Bloodhound will have to withstand extreme forces, including the risk of bird strike, during its record attempt
+
+The components for Bloodhound include solid aluminium wheels for running over the desert surface (6), a 3D printed titanium steering wheel (18), the cockpit canopy (29), ice tanks (33) for cooling the V8 engine (15) carbon fibre fuel tanks (27), the Rolls-Royce EJ200 jet engine (14) and driver Andy Green (17) 
+
+The cockpit structure weighs 441lbs (200kg) and bolts directly to the metallic rear chassis carrying the jet, rocket and racing car engine.
+
+It has to be strong as this front section will have to endure peak aerodynamic loads of up to three tonnes per square metre at 1,000mph (1,609kph), as well the considerable forces generated by the front wheels and suspension.
+
+It will also carry ballistic armour to protect Wing Commander Green should a stone be thrown up by the front wheels at very high speeds.
+
+Bloodhound will attempt to beat the World Land Speed Record set by the Thrust Supersonic Car in 1997
+
+The cockpit is positioned in front of three loud motors - the jet, a cluster of hybrid rockets and the racing car engine that drives the rocket’s oxidiser pump, which are expected to generate a noise level estimated at 140 decibels - the equivalent to a shotgun blast.
+
+Wing Commander Green will wear a specially made in-ear communications system to protect his hearing and to ensure that he can communicate with mission control. 
+
+Mark Chapman, chief engineer behind Bloodhound: 'This is a fantastic moment in the project, it is great to see the car broken down into its main components.
+
+“It validates the many years of hard work by our team of motorsport and aerospace engineers.”
+
+The SSC stands for ‘SuperSonic Car’.
+
+The vehicle has four wheels and is powered by both the newly-fitted jet engine and a rocket.
+
+It is set to travel at 1,000mph (1,600km/h).
+
+The slender body, 44 feet (14 metres) long, keeps the entire vehicle aerodynamic.
+
+The pencil-shaped car (concept pictured) will be 44ft (13.4m) long and weigh 7.5 tonnes when completed
+
+It weighs just over seven tonnes and the engines will produce more than 135,000 horsepower.
+
+That’s more than six times the power of all the cars on a Formula 1 starting grid put together.
+
+In the coming years the vehicle will begin test runs at lower speeds before attempting to set a new land speed record.
+
+The current land speed record stands at 763.035mph (1,227.985km/h), set by former RAF pilot Andy Green - who will also drive the Bloodhound - back in 1997 in the ThrustSSC. 
+
+@highlight
+
+The Bloodhound SSC is designed to faster than 1,000mph (1,600km/h) 
+
+@highlight
+
+Car will be 44ft (13.4m) long, 6ft (183cm) in diameter and weigh 7.5 tonnes
+
+@highlight
+
+Engineers will use 22,500 aircraft rivets to piece the components together
+
+@highlight
+
+Will use three of the hybrid rockets when it makes record attempt in 2016 along with EJ200 jet engine that normally powers a Eurofighter Typhoon
+
+@highlight
+
+The record attempt is due to take place in 2016 in the South African desert

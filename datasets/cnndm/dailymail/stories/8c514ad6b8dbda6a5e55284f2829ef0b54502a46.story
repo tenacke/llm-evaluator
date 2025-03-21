@@ -1,0 +1,31 @@
+A missing schoolgirl who was seen on CCTV footage with an unknown man on a city street late last night has been found safe and well.
+
+Evelin Mezei, a 12-year-old Hungarian national, was spotted with the man at around 10.30pm yesterday, an hour after she was last seen by her mother in East London, Scotland Yard said.
+
+But the youngster, who came to the UK six months ago, was traced this morning.
+
+Found: Evelin Mezei, 12, was traced this morning after going missing in Stratford, London, last night
+
+A police spokesman said: 'Evelin was found at 11am this morning by police in Newham and is safe and well.'
+
+Detectives had released a CCTV image and appealed for information about the man. 
+
+The image showed Evelin, who lived with her family in East London, with the man in Romford Road in Stratford, close to Grove Crescent Road, where her mother had last seen her at 9.30pm, police said.
+
+She was described by police as white, with a large build. She was wearing a red jacket and black leggings with white stars on the legs and carrying a black and red schoolbag-style bag when last seen.
+
+CCTV footage: Police had released an image which captured Evelin with an unknown man on Romford Road, Stratford at about 10.30pm. She was wearing a red jacket and black leggings with white stars on the legs
+
+ 
+
+@highlight
+
+Hungarian national Evelin Mezei, 12, has been found safe and well
+
+@highlight
+
+She had gone missing from the Stratford area in London last night
+
+@highlight
+
+Evelin had been seen on CCTV footage with an unknown man 

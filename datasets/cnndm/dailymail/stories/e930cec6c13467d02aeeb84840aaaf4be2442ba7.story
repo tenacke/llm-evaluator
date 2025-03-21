@@ -1,0 +1,39 @@
+Bali prosecutors want an Australian man allegedly caught smoking a joint on the beach to serve up to 12 years in jail.
+
+Nicholas James Langan, 24, from Townsville, was arrested about 1.00am on January 27 at a beach in Canggu, north of Kuta, for smoking a marijuana joint.
+
+Police seized the 0.1 gram joint and a small bag of marijuana weighing 0.86 grams.
+
+Scroll down for video 
+
+An Indonesian prosecutor has finalised the charges against Langan, who was arrested on January 27 at a beach in Canggu, north of Kuta, for smoking a marijuana joint
+
+Also arrested was Hanung Pekik Hermantoro, 25, a driver for The Green Room Villas where the Queensland painter was staying. 
+
+Prosecutor Deni Iswanto on Thursday finalised the charges against the men, pushing for Langan to face a maximum 12 years jail for drug possession.
+
+'We have 20 days to hand this over to the court,' he said.
+
+'At the moment, both are detained in the district prosecutor's cell and this afternoon, they will be taken to Kerobokan Prison.'
+
+A family member refused to comment when called by Daily Mail Australia. 
+
+- With Daniel Piotrowski for Daily Mail Australia
+
+Nicholas James Langan, 24, from Townsville, was arrested about 1.00am on January 27 at a beach in Canggu, north of Kuta, for smoking a marijuana joint (file photo)
+
+@highlight
+
+Bali prosecutors want an Australian man allegedly caught smoking a joint on the beach to serve up to 12 years in jail
+
+@highlight
+
+Nicholas James Langan, 24, from Townsville, was arrested about 1.00am on January 27 at a beach in Canggu, north of Kuta
+
+@highlight
+
+Police allege he was smoking a joint at the time of the arrest
+
+@highlight
+
+Prosecutors said he possessed a small bag of marijuana weighing 0.86 grams 

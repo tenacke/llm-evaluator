@@ -1,0 +1,53 @@
+Passengers hoping to make a short domestic flight Friday were trapped on the tarmac at an airport for six hours with only one bathroom between them.
+
+Men, women and children who boarded a United Express flight from Kansas City, Missouri, to Denver, Colorado, were instead diverted to Colorado Springs due to bad weather.
+
+The 6am flight took just an hour and a half to get to the unscheduled stop at Colorado Springs - but then languished for another six hours, before everybody was ordered off anyway. 
+
+Scroll down for video 
+
+Stuck: Passengers headed from Kansas City to Denver were rerouted due to bad weather - and left sat on the tarmac for six hours at Colorado Springs airport
+
+Stuck: The flight was stuck on the tarmac from early Friday morning until after lunchtime. Pictured above are several United Express planes waiting
+
+The 6am flight took just an hour and a half to get to the unscheduled stop at Colorado Springs - but then languished for another six hours, before everybody was ordered off anyway.
+
+According to local news station KOAA, those aboard Flight 4934, which was being operated by Republic Airlines, were finally taken to their destination by bus.
+
+In accordance with federal law the airline gave people the chance to get off the plane after it had been stuck for three hours.
+
+But passengers were told that if they got off, that would be the end of their trip and they would have to give up on connecting flights and make their own way from Colorado Springs.
+
+Trapped: Pictured is Kathie Ridings, one of the passengers who was stuck at Colorado Springs
+
+According to those on board, virtually everyone chose to stay on the plane. In the mean time, passengers told how the short-haul flight's meager supplies of crackers and water dwindled, while the single bathroom became 'foul' and ran out of necessary supplies.
+
+A Republic spokesman told DailyMail.com: 'Passengers were offered the opportunity to deplane, despite several erroneous media reports.
+
+'Republic eventually cancelled the flight, and the Company repositioned another aircraft so passengers could continue on to their destination.
+
+'Further, United was reaching out to customers to offer compensation. Republic apologizes for the inconvenience, but as always, the safety of our customers and crew is always our number one priority'. 
+
+ 
+
+ 
+
+@highlight
+
+Flight from Kansas City, Missouri to Denver, Colorado, was diverted Friday
+
+@highlight
+
+Landed at Colorado Springs at 7.30am - beginning six-hour ordeal
+
+@highlight
+
+After three hours passengers could go - but would have had to pay for new connecting flights and transport
+
+@highlight
+
+During long wait airplane ran low on water, food and bathroom supplies
+
+@highlight
+
+Airline has denied it was feasible to get passengers off the flight  

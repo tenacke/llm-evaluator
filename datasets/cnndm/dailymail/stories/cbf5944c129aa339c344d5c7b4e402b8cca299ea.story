@@ -1,0 +1,52 @@
+By
+Ashley Collman
+
+A 22-year-old Brooklyn, New York man was decapitated  Wednesday trying to evade police after a traffic stop.
+
+NYPD say an officer tried to issue a traffic citation to Leroy Samuel, but instead the man took off in his black Infiniti G35 sedan with his girlfriend in the passenger seat. Authorities say Samuel was approached by an officer on foot and there was no chase, but several witnesses say he was being pursued by police cruisers.
+
+Sameul was speeding eastbound on the Gowanus Expressway when he collided with a truck on an off ramp, and the vehicle's flatbed severed Samuel's head from his body.
+
+Gruesome scene: Leroy Samuel, 22, was decapitated Wednesday after colliding with a flatbed truck at a freeway off-ramp. Witnesses say he was fleeing from police
+
+Joseph Vega, 59, was riding his bike to work at the time and witnessed the crash.
+
+'When he exited here he was driving 70 to 80 miles per hour, and the trailer was waiting for the light,' Mr Vega told the New York Post.
+
+'When I went to see what happened to the driver, he had no head. His head was in the back seat. It was horrible,' Mr Vega said.
+
+'It was an instant death,' he added to 
+DNAinfo.  'A split second. That's how fast it happened. The impact was 
+so hard, just a boom.'
+
+Instant death: A witness who went to go check on the driver says he found the man's head in the back seat of the car
+
+After the crash, Samuel's girlfriend got out of the vehicle and tried to run before police apprehended her and took her to Bellevue hospital for treatment.
+
+'The girl limped out. She was trying to get away, but she was hurt. There were cuts on her arm,'  another witness, Hamid Mateen, said.
+
+The truck owned by Monile Steam Boiler Rental Corp and was empty except from metal tubing at the time. 
+
+@highlight
+
+NYPD tried to issue 22-year-old Leroy Samuel a traffic citation Wednesday around noon
+
+@highlight
+
+Instead, the Brooklyn man took off in his black Infiniti G35 Sedan 
+
+@highlight
+
+Witnesses say Samuel was being pursued by police vehicles when he collided with a flatbed truck stopped at an off-ramp 
+
+@highlight
+
+One witness went to check on the driver and found Samuel's head in the back seat of the car
+
+@highlight
+
+Samuel's girlfriend was also in the car at the time but survived, and was taken to Bellevue Hospital
+
+@highlight
+
+The NYPD insists there was no police chase and that it was an officer on foot that tried to issue Samuel a ticket

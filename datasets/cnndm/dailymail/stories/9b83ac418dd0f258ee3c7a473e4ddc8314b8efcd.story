@@ -1,0 +1,87 @@
+By 
+Luke Salkeld
+
+PUBLISHED:
+
+06:04 EST, 6 November 2013
+
+
+| 
+
+UPDATED:
+
+20:15 EST, 6 November 2013
+
+A drama teacher who asked a 17-year-old boy for sex and played a game with pupils called Who’s a Virgin? has been banned from teaching.
+
+Lindsay Black, 28, also urged sixth-formers to mime sexual acts at the Roman Catholic school where she taught, a disciplinary panel was told.
+
+She paid particular attention to a teenager who was performing in the school musical, and revealed to pupils that she fantasised about having sex in the drama class and cheating on her fiancé.
+
+Drama teacher: Lindsay Black, 28, told the schoolboy she had fantasised about performing a sex act on him and pestered him for sex
+
+Black sent text messages, emails and Facebook messages to the 17-year-old boy, asking him to meet up for sex.
+
+It was said the schoolboy, referred to as Pupil A, showed other pupils text messages from Black as he rehearsed for We Will Rock You, a show based on the songs of rock band Queen.
+
+English teacher Abigail Watts said: ‘I heard comments from other pupils about Miss Black liking pupils and I asked what this meant. They said she had been Facebook messaging Pupil A – she told him she had a dream about them having sex.’
+
+She added: ‘They had not met up but they had been talking about it.’
+
+The hearing was told Black ‘flirted’ with the boy during lessons and sent him a message saying how she dreamt about him.
+
+Sex teacher: Miss Black also got the class to play a game of 'I have never' and questioned them about sex
+
+The trained actress met the teenager while working on maternity cover at St Joseph’s Roman Catholic High School in Newport, South Wales.
+
+She contacted him on Facebook asking about his coursework – then began sending him messages talking about sex and alcohol.
+
+Black told the boy she had a dream in which she performed a sex act on him, then asked him to meet up with her for sex.
+
+A Professional Conduct Committee of the General Teaching Council of Wales heard she even grilled the boy’s girlfriend about their relationship.
+
+The hearing was told that Black played a game in which she asked her sixth form class, ‘who’s a virgin?’ and made pupils stand up if they had not yet had sex.
+
+She also played a game named ‘I Have Never’ in which she would ask them if they had performed various sex acts.
+
+The hearing was told Black then encouraged the teenagers to mime sex acts and spent time talking to pupils about sex.
+
+When Black was confronted by the head of drama she told him it was just an exercise to get pupils ‘into character’.
+
+Colleague Sandra Davies said: ‘Pupils told me that during drama classes Miss Black would talk about sex and she turned the lessons on to a sexual theme.
+
+She said she wanted to cheat on her fiancé once before getting married and that she fantasised about having sex on a table in the drama class.
+
+‘They played a game called “I Have Never” where she would ask them things [about sex]. She would then get the pupils to act out the acts in question.’
+
+The hearing in Cardiff was told how Pupil A’s academic performance had suffered as a result of the messages and he had to re-sit his AS levels.
+
+Black was interviewed by police following the allegations in 2011 but no further action  was taken.
+
+She later admitted engaging in inappropriate and sexually explicit conversations with a pupil via Facebook.
+
+Drama: The teacher, who was doing maternity cover at St Joseph's Catholic High School in Newport, has been struck off
+
+Black, who did not attend the hearing, denied talking to her class about sex and said the pupils had made up the allegations.
+
+But the panel found she had held discussions of an ‘inappropriate and sexually explicit nature’ with pupils. They found her actions amount to unacceptable professional conduct and banned her from teaching.
+
+Committee chairman Peter Williams said: ‘The conduct in question seriously affected pupils and was not an isolated lapse. Black’s actions are fundamentally incompatible with being a registered teacher.’
+
+Black declined to comment at her house in Pontypridd after the hearing. Paul Bennett, chairman of governors at St Joseph’s RC High School, said: ‘The school takes allegations of unprofessional conduct very seriously and acts swiftly when such allegations are made.’
+
+@highlight
+
+Lindsay Black, 28, told the boy she had a dream about them having sex
+
+@highlight
+
+She then asked him to meet up for sex with her in the Facebook message
+
+@highlight
+
+Miss Black told pupils she fantasised about cheating on her fiance once before getting married, disciplinary hearing is told
+
+@highlight
+
+Catholic school teacher is banned from teaching indefinitely

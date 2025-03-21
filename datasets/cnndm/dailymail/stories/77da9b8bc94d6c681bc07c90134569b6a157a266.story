@@ -1,0 +1,35 @@
+Ulster and Ireland prop Declan Fitzpatrick is to retire from rugby on medical grounds.
+
+Ulster said that 31-year-old Fitzpatrick had 'experienced a number of concussive episodes' in recent seasons, and his symptoms were 'progressively slower to resolve'.
+
+Medics at the Guinness PRO12 province referred him to a neurologist, and after tests it was recommended it would be in Fitzpatrick's long-term interests to stop playing.
+
+Ulster and Ireland Declan Fitzpatrick has been forced to retire on medical grounds after multiple concussions
+
+Fitzpatrick won seven caps for Ireland, the last of which was against New Zealand during the 2013 autumn Tests. He also made 98 Ulster appearances.
+
+'While it is not an easy decision to hang up the boots, I can look back with fondness at nine fantastic seasons at Ulster Rugby,' Fitzpatrick said.
+
+'It was a huge honour to have represented my country and an enormous privilege to pull on that green shirt.
+
+'I want to thank the medical teams at Ulster Rugby and the IRFU (Irish Rugby Football Union) for the care that they have given me.
+
+'My symptoms continue to improve, and I know the advice that I received is in the best interests of my long-term health.' 
+
+ 
+
+@highlight
+
+Ulster and Ireland prop Declan Fitzpatrick has announced his retirement
+
+@highlight
+
+The 31-year-old was advised to on medical grounds following 'a number of concussive episodes' in recent seasons
+
+@highlight
+
+Medics and the Guinness PRO12 province referred him to a neurologist
+
+@highlight
+
+Fitzpatrick was capped seven times by his country 

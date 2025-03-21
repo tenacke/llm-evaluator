@@ -1,0 +1,29 @@
+A 160kg man who fell down a  stormwater drain has been rescued by 15 firefighters after an hour of trying to lift him out of the hole.
+
+Rescue teams were called to Meadowbank in Sydney's west about 11pm on Wednesday with reports a man was trapped in a drain.
+
+Firefighters, paramedics and police extracted the man from the hole using ropes and ladders due to injuries he sustained to his shoulder and leg.
+
+'In order to get him out they had to set up a ladder and put him on a stokes stretcher and slide him up,' NSW Fire & Rescue Superintendent Tom Cooper said on Thursday.
+
+The moment a 160kg man who fell down a stormwater drain was rescued by 15 firefighters
+
+Due to the size of the man it took 15 firefighters, ambulance and the police to get him out of the drain.
+
+It's unknown how the man fell down the two-metre drain, Supt Cooper said.
+
+The man was taken to hospital.
+
+ 
+
+@highlight
+
+Man was trapped in stormwater drain in Meadowbank in Sydney's west 
+
+@highlight
+
+It took an hour to rescue him using ropes and ladders
+
+@highlight
+
+It's unknown how the man ended up stuck in the two-metre deep drain

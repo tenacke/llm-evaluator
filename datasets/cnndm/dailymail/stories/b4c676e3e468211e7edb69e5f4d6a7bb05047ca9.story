@@ -1,0 +1,33 @@
+Bolton Wanderers defender Marc Tierney is poised to announce his retirement on Thursday.
+
+The 29-year-old left-back fractured his ankle playing against Yeovil in September 2013 and following a series of operations and advice from specialists in America he has been forced to cut short his career. 
+
+Tierney, who joined Bolton from Norwich, was set for a call up to the Republic of Ireland squad prior to his injury. 
+
+Bolton defender Marc Tierney has been forced to take early retirement following a long-term ankle injury
+
+Tierney started his career at Oldham Athletic in 2003 , rising through the ranks at the club's academy and making 44 appearances for the first-team, before a switch to Shrewsbury Town four years later. 
+
+He spent another four years at Shrewsbury, with one of those a loan spell at Colchester United.  
+
+He then moved to Colchester permanently before signing for Norwich in 2010, where he was part of the Canaries side that won promotion to the Premier League. 
+
+After being released from Carrow Road, Tierney had established himself as Bolton's first-choice left-back. 
+
+Tierney (left), during his Norwich days, tracks Everton's attacking midfielder Royston Drenthe (right)
+
+ 
+
+ 
+
+@highlight
+
+Bolton left-back Marc Tierney is set to hang up his boots
+
+@highlight
+
+The 29-year-old has been forced into early retirement after failing to recover from a fractured ankle suffered against Yeovil in September 2013
+
+@highlight
+
+He underwent a series of operations and received specialist advice 

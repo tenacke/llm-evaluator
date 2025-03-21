@@ -1,0 +1,31 @@
+A man has been charged with stabbing his girlfriend in the backside with a pitchfork.
+
+Antonio Nuñez, 59, was said to be arguing with the woman, who has not been named, at his home in San Antonio, Texas, on Monday.
+
+It escalated, and at 4.15am Nuñez allegedly grabbed the gardening tool and drove it into the woman's behind.
+
+Attack: Antonio Nunez allegedly stabbed his girlfriend in the backside with a pitchfork during an argument
+
+According to police, the woman pepper sprayed Nuñez in the eyes and ran across the street to a neighbor who called 911.
+
+She is in hospital recovering.
+
+Nuñez will be charged with aggravated assault, the Houston Chronicle reported.
+
+Neighbors told KSAT the couple have frequent fights which have ended in police attending the scene numerous times.
+
+The scene: Deputies were called to the property in San Antonio, Texas, at 4.30am on Monday
+
+ 
+
+@highlight
+
+Antonio Nuñez, 59, was arguing with girlfriend at 4am at home in Texas
+
+@highlight
+
+It escalated and he stabbed the woman in the backside with pitchfork
+
+@highlight
+
+She pepper sprayed him, called 911, is in hospital recovering 

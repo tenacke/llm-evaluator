@@ -1,0 +1,45 @@
+Gary Cahill has spoken of the demands of maintaining a  title challenge as he looks to secure his first ever Premier League winners medal with Chelsea this season.
+
+Cahill has won four cups with the Stamford Bridge outfit since joining in January 2012, including the Champions League, but the England defender believes league glory would be his most testing achievement yet.
+
+'What I’ve won already at Chelsea has been fantastic but we all know in cups, you play the game and don’t see the next one for a month or so,' Cahill said in an interview with Soccer Saturday.
+
+Gary Cahill is yet to win the Premier League with Chelsea since joining the club in January 2012
+
+Cahill (centre) hoists the Champions League trophy aloft after Chelsea's 2012 victory
+
+Cahill spoke of the difference in challenging for the Premier League compared to cup competitions
+
+'You prepare differently. With the Premier League you’re coming day-to-day, working hard a whole season, all the way through, keeping fit and doing everything you possibly can do. 
+
+'In terms of that, the reward is massive and when it is in touching distance of you, for me personally it would be amazing.' 
+
+Cahill believes Chelsea were taught some important lessons last season, when they finished third, which has caused them to develop a more clinical touch to their performances.
+
+Three defeats from March 15 - April 19 in the league last year derailed any title hopes. 
+
+Losses to Aston Villa and Crystal Palace on their travels were compounded when Sunderland inflicted Jose Mourinho's first home Premier league defeat upon him in 78 games.
+
+Cahill believes that Jose Mourinho's side learnt some difficult lessons during last season in the league
+
+Cahill (right) will be back in action when Chelsea host Manchester United on Saturday in the league
+
+'We are more ruthless, I think we learnt a lot from last season in terms of games that people expected us to perform better in or win,' Cahill said. 'We lost a good few points last year against teams we should be beating and I think that stuck in our heads.'
+
+Chelsea can move three points nearer to their fourth Premier League trophy with three points against Manchester United at Stamford Bridge on Saturday.
+
+ 
+
+ 
+
+@highlight
+
+Gary Cahill has won four cup competitions since joining Chelsea
+
+@highlight
+
+The defender could win the league for the first time this season
+
+@highlight
+
+Cahill believes league glory would be his toughest achievement yet

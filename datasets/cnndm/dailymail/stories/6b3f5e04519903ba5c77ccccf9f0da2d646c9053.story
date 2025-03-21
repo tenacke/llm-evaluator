@@ -1,0 +1,43 @@
+Francis Coquelin has jumped to the defence of team-mate Olivier Giroud following Thierry Henry's claim that Arsenal need a 'top quality striker' to win the Premier League next season.
+
+Despite Giroud scoring 14 Premier League goals for Arsene Wenger's side this campaign, Henry believes he must sign a new striker as well as three more players if they are to compete for the title.
+
+Speaking after the 0-0 draw with Premier League leaders Chelsea on Sunday, Henry told Sky Sports: 'They need a goalkeeper, they still need a centre back, they still need a holding midfielder and, I'm afraid, they need a top, top quality striker to win this league again.'
+
+Arsenal midfielder Francis Coquelin has defended Olivier Giroud (above) after criticism from Thierry Henry
+
+Sky Sports pundit Henry questioned whether Arsenal can win the title with Giroud in attack
+
+Coquelin, who has played a vital role in Arsenal's late-season resurgence, has since hit back at the Gunners legend and insists Giroud is worthy of his place in the first team.
+
+The French midfielder told RMC: 'Thierry Henry is wrong. Giroud shows his potential every week.
+
+'He showed that he has the level to be the Arsenal striker and we can win titles with him.
+
+'We are disappointed with the result against Chelsea because we were on a good run.
+
+'Now the target is to focus on the end of the championship, win all the remaining matches to get this second place, and of course win the FA Cup final.'
+
+Coquelin (above) believes Arsene Wenger's side 'can win titles' with Giroud playing as their main striker
+
+Giroud (left) could not score against Chelsea on Sunday as the London rivals drew 0-0 at the Emirates
+
+@highlight
+
+Francis Coquelin defends Arsenal striker Olivier Giroud after criticism 
+
+@highlight
+
+Thierry Henry believes Arsenal need a 'top quality' striker 
+
+@highlight
+
+Coquelin insists the Gunners 'can win titles' with Giroud in the side 
+
+@highlight
+
+French striker has scored 14 Premier League goals this season
+
+@highlight
+
+Giroud: I get p***** about everyone talking about my hair and not my goals

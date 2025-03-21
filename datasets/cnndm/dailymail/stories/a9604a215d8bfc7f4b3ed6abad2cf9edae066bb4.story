@@ -1,0 +1,43 @@
+A bobcat was snapped hauling a shark along a Florida beach in an unbelievable photograph.
+
+The image was taken at Sebastian Inlet State Park near Vero Beach by John Bailey, WPTV reported.
+
+Bailey told the television station that the bobcat collected the shark after entering the water.
+
+Scroll down for video 
+
+Life in the water: A bobcat was snapped hauling a shark along Sebastian Inlet State Park 
+
+However, Bailey told WPTV the bobcat might have been scared by his presence, since it scampered off toward the woods and let go of its find.
+
+Amy Kight, Busch Wildlife Sanctuary's Animal Care Director, told WPTV: 'My first reaction was amazement that somebody actually took that picture because bobcats are generally very, very reclusive.
+
+'You don't really see them out and about too often.'
+
+A spokesman for the Florida Fish and Wildlife Conservation Commission has said she believes the image is genuine.
+
+FWC's Liz Barraco told WESH 'There is no reason to believe it's fake.' 
+
+The bobcat exhibited typical behavior, FWC officials told the NBC affiliate station.  
+
+Scene: The image was reportedly taken at Sebastian Inlet State Park (pictured) near Vero Beach, Florida 
+
+ 
+
+ 
+
+@highlight
+
+The image was taken at Sebastian Inlet State Park near Vero Beach, Florida, by John Bailey
+
+@highlight
+
+Bailey has said the bobcat caught the shark after entering the water
+
+@highlight
+
+The bobcat might have been scared by his presence, since it scampered off toward the woods and let go of its find
+
+@highlight
+
+A spokesman for the Florida Fish and Wildlife Conservation Commission believes the image is genuine 

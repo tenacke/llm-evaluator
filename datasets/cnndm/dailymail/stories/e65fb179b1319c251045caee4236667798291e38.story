@@ -1,0 +1,33 @@
+A lonely shepherd has been found dead alongside a scarecrow he had apparently had sex with after dressing it up in a long-haired wig and lipstick. 
+
+The rotting remains of Jose Alberto, 58, were discovered after neighbours called their local council to report the smell coming from his house in the city of San Jose de Balcare in eastern Argentina.
+
+Rodolfo Moure, a spokesman for the prosecutor's office, said: 'I initially thought there were two bodies but then I realised one was a scarecrow wearing lipstick and a long-haired wig.
+
+Jose Alberto, 58, was found dead next to a scarecrow prosecutors believe he died while having sex with it
+
+'It was lying next to the deceased.
+
+'There were no signs of violence and we are working on the assumption that the man died during sex with the scarecrow. 
+
+'Straw had been stuffed inside the old clothes that had been sewn together to make the scarecrow.
+
+'We are now waiting the results of an autopsy.'
+
+ 
+
+@highlight
+
+Body of Jose Alberto, 58, discovered at home in Argentina by neighbours
+
+@highlight
+
+They reported smell coming from his house in city of San Jose de Balcare
+
+@highlight
+
+Was found lying next to scarecrow wearing lipstick and long-haired wig
+
+@highlight
+
+Prosecutor working on assumption he died during sex with the scarecrow

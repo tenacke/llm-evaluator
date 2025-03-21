@@ -1,0 +1,81 @@
+By 
+Associated Press
+
+PUBLISHED:
+
+09:21 EST, 7 June 2013
+
+
+| 
+
+UPDATED:
+
+09:25 EST, 7 June 2013
+
+A gay couple is pursuing a discrimination complaint against a Colorado bakery, saying the business refused them a wedding cake to honor their Massachusetts ceremony.
+
+The couple are alleging the owners have a history of turning away same-sex couples.
+
+As more states move to legalize same-sex marriage and civil unions, the case highlights a growing tension between gay rights advocates and supporters of religious freedom.
+
+Scroll down for video...
+
+David Mullins, left, and Charlie Craig, right, allege their order for a rainbow wedding cake was turned down by a Colorado bakery because of their sexual orientation
+
+Married: The couple tied the knot in July of 2012 but ended up getting their cake from somewhere else
+
+'Religious freedom is a fundamental right in America and it's something that we champion at the ACLU,' said Mark Silverstein, the legal director of the group in Colorado, which filed the complaint on behalf of the couple. 'We are all entitled to our religious beliefs and we fight for that. But someone's personal religious beliefs don't justify breaking the law by discriminating against others in the public sphere.'
+
+The attorney for Jack Phillips, one of the owners of Masterpiece Cakeshop, sees it differently.
+
+'We don't believe that this is a case about commerce. At its heart, this is a case about conscience,' said Nicolle Martin. She said the matter is important because it will serve as an example for future cases across the country as more gay couples gain legal recognitions for their relationships.
+
+'It brings it to the forefront. I just don't think that we should heighten one person's beliefs over and above another person's beliefs,' she said.
+
+Owner: Jack Philips says that he believes in Jesus Christ and because of his religion does not wish to make cakes for same-sex couples
+
+Habit: The couple say they are not the only gay couple to have had their order refused on the grounds of their sexuality
+
+The Colorado Attorney General's office filed a formal complaint last week after the ACLU initiated the process last year on behalf of David Mullins and Charlie Craig. The case is scheduled for a hearing in September before Colorado's Civil Rights Commission.
+
+Nationwide, 12 states now allow gay marriage, with Rhode Island, Delaware and Minnesota doing so this year. And in a year that Colorado lawmakers approved civil unions, they also elected the first gay Speaker of the House.
+
+But Colorado's civil union law does not provide religious protections for businesses despite the urging of Republican lawmakers. Democrats argued that such a provision would give businesses cover to discriminate.
+
+Priorities: In another instance a gay couple had their order refused but when told the order was for a dog, the bakery happily agreed to proceed
+
+Tensions: As more states move to legalize same-sex marriage and civil unions, the case highlights a growing tension between gay rights advocates and supporters of religious freedom
+
+Mullins, 28, and Craig, 33, filed the discrimination complaint against Phillips after visiting his business in suburban Denver last summer. After a few minutes looking at pictures of different cakes, the couple said Phillips told them he wouldn't make one for them when he found out it was to celebrate their wedding in Colorado after they got married in Massachusetts. Phillips has said making a wedding cake for gay couples would violate his Christian religious beliefs, according to the complaint.
+
+'We were all very upset, but I was angry and I felt dehumanized and mortified,' Mullins said. He said he vented his frustration on Facebook and was surprised at how 'the story ended up catching fire,' with responses from local media and bloggers in other countries posting about it.
+
+'We felt that the best way to honor the support that they had given us was to follow this complaint through,' he said. In the process, the ACLU said they found out about two other gay couples who had been refused a wedding cake from the same shop. Both have written affidavits in support of the discrimination claim.
+
+Recent advances on gay rights only underscore Colorado's difficult past on the issue. In 2006, voters banned gay marriage.
+
+Now what? Colorado law says it¿s illegal to discriminate based on sexual orientation in employment and housing. But when it comes to things like selling cakes, the law is less than clear
+
+More notably, in 1992, voters approved a ban on municipal antidiscrimination laws to protect gays, leading some to brand Colorado a 'hate state.' Four years later, the U.S. Supreme Court said the law, known as Amendment 2, was unconstitutional.
+
+The complaint seeks to force Masterpiece Cakeshop to 'cease and desist' the practice of refusing wedding cakes for gay couples, and to tell the public that their business is open to everyone.
+
+If Phillips loses the case and refuses to comply with the order, he would face fines of $500 per case and up to a year in jail, his attorney said
+
+'It would force him to choose between his conscience and a paycheck. I just think that's an intolerable choice,' Martin said.
+
+@highlight
+
+Cake shop refused to bake a cake for gay couple specifically because of their sexual orientation
+
+@highlight
+
+Bakery now being taken to court for not serving gay couples
+
+@highlight
+
+Illegal under Colorado law to discriminate on employment or housing but less clear on cake
+
+@highlight
+
+12 U.S. states allow gay marriage but Colorado only allows for civil unions

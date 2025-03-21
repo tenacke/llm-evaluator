@@ -1,0 +1,43 @@
+Jose Mourinho claims Eden Hazard has joined Lionel Messi and Cristiano Ronaldo as one of the best three players in world football.
+
+Hazard scored Chelsea's 38th minute winner against Manchester United and is widely expected to be named PFA player of the year on Sunday.
+
+Mourinho said: 'He's a kid, but he knows that he is one of the three best players in the world - he is coping with that responsibility.
+
+Eden Hazard has been named 'one of the three best players in the world' by his manager Jose Mourinho
+
+Hazard has been in superb form for Chelsea this season and scored the winner against Manchester United
+
+Hazard's goal in the 1-0 victory over United extends Chelsea's lead at the top of the Premier League table
+
+Mourinho has praised the Belgian's exceptional talent and also his unwavering humility amid his success
+
+'I had lots of stars. Hopefully in every club I worked I had stars. But he is the humble star, yes. He is the humble star.
+
+'He's getting strong. Physically, mentally he's getting very, very strong. He understands his role. 'The day before the game I told him: 'This game we will never lose. Never.'
+
+'But we needed to win. He understands clearly that especially in a moment where the team doesn't have all its power, he understands when the game becomes strategically. 
+
+'He understands that his talent is fundamental for the team. He was there for us and almost a second goal when he hit the post.' Hazard also believes he is having the best season of his career as Chelsea close in on the Barclays Premier League title.
+
+The Chelsea winger said: 'I'm playing my best season ever. With my experience, I succeed to manage the strong and weak moments in a game better. 
+
+'Last year I played a good season, but I disappeared in some games. 
+
+'This season I can't really remind a game where I really wasn't into. It's impossible to be top in 40 or 50 games in a season, but I've been the best player of the team for several times. 
+
+'My stats? People are talking more about me, but what pleases me the most, is that I'm doing better than last season.' 
+
+Hazard, still only 24-years-old, is being hotly tipped to claim the PFA Player of the Year award this season
+
+@highlight
+
+Chelsea forward Eden Hazard has been in superb form this season
+
+@highlight
+
+The Belgian scored the winning goal against Manchester United on Saturday to extend Chelsea's lead at the top of the Premier League table
+
+@highlight
+
+Manager Jose Mourinho believes Hazard is one of the best players in the world and holds him in similar esteem to Cristiano Ronaldo 

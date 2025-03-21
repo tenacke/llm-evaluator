@@ -1,0 +1,45 @@
+Chelsea are planning a victory parade through the streets around Stamford Bridge should they stay on course to claim the Premier League title in May. 
+
+Jose Mourinho's side, who face Arsenal at the Emirates on Sunday, are currently nine points clear at the summit of the table with six games of the current campaign remaining.  
+
+In a letter from Hammersmith and Fulham council which was delivered to residents in the area over the past few days, the schedule for the planned celebrations are laid out. 
+
+Eden Hazard fires past Manchester United keeper David De Gea during his side's 1-0 win at Stamford Bridge
+
+The letter, delivered to residents of Fulham, outlines Chelsea's plan for their victory parade on May 25 
+
+The planned victory parade route is outlined to residents of the area on a map included with the letter 
+
+Leicester (away) - April 29
+
+Crystal Palace (home) - May 3
+
+Liverpool (home) - May 10
+
+West Brom (away) - May 18
+
+Sunderland (home) - May 24
+
+The letter, titled 'Advance notice of possible Chelsea football Club parade on Monday, May 25', reads: 'I am writing to give you early notice of a Victory Parade that will take place in Fulham if Chelsea Football Club wins the Premier League. 
+
+'If Chelsea win, a Victory Parade will take place on Monday, May 25. This would be wholly funded by the football club, as would the clean-up operation. The parade would start around 12pm and should finish around 1pm.
+
+'The team's buses would depart from Stamford Bridge's west entrance before travelling east along Fulham Road and turning right onto Hortensia Road, and then right onto King's Road. There would be short stop at Eel Brook Common, where the procession would end. The buses would then leave the parade route via Parsons Green.
+
+'As I say, the Victory Parade will only take place if Chelsea win the Premier League, but I wanted to give you this advance warning so you can plan ahead should they win the title.'
+
+Chelsea are 10 points clear of second placed Manchester City at the top of the table with five games to play
+
+Jose Mourinho raises the Premier League trophy following his side's title triumph in 2005 
+
+@highlight
+
+Chelsea are currently nine points clear in the Premier League standings 
+
+@highlight
+
+Jose Mourinho's side face Arsenal at the Emirates on Sunday 
+
+@highlight
+
+The Blues have six games remaining in the current league campaign 

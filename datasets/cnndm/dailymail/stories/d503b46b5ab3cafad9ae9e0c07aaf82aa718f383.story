@@ -1,0 +1,40 @@
+Andy Murray second on Centre Court against Kevin Anderson
+
+Eugenie Bouchard first on Centre Court against Alize Cornet
+
+Maria Sharapova and boyfriend Grigor Dimitriov both in action on Court One
+
+Novak Djokovic takes on Jo-Wilfried Tsonga in the match of the day on Centre Court
+
+By
+Mike Dawes
+
+Andy Murray is second on Centre Court on Monday as he bids to send South African Kevin Anderson packing in the fourth round.
+
+The defending champion made light work of David Goffin, Blaz Rola and Roberto Bautista Agut and will be hoping to continue his 100 per cent record so far this year with another straight sets victory against the 20th seed.
+
+Centre of attention: Andy Murray, pictured training at Aorangi Park on the middle Sunday of Wimbledon, plays Kevin Anderson second on Centre Court on Monday
+
+Eugenie Bouchard opens proceedings on Centre Court against Alize Cornet while French Open champion Maria Sharapova faces a tough test on Court One against 2012 semi-finalist Angelique Kerber.
+
+And the match of the day concludes the action on Centre Court when top men's seed Novak Djokovic collides with Jo-Wilfried Tsonga.
+
+One to watch: Eugenie Bouchard opens proceedings on Centre Court against Alize Cornet
+
+Centre Court 1pm(25) Alize Cornet (Fra) v (13) Eugenie Bouchard (Can)(3) Andy Murray (Gbr) v (20) Kevin Anderson (Rsa)(1) Novak Djokovic (Ser) v (14) Jo-Wilfried Tsonga (Fra)Court One 1pm(11) Ana Ivanovic (Ser) v (19) Sabine Lisicki (Ger) - To Finish 6-4 1-1(11)Grigor Dimitrov (Bul) v Leonardo Mayer (Arg)(9) Angelique Kerber (Ger) v (5) Maria Sharapova (Rus)(8) Serena Williams (USA) & Venus Williams (USA) v Kristina Barrois (Ger) & Stefanie Voegele (Swi)Court Two 11.30am(5) Stanislas Wawrinka (Swi) v Denis Istomin (Uzb)(6) Petra Kvitova (Cze) v Shuai Peng (Chn)Lyudmyla Kichenok (Ukr) & Nadiya Kichenok (Ukr) v (2) Sara Errani (Ita) & Roberta Vinci (Ita)Dominic Inglot (Gbr) & Johanna Konta (Gbr) v (2) Bob Bryan (USA) & Kveta Peschke (Cze)Court Three 11.30am(19) Feliciano Lopez (Spa) v (9) John Isner (USA)(22) Ekaterina Makarova (Rus) v (4) Agnieszka Radwanska (Pol)Feliciano Lopez (Spa) & Jurgen Melzer (Aut) v (11) Jean-Julien Rojer (Ned) & Horia Tecau (Rom(7) Rohan Bopanna (Ind) & Andrea Hlavackova (Cze) v Colin Fleming (Gbr) & Jocelyn Rae (Gbr)Mate Pavic (Cro) & Bojana Jovanovski (Ser) v (6) Horia Tecau (Rom) & Sania Mirza (Ind)Court No 4 11.30am(12) Marketa Vondrousova (Cze) v Freya Christie (Gbr)Jamie Malik (Gbr) v Noah Rubin (USA)Seone Mendez (Aus) v Holly Hutchinson (Gbr)Tami Grende (Ina) v (15) Anna Bondar (Hun)Gabriella Taylor (Gbr) v Katherine Sebov (Can)Julian Cash (Gbr) v Taylor Harry Fritz (USA)Court No 5 11.30amMatteo Berrettini (Ita) v Akira Santillan (Aus)Juan Jose Rosas (Per) v Harry Bourchier (Aus)(5) Jil Belen Teichmann (Sui) v Fanny Stollar (Hun)Martin Blasko (Svk) v (7) Francis Tiafoe (USA)Elena Gabriela Ruse (Rou) v (4) Aliona Bolsova Zadoinov (Spa)(6) Stefan Kozlov (USA) v Rafael Matos (Bra)Court No 6 11.30amMartin Klizan (Svk) & Dominic Thiem (Aut) v (2) Alexander Peya (Aut) & Bruno Soares (Bra)(8) Rohan Bopanna (Ind) & Aisam-Ul-Haq Qureshi (Pak) v Jaroslav Pospisil (Cze) & Jack Sock (USA)Court No 7 11.30amPaula Badosa Gibert (Spa) v Luisa Stefani (Bra)(1) Ivana Jorovic (Ser) v Kaitlyn McCarthy (USA)(16) Naiktha Bains (Aus) v Greetje Minnen (Bel)Joel Cannell (Gbr) v Jan Zielinski (Pol), Pedro Martinez Portero (Spa) v Seong Chan Hong (Kor), (8) Anna Karolina Schmiedlova (Svk) v Usue Maitane Arconada (USA)Court No 8 11.30amSimone Bolelli (Ita) v (10) Kei Nishikori (Jpn)(12) Michael Llodra (Fra) & Nicolas Mahut (Fra) v Johan Brunstrom (Swe) & Frederik Nielsen (Den)Tomasz Bednarek (Pol) & Vania King (USA) v (14) Max Mirnyi (Blr) & Hao-Ching Chan (Tpe)Jan Choinski (Ger) v (11) Michael Mmoh (USA)Katie Swan (Gbr) v (11) Ioana Loredana Rosca (Rom)Court No 9 11amKatrine Steffensen (USA) v Viktoria Kuzmova (Svk)Tim Van Rijthoven (Ned) v (15) Jumpei Yamasaki (Jpn)Jaqueline Adina Cristian (Rou) v (7) Francoise Abanda (Can)Bogdan Ionut Apostol (Rou) v Yunseong Chung (Kor)Marie Bouzkova (Cze) v Rebecca Sramkova (Svk), Helen Ploskina (Ukr) v Kimberly Birrell (Aus)Court No 10 11.30am(9) Julian Knowle (Aut) & Marcelo Melo (Bra) v Aleksandr Nedovyesov (Kaz) & Dmitry Tursunov (Rus)Andrea Petkovic (Ger) & Magdalena Rybarikova (Svk) v Jarmila Gajdosova (Aus) & Arina Rodionova (Aus)Lukas Dlouhy (Cze) & Liezel Huber (USA) v (5) Daniel Nestor (Can) & Kristina Mladenovic (Fra)Sofia Kenin (USA) v Leticia Garcia Vidal (Bra)Nicolas Alvarez (Per) v Alex Molcan (Svk)Court No 11 11amMargot Yerolymos (Fra) v Yolimar Ogando (Pur)Katie Boutler (Gbr) v (13) Priscilla Hon (Aus)Francisco Bahamonde (Arg) v Bogdan Bobrov (Rus)(4) Jaume Munar (USA) v Ku Keon Kang (Kor)(8) Johan Sebastien Tatlot (Fra) v Omar Jasika (Aus)Renata Zarazua (Mex) v Justina Mikulskyte (Lit)Court No 12 11.30amMadison Keys (USA) v Yaroslava Shvedova (Kaz)(16) Caroline Wozniacki (Den) v Barbora Zahlavova Strycova (Cze)(10) Julia Goerges (Ger) & Anna-Lena Groenefeld (Ger) v Eva Hrdinova (Cze) & Bojana Jovanovski (Ser)(6) Ashleigh Barty (Aus) & Casey Dellacqua (Aus) v Kimiko Date Krumm (Jpn) & Barbora Zahlavova Strycova (Cze)(1) Su-Wei Hsieh (Tpe) & Shuai Peng (Chn) v Yulia Beygelzimer (Ukr) & Klaudia Jans-Ignacik (Pol)(10) Jamie Murray (Gbr) & Casey Dellacqua (Aus) v Jesse Huta Galung (Ned) & Andreja Klepac (Slo)Court No 16 11.30amVera Dushevina (Rus) & Chanelle Scheepers (Rsa) v (9) Andrea Hlavackova (Cze) & Jie Zheng (Chn)Chris Guccione (Aus) & Lleyton Hewitt (Aus) v (7) Lukasz Kubot (Pol) & Robert Lindstedt (Swe)Neal Skupski (Gbr) & Naomi Broady (Gbr) v (9) David Marrero (Spa) & Arantxa Parra Santonja (Spa)Alize Cornet (Fra) & Caroline Garcia (Fra) v (7) Raquel Kops-Jones (USA) & Abigail Spears (USA)(15) Nenad Zimonjic (Ser) & Samantha Stosur (Aus) v Martin Emmrich (Ger) & Michaella Krajicek (Ned)Court No 17 11.30amBelinda Bencic (Swi) & Tsvetana Pironkova (Bul) v (14) Timea Babos (Hun) & Kristina Mladenovic (Fra), (1) Bob Bryan (USA) & Mike Bryan (USA) v Roberto Bautista-Agut (Spa) & Igor Sijsling (Ned), Eric Butorac (USA) & Timea Babos (Hun) v (4) Leander Paes (Ind) & Cara Black (Zim), Daniela Hantuchova (Svk) & Mirjana Lucic-Baroni (Cro) v (5) Ekaterina Makarova (Rus) & Elena Vesnina (Rus), (1) Mike Bryan (USA) & Katarina Srebotnik (Slo) v Chris Guccione (Aus) & Oksana Kalashnikova (Geo)Court No 18 11.30amTereza Smitkova (Cze) v (23) Lucie Safarova (Cze)Jeremy Chardy (Fra) v (26) Marin Cilic (Cro)Flavia Pennetta (Ita) & Samantha Stosur (Aus) v Anastasia Pavlyuchenkova (Rus) & Lucie Safarova (Cze)(16) Aisam-Ul-Haq Qureshi (Pak) & Vera Dushevina (Rus) v Oliver Marach (Aut) & Karolina Pliskova (Cze)(8) Jean-Julien Rojer (Ned) & Anna-Lena Groenefeld (Ger) v Florin Mergea (Rom) & Elina Svitolina (Ukr)Court No 19 11am(1) Andrey Rublev (Rus) v Henrik Wiersholm (USA)(12) Kamil Majchrzak (Pol) v Joao Menezes (Bra)Evgeniya Levashova (Rus) v Bianca Turati (Ita)Jodie Anna Burrage (Gbr) v Ipek Soylu (Tur)(3) Tornado Alicia Black (USA) v Anna Brogan (Gbr)Nino Serdarusic (Cro) v (14) Marcelo Zormann (Bra)MATCHES TO BE ARRANGED - Not Before 5pm(3) Alexander Peya (Aut)/Abigail Spears (USA) vs Martin Klizan (Svk)/Belinda Bencic (Sui)(13) Matias Zukas (Arg) vs Chan-Yeong Oh (Kor)Daniel Appelgren (Swe) vs (9) Naoki Nakagawa (Jpn)Nicholas Monroe (USA)/Shuai Zhang (Chn) vs (13) Bruno Soares (Bra)/Martina Hingis (Sui)Pedro Iamachkine (Per) vs Dennis Uspensky (USA)Anastasia Mikheeva (Gbr) vs Jelena Ostapenko (Lat)Mikhail Elgin (Rus)/Anastasia Rodionova (Aus) vs (11) Juan-Sebastian Cabal (Col)/Raquel Kops-Jones (USA)Hubert Hurkacz (Pol) vs Lucas Miedler (Aut)Natalia Vikhlyantseva (Rus) vs (6) Iryna Shymanovich (Blr)
+
+@highlight
+
+Andy Murray second on Centre Court against Kevin Anderson
+
+@highlight
+
+Eugenie Bouchard first on Centre Court against Alize Cornet
+
+@highlight
+
+Maria Sharapova and boyfriend Grigor Dimitriov both in action on Court One
+
+@highlight
+
+Novak Djokovic takes on Jo-Wilfried Tsonga in the match of the day on Centre Court

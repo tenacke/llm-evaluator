@@ -1,0 +1,89 @@
+By 
+Mark Duell
+
+PUBLISHED:
+
+09:42 EST, 11 November 2013
+
+
+| 
+
+UPDATED:
+
+09:53 EST, 11 November 2013
+
+These dramatic images show how a powerboat racer cheated death when he crashed at more than 130mph on the same lake where Bluebird speed ace Donald Campbell was killed.
+
+Adrenaline junkie Keith Whittle had just set a new record for the Formula 2 class in his 200hp boat named Pepstar when he spectacularly flipped on Coniston Water in the Lake District.
+
+His boat somersaulted one a half times through the air before landing top-down on the water, in an accident witnessed by hundreds of spectators on Friday. Mr Whittle escaped unscathed but shaken
+
+Scroll down for video
+
+Dangerous: Adrenaline junkie Keith Whittle had just set a new record for the Formula 2 class in his 200hp boat named Pepstar when he spectacularly flipped on Coniston Water in the Lake District
+
+Going up: His boat somersaulted one a half times through the air before landing top-down on the water
+
+Flipping over: The shocking accident was witnessed by hundreds of spectators in the Lake District on Friday
+
+Upside down: Mr Whittle was taking part in the Coniston Records Week and had reached 132mph - smashing the previous best in his of 124mph
+
+It happened on the same stretch of 
+Coniston that claimed the life of speed record ace Donald Campbell, who 
+lost control of his Bluebird at more than 300mph in January 1967.
+
+He
+already held the water speed record of 276mph and was trying to beat it. His boat was named after
+the car in which his father Sir Malcolm Campbell had set what was then a
+land speed record of 146mph in 1924.
+
+Mr Whittle was taking part in the Coniston Records Week and had reached 132mph - smashing the previous best in his of 124mph.
+
+Martin
+Campbell, who witnessed the crash, said: ‘Your initial response is 
+hoping the driver gets out and he did but it is still quite shocking 
+when it happens.
+
+Survival: Medics looked over Mr Whittle following his accident in the boat, but 'he was fine, just a bit stiff'
+
+Damage: Mr Whittle's Formula 2 class boat is pictured here after being recovered from the lake on Friday
+
+‘On the lake you have several boats with divers on board and as soon as a boat goes over it is full throttle over to them.
+
+Okay: Mr Whittle escaped unscathed but shaken
+
+‘Most drivers carry oxygen but Keith didn’t need it, he managed to get out straight away. It all happened in an instance and he was a bit shaken up.
+
+‘Medical staff checked him out and he was fine, just a bit stiff. They are there to set records and know the risks involved but everything worked out okay.’
+
+Coniston Power Boat Records Week is the only event in the Powerboat Racing Calendar to bring together all classes of boat.
+
+Jim Noone, chief technical measurer, added: ‘Keith was trying hard for the record and when you’re right on the edge these things can happen.
+
+‘But the safety element has advanced in the past ten years and crashes like this are very survivable. He was a bit shaken and a bit cold but other than that he was fine.
+
+‘The water conditions were perfect and there were nine records set through the week and Keith had at least two of them.
+
+‘The high speed runs are always exciting and you have a mixture of relief and elation - it was the last run of the week and certainly the most dramatic.’
+
+Decades ago: The accident happened on the same stretch of Coniston that claimed the life of speed record ace Donald Campbell (pictured)
+
+Other crash: Mr Campbell lost control of his Bluebird at more than 300mph in January 1967 and died
+
+Recovered: The remains of Donald Campbell's speedboat Bluebird were brought to the surface of Coniston Water in March 2011 - 34 years after he crashed while in pursuit of the world water speed record
+
+@highlight
+
+Keith Whittle had just set a new record for Formula 2 class in 200hp boat
+
+@highlight
+
+But his boat flipped one and a half times through the air in Lake District
+
+@highlight
+
+Hundreds of spectators watched on Friday as Whittle escaped unscathed
+
+@highlight
+
+Donald Campbell lost control of his Bluebird on same lake stretch in 1967

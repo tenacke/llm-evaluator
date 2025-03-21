@@ -1,0 +1,99 @@
+Ghost writers are advertising their services to write essays for university students through online classified websites.
+
+A photo of an attractive and studious-looking brunette, who is touting herself as a 'psychology tutor and essay writer', is posted alongside her advertisement on classifieds site, Gumtree, encouraging students to contact her for an academic helping hand.
+
+'If you are running out of time to write that assignment or would like some help getting started or finished, I am here to help!' the ad says.
+
+The woman promises students that she will return every essay 'complete and correctly formatted' with fees negotiable dependent on the volume of work - but her guide is $160 for  every 1,000 words.
+
+This ad ran alongside a photo of an attractive and studious-looking brunette on the Gumtree site
+
+Another female 'freelance writer' who also advertises on Gumtree, told The Sydney Morning Herald that she was contacted by about a dozen Australian and international university students on a weekly basis - with using many using pseudonyms to avoid being caught for cheating.
+
+The woman said she was surprised that the teachers had not picked up on how much the student's essay plan differed from the final version and suggested that the lecturers must not 'know the students well enough'.
+
+Another writer advertises offers to write academic papers and exam notes for both school and university students and even offers discounts for multiple projects. 
+
+Students are reassured that all discussions are '100% confidential'.
+
+Another writer offers to write academic papers and exam notes for both school and university students
+
+The latest news comes as Chinese-born Yingying Dou, 30, reportedly runs a website called MyMaster which  helps students cheat, a Sydney Morning Herald investigation by Amy McNeilage and Lisa Visentin claims after they discovered more than 900 ghostwritten essays.
+
+Yingying Dou reportedly runs an essay writing company
+
+The businesswoman allegedly charges up to $1000 for essays written by her  100 employees working from a Chinatown office on George Street in Sydney.
+
+It’s claimed that MyMaster has an annual turnover of $160,000 thanks to international students desperate to pass their courses or too lazy to do the work themselves.
+
+UTS Deputy Vice-Chancellor Professor Shirley Alexander told the ABC: 'I'm not as surprised as you might think. In higher-education we've had to up the ante in how students are changing the methods of cheating for some time.’
+
+She said that the news that flyers advertising the MyMaster essay writing service were posted in UTS toilets was not alarming.
+
+‘We find those kinds of things all the time, that's not something that is new,’ she said.
+
+‘When we find them we do take the number and call them and point out how illegal it is but they do appear all the time that's not something new,’ she explained. 
+
+Ms Dou has denied knowing anything about the website MyMaster website which has now been taken down
+
+Students (a stock photo is shown) have reportedly paid up to $1000 for their essays to be written for them
+
+The Sydney Morning Herald reported that a flyer posted at the University of Technology Sydney said: ‘Are you racking your brains on your school work? Do you worry about spending $3000 retaking tuition on the failing subject? Leave your worries to MyMaster and make your study easier!’
+
+Ms Dou has denied knowing anything about the website, which has now been taken down. The company’s Facebook page has also been removed but a holding page shows 605 previously people 'liked' it.
+
+She reportedly also runs Yingcredible Tutoring, a page which she has endorsed from her own personal Facebook account.
+
+‘We provide commerce subjects tutoring service to university students to help them pass the course,’ a description on the page reads.
+
+Daily Mail Australia has contacted Ms Dou for comment but she has not responded. 
+
+Most university websites display clear advice about plagiarism.
+
+The University of Sydney says that while nobody commences their studies with the intent to plagiarise ‘many people do, for a variety of reasons’.
+
+‘Some students plagiarise because they don’t fully understand what plagiarism is, why it is wrong and how it can be avoided. Others plagiarise, because of time or other pressures,’ a warning on their website reads. 
+
+Ms Dou also reportedly runs Yingcredible Tutoring, which is another service for students
+
+When handing in work students must satisfy the notion that it is ‘all your own work’. 
+
+Students who have used the MyMaster website could be found guilty of ‘dishonest plagiarism’, which is when they ‘knowingly presenting another person’s work as one’s own work without appropriate acknowledgement of the source’.
+
+And ‘engage another person to produce or conduct research for the work, including for payment or other consideration’. 
+
+A spokesperson for the University of Sydney told Daily Mail Australia: 'The University of Sydney is unequivocally opposed to academic dishonesty, including plagiarism and fraudulent authorship, and takes seriously any allegations of academic misconduct. Breaches of academic honesty are not tolerated at the University of Sydney.'
+
+'Failure to adhere to the University’s high standards of academic merit, intellectual rigour, and ethical behaviour constitutes a breach of the University’s Code of Conduct for Students and Academic Dishonesty and Plagiarism in Coursework Policy. If proven, academic dishonesty may constitute misconduct, resulting in serious penalties that may include failure or exclusion.
+
+'The University thoroughly investigates all cases of alleged academic dishonesty and provides education and support to assist students to observe the rules of honest scholarship,' they added.
+
+ 
+
+@highlight
+
+Ghost writers advertising their services to students on classified websites
+
+@highlight
+
+Students promised essays will be 'complete and correctly formatted'
+
+@highlight
+
+One writer charges about $160 for every 1,000 words
+
+@highlight
+
+Yingying Dou, 30, reportedly runs the website called MyMaster
+
+@highlight
+
+She reportedly charges up to $1000 for her staff to write an essay 
+
+@highlight
+
+International students across NSW were using its services to cheat 
+
+@highlight
+
+Businesswoman denies knowing of website which is now taken down 

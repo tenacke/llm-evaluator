@@ -1,0 +1,63 @@
+A stern defensive line has twice helped Jose Mourinho and Chelsea to Premier League glory, with a third likely to follow upon the resolution of the 2014-15 campaign.
+
+Statistics show the Chelsea manager is the best in Premier League history at shutting out opponents, edging out the man he replaced upon returning to London for his second stint at Chelsea, Rafa Benitez.
+
+Of the 189 Premier League matches the Portuguese has overseen, he has an astounding 101 clean sheets, nullifying his rivals in 53.4 per cent of games.
+
+Chelsea boss Jose Mourinho has the best clean sheets percentage record in  Premier League history
+
+A stubborn defence has twice helped Mourinho win the league, with a third likely at the end of the season
+
+Mourinho (left) beats Rafa Benitez in the clean sheets record and average of goals conceded
+
+Benitez has 13 more, 114 from 254 matches with Liverpool and Chelsea, keeping out his opponents in 44.9 per cent of his games.
+
+From his 133 games at Manchester City, Roberto Mancini edged out Sir Alex Ferguson by 0.1 per cent.
+
+Ferguson retired at Old Trafford with 359 shut-outs and clean sheet percentage of 44.3, but Mancini had 44.4 per cent with 59 from 133. 
+
+Mourinho also heads the list of managers with the lowest average of goals conceded per game, with 0.63.
+
+His Chelsea teams have collectively only conceded a stubborn 120 times under his guidance.
+
+Again, Benitez is second but with a much bigger difference, as the Spaniard averages 0.82 goals every Premier League encounter.
+
+Mancini is third, on 0.83 and Bruce Rioch fourth on 0.84, but the former Arsenal manager has taken charge of the lowest number of games (38) in the top 10.
+
+Carlo Ancelotti is fifth, averaging 0.86 goals a game from the two seasons he oversaw at Chelsea, where he also won the Premier League.
+
+Sir Alex Ferguson (right) celebrates winning the league with one of his best defenders, Rio Ferdinand
+
+Arsene Wenger has also established an imposing defensive record from 708 games at Arsenal
+
+Roberto Mancini (left) and Carlo Ancelotti have impressive defensive records from shorts spells in England
+
+Ferguson, a 13-time league champion from his time at United, conceded 703 times and averaged 0.87 goals per game.
+
+Arsene Wenger, the second-longest serving manager in Premier League history with 708 games to date, has kept 277 clean sheets and conceded 672 goals.
+
+He ranks ninth in the list of clean-sheet percentages and eighth in the number of goals conceded per game, averaging 0.95.
+
+ 
+
+  
+
+@highlight
+
+Jose Mourinho has a stunning defensive record from his time at Chelsea
+
+@highlight
+
+He has 101 clean sheets from 189 games, conceding only 120 goals
+
+@highlight
+
+His record surpasses those of Rafa Benitez and Sir Alex Ferguson
+
+@highlight
+
+Mourinho: I have a problem, I am getting better and better  
+
+@highlight
+
+CLICK HERE for all the latest Chelsea news 

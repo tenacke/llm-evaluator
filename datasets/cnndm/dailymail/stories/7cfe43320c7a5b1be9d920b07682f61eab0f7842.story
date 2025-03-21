@@ -1,0 +1,59 @@
+Kyrie Irving scored 30 points in his playoff debut and LeBron James added 20 in his first post-season game with Cleveland in five years as the Cavaliers opened a run towards a NBA title with a 113-100 victory over the Boston Celtics on Sunday.
+
+Irving made five three-pointers and Kevin Love, another post-season rookie, had 19 points and 12 rebounds.
+
+It was Cleveland's first home playoff game since May 11, 2010, when the Celtics won Game 5 and James left the floor to some boos from Cavaliers fans. He departed for Miami two months later, but he's home now, all is forgiven and Cleveland are aiming to end a championship drought dating to 1964.
+
+Kyrie Irving scored 30 points in his playoff debut as Cleveland Cavaliers beat Boston Celtics 113-100
+
+LeBron James (left) chipped in with 20 points as the Cavs took a 1-0 lead in their best of seven-game series
+
+Isaiah Thomas scored 22 points to lead the seventh-seeded Celtics. They will try to even the best-of-seven series in Game 2 on Tuesday night.
+
+Clippers point guard Chris Paul scored 32 points, and Blake Griffin added 26 points and 12 rebounds, as Los Angeles surged in the second half to beat the San Antonio Spurs 107-92 in their first-round playoff series opener.
+
+Jamal Crawford added 17 points for the Clippers, who met the defending NBA champions' challenge in a difficult post-season-opening match-up of two powers. Griffin threw down his usual array of roof-raising dunks, while Paul quarter-backed Los Angeles to an 18-point lead in the third quarter.
+
+Kawhi Leonard scored 18 points for the Spurs, who had won the opening game in their previous 11 playoff series. Tim Duncan had 11 points and 11 rebounds, but the Spurs couldn't rally from their hefty second-half deficit.
+
+Game 2 is on Wednesday night.
+
+Los Angeles Clippers' point guard Chris Paul (left) scored 32 points as they beat San Antonio Spurs
+
+Blake Griffin (centre) added 26 points and 12 rebounds for the Clippers in their 102-97 win
+
+In Atlanta, Kyle Korver scored 21 points, including five three-pointers, as the top-seeded Hawks held off the Brooklyn Nets 99-92 in Game 1 of the Eastern Conference playoff series.
+
+The Hawks led nearly the entire game and pushed the margin as high as 16 points, but the Nets kept coming back. Finally, Jeff Teague dropped in a floater coming off the left wing, giving Atlanta a 95-89 lead. Joe Johnson missed a 3-pointer from the corner for Brooklyn, and Teague made a pair of free throws with just under a minute remaining to essentially seal it.
+
+Teague and DeMarre Carroll scored 17 points apiece.
+
+Game 2 is Wednesday night in Atlanta.
+
+Kyle Korver scored 21 points as Atlanta Hawks defeated Brooklyn Nets 99-92 on Sunday evening
+
+The Memphis Grizzlies downed the Portland Trail Blazers 100-86 after reserve Beno Udrih scored 20 points in Game 1 of their Western Conference first-round series.
+
+Zach Randolph had 16 points and 11 rebounds, and Marc Gasol added 15 points and 11 rebounds. Mike Conley finished with 16 points and didn't play the fourth quarter. Jeff Green had 11.
+
+LaMarcus Aldridge led Portland with 32 points while taking more shots than anyone had ever taken against Memphis in the postseason, going 13 of 34. Damian Lillard added 14 points, shooting 5 of 21 overall and 0 of 6 beyond the arc. Nicolas Batum had 15 points. The Trail Blazers have lost five straight overall.
+
+Game 2 is Wednesday night.
+
+LaMarcus Aldridge's (centre) 32 points wasn't enough for Portland  as they lost to 100-86 Memphis Grizzlies
+
+@highlight
+
+Kyrie Irving scored 30 points and LeBron James had 20 for the Cavaliers 
+
+@highlight
+
+Chris Paul scored 32 points for the Clippers as they beat the Spurs
+
+@highlight
+
+Kyle Korver had 21 points as the Atlanta Hawks beat Brooklyn Nets 99-92 
+
+@highlight
+
+Memphis Grizzlies defeated Portland Trail Blazers 100-86 on Sunday night

@@ -1,0 +1,123 @@
+Every weekend, Sportsmail tallies up the match ratings handed out by our team of reporters to bring you the Barclays Premier League team of the day.
+
+Eden Hazard leads the way this weekend, having powered Chelsea to a vital, narrow win against Manchester United as they hunt down the Premier League title. He is joined by two team-mates from Jose Mourinho's champions-elect.
+
+Craig Gardner starred as Tony Pulis' West Bromwich Albion side gave him a winning return to Crystal Palace, even despite the efforts of in-form Palace winger Yannick Bolasie.
+
+Everton claimed a win over struggling Burnley, Stoke City saw off Southampton and Leonardo Ulloa scored to continue Leicester City's late surge against Swansea City. 
+
+GOALKEEPER
+
+Tom Heaton 7.5 (Everton vs BURNLEY)
+
+Burnley might have lost at Goodison Park but goalkeeper Tom Heaton was in no way to blame, producing a string of saves to keep Everton to just one goal in a narrow defeat.
+
+The performance was topped off with a penalty save from Ross Barkley and his showing bodes well for Burnley's hopes of a great escape.
+
+Tom Heaton produced a string of saves against Everton and saved Ross Barkley's penalty
+
+DEFENCE 
+
+Seamus Coleman 7.5 (EVERTON vs Burnley)
+
+Seamus Coleman was key to Everton's win over Burnley, laying on the only goal of the game for Kevin Mirallas and helping to keep a clean sheet.
+
+And it was Coleman who was fouled by Ashley Barnes to reduce Burnley to 10 men on the stroke of half-time in an all-action showing.
+
+Seamus Coleman was key to Everton's win over Burnley, laying on the only goal of the game on Saturday
+
+John Terry 7 (CHELSEA vs Manchester United)
+
+Defences across the country have found it impossible to cope with Manchester United of late, but a John Terry-marshalled Chelsea kept them out to take another step towards the Premier League title.
+
+The Blues skipper bullied Radamel Falcao out of the game at Stamford Bridge and helped to limit United to just two shots on target.
+
+A John Terry-marshalled Chelsea kept outut Manchester United to take another step towards the title
+
+Philipp Wollscheid 7 (STOKE CITY vs Southampton)
+
+A classy performance from the German centre back kept Graziano Pelle and Dusan Tadic quiet in a win over Southampton.
+
+A newcomer to the Premier League, Philipp Wollscheid revels in the physicality of English-style defending and he dominated in defence for Stoke.
+
+Philipp Wollscheid revels in the physicality of English-style defending and he dominated in defence for Stoke
+
+Luke Shaw 7 (Chelsea vs MANCHESTER UNITED)
+
+Drafted in to replace Daley Blind, Luke Shaw proved to be Manchester United's most penetrative attacking threat in a game they dominated against Chelsea.
+
+Shaw was rarely tested defensively and took plenty of opportunities to go forward. His cutback should have seen Wayne Rooney open the scoring. 
+
+Luke Shaw proved to be Manchester United's most penetrative attacking threat in a game they dominated
+
+MIDFIELD
+
+Aaron Lennon 8 (EVERTON vs Burnley)
+
+Enjoying his football and finding form again at Everton, it was another good weekend for Aaron Lennon.
+
+The Tottenham loanee won a penalty in a man-of-the-match display at Goodison Park.
+
+It was another good weekend for Aaron Lennon, who won a penalty for Everton against Burnley
+
+Craig Gardner 7.5 (Crystal Palace vs WEST BROMWICH ALBION)
+
+Craig Gardner's beautiful 30-yard curler sealed victory for West Brom away at one of the Premier League's in-form sides.
+
+His solid passing in midfield helped to put a stop to Crystal Palace's free-flowing style as Tony Pulis enjoyed a winning return to Selhurst Park.
+
+Craig Gardner's beautiful 30-yard curler sealed victory for West Brom away at Crystal Palace on Saturday
+
+Eden Hazard 8.5 (CHELSEA vs Manchester United)
+
+Made the difference in a big game again. Eden Hazard was a constant outlet for Chelsea's midfield and he slotted between David de Gea’s legs for a decisive goal.
+
+Hazard's form seems to make him a nailed-on bet for the Player of the Year prizes come the end of the season. 
+
+Eden Hazard was a constant outlet for Chelsea and he slotted between David de Gea’s legs for a goal
+
+Yannick Bolasie 8 (CRYSTAL PALACE vs West Bromwich Albion)
+
+Yannick Bolasie was not as successful this week as he was with his hat-trick against Sunderland last time around, but still a threat to West Brom with his pace and power.
+
+Every attack for Palace seemed to come down the left and he was denied a deserved goal when Boaz Myhill clawed away his bicycle kick. 
+
+Yannick Bolasie was not as successful this week as he was last week but he was still a threat with his pace
+
+FORWARDS
+
+Leonardo Ulloa 7 (LEICESTER CITY vs Swansea City)
+
+Leonardo Ulloa's first goal in the Premier League since Boxing Day brought another victory in the fight for survival.
+
+Only starting after David Nugent was injured in the warm-up, he saw another effort land on the roof of the net, leading the line on a difficult afternoon for the hosts.
+
+Leonardo Ulloa's first goal in the Premier League since Boxing Day crowned a good line-leading performance
+
+Mame Biram Diouf 7 (STOKE CITY vs Southampton)
+
+A second-half comeback for Stoke was led by Mame Biram Diouf, who slammed home an equaliser against Southampton just after half-time.
+
+A genuine presence upfront and a constant thorn in the side of the usually excellent Southampton defence.
+
+A second-half comeback for Stoke was led by Mame Biram Diouf, who slammed home the equaliser
+
+@highlight
+
+Eden Hazard scored the only goal as Chelsea beat Manchester United
+
+@highlight
+
+Leonardo Ulloa struck as Leicester City claimed vital win over Swansea
+
+@highlight
+
+Everton beat Burnley at Goodison Park with Aaron Lennon starring
+
+@highlight
+
+Craig Gardner scored to help West Brom win at Crystal Palace
+
+@highlight
+
+Stoke City won against Southampton, with Philipp Wollscheid starring

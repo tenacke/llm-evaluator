@@ -1,0 +1,77 @@
+Arsene Wenger says something must be done to solve the fixture scheduling mess which means Arsenal's FA Cup semi-final will clash with a key Premier League title game.
+
+Arsenal will take on Reading on Saturday evening as league leaders Chelsea take on Manchester United at Stamford Bridge.
+
+The Gunners boss also branded rumours that he will be replaced by Borussia Dortmund manager Jurgen Klopp as 'ridiculous', after the German announced he will be leaving the club this summer.  
+
+Mesut Ozil pictured during Arsenal's training session ahead of their match with Reading on Saturday
+
+Arsenal will take on Reading on Saturday as league leaders Chelsea take on Manchester United at home
+
+Santi Cazorla and Aaron Ramsey could star for Arsenal in their FA Cup semi-final with Reading
+
+Alexis Sanchez (left) tries to escape Per Mertesacker during Arsenal's training session on Thursday
+
+Arsene Wenger says something must be done to solve the fixture scheduling mess in England
+
+Dortmund manager Jurgen Klopp oversees training on Thursday ahead of this weekend's match
+
+On TV scheduling, Wenger said: 'Something should be done. I'm surprised they don't analyse it in the TV deals. I'm surprised a game of the same stature is played at the same time. There's a little conflict there. It's difficult to understand.' 
+
+'We would like it to be a unique competition that's played, especially a semi-final or final and don't want it to be conflicting with other competitions. It's a very big game (at Chelsea). It's a surprise to me.' 
+
+Wenger admits a United win at Chelsea could open up the title race again. 'Mathematically yes,' he said. 'But we have to keep winning.' 
+
+Klopp confirmed on Wednesday his intention to leave Dortmund at the end of the season after seven years in which the club won two Bundesliga titles and reached the Champions League final.
+
+It sparked a frenzy of speculation about whether the charismatic 47-year-old might be destined for England with Arsenal or Manchester City, where manager Manuel Pellegrini is feeling the heat after a poor run of form. 
+
+Wenger hit out at the TV scheduling as Manchester United's trip to Chelsea clashes with the semi-final
+
+Wenger has branded the 'circus' around Jurgen Klopp's resignation as 'ridiculous' 
+
+'I'm not an agency to place managers,' said Wenger, when asked about Klopp's announcement. 'I like every manager and respect, everybody. I find that circus a bit ridiculous.
+
+'It's down to every club to make the right decision and to respect Dortmund. Dortmund is a massive club and will survive, they have the ability to keep their best players. They have a big history linked with great results and great achievements so I don't think that will stop for Dortmund.' 
+
+Arsenal will have Jack Wilshere available for the semi-final against Reading, as he trained on Thursday with the club at their base. Wojciech Szczesny will start in the tie, and was also put through his paces during Arsenal's training session.
+
+The Gunners boss says his team have learned from last season, when they fell behind at this stage against Wigan and needed penalties to beat the Championship side.
+
+'It's my 10th semi-final and that means we know how to prepare but it's always tricky,' he added. 
+
+'We learned from Wigan last year. It's always a special occasion to share with our fans. We want them to go home happy.'
+
+Wenger confirmed that second-choice keeper Wojciech Szczesny will start at Wembley on Saturday
+
+Szczesny will start for Wenger on Saturday when Arsenal try to book their place in the FA Cup final
+
+Jack Wilshere, who played against Reading U21s this week, will be fit to face the Championship side
+
+Arsenal scored late on last season to earn a draw at this stage against another Championship side Wigan
+
+Lukas Fabianski was the hero last season as the Gunners reached the final via a penalty shootout
+
+ 
+
+ 
+
+@highlight
+
+Arsenal play Reading in FA Cup semi-final on Saturday evening 
+
+@highlight
+
+Chelsea kick off against Manchester United 10 minutes later
+
+@highlight
+
+Wenger says 'something should be done' and 'it is difficult to understand'
+
+@highlight
+
+Arsenal manager also brands circus around Jurgen Klopp 'ridiculous'
+
+@highlight
+
+Klopp announce on Wednesday he will leave Dortmund this summer 

@@ -1,0 +1,45 @@
+Hog’s Breath Café in Aspley is facing online criticism after a customer found a sink plug in her salad.
+
+The unhappy diner posted a picture of her unappetising salad to franchise's Facebook account where it was ‘liked’ over 2,000 times before she decided to remove it.
+
+The unhappy diner posted a picture of her unappetising salad to franchise's Facebook account where it was ‘liked’ over 2,000 times before she decided to remove it
+
+Several Facebook users have left comments roasting the Hogs Breath, located north of Brisbane, for the embarrassing mistake.
+
+One jokes: ‘How long is the Buy one salad, Get one plug free meal offer valid till?’
+
+While another suggests Hogs Breath’s new slogan could be ‘We provide everything from salad to the kitchen sink.’
+
+Facebook users were quick to ridicule the steakhouse franchise after seeing a picture of the embarrassing incident
+
+ 
+
+Hog's Breath Cafe Australian general manager Ross Worth said he had taken immediate action to make sure an instance like this will never happen again.
+
+‘We have moved to ensure every plug has been chained to the sink,’ he told News Limited.
+
+He said the plug in question was from a sanitised ice bath that is used to wash lettuce and tomatoes.
+
+While social media users may have taken the incident lightly, Mr Worth said he had taken the issue ‘very seriously’.
+
+‘We alerted the health department and have had them go in and check everything is up to scratch there, which of course it is.’
+
+Mr Worth said he reached out and apologised to the woman who was served the unusual side.
+
+ 
+
+@highlight
+
+A customer dining at Aspley Hogs Breath found a sink plug in her salad
+
+@highlight
+
+She posted a photo of the embarrassing incident to Facebook 
+
+@highlight
+
+The post racked up over 2,000 likes before the diner removed it 
+
+@highlight
+
+Social media users have left comments roasting the popular steakhouse 

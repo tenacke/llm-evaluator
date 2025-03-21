@@ -1,0 +1,121 @@
+Luke Batty's father told ambulance workers to let him die after he killed his 11-year-old son at a Victorian cricket oval during a custody visit.
+
+Greg Anderson was covered with blood and holding a knife when he lunged at emergency services workers called to the Tyabb oval on February 12, an inquest into Luke's death has heard.
+
+The 54-year-old was shot by police and said 'let me die' as paramedics attempted to treat him, the Victorian Coroners Court heard on Monday.
+
+Scroll down for video 
+
+Greg Anderson, 56, killed his son Luke Batty, 11, on the Tyabb oval in Victoria on February 12
+
+Mr Anderson and Luke were practising in the cricket nets, 'substantially on their own', when the attack happened, but it was witnessed by an eight-year-old boy, the inquest heard
+
+Mr Anderson and Luke were practising in the cricket nets, 'substantially on their own', when the attack happened, but it was witnessed by an eight-year-old boy, the inquest heard.
+
+Luke died after Mr Anderson struck him with a cricket bat and attacked him with a knife. 
+
+The boy saw Mr Anderson raise the bat over his right shoulder but did not see it connect with Luke.
+
+Luke died after Mr Anderson struck him with a cricket bat and attacked him with a knife during a custody visit
+
+He ran and told his father, who called paramedics.
+
+When emergency services workers arrived they saw Mr Anderson kneeling by Luke.
+
+At first they thought he was helping him, the inquest heard.  
+
+When ambulance workers tried to approach Luke, Mr Anderson said 'he's in heaven now'.
+
+Mr Anderson died in hospital from gunshot wounds and self-inflicted knife wounds.
+
+The inquest heard that in the months before he killed his son, Mr Anderson once held up a knife while talking to Luke and said: 'This could be the one to end it all.'
+
+Luke reported the incident to police and a child protection officer, but told them that he loved his father and was not in fear of him, the inquest heard. 
+
+Luke's mother, Rosie Batty, said she had always wanted her son to have a relationship with his father. 
+
+'For me it's really important a child should know his father,' she told the inquest.
+
+'Greg was really loving and keen to be involved in Luke's life.
+
+'But I said to myself this is a journey, I'll keep doing things that feel right until they didn't feel right anymore.'
+
+Ms Batty said she changed her mind in April 2013 when Luke revealed his father had shown him the knife while Anderson prayed in his car.
+
+'I was so alarmed I knew I could no longer support his relationship with his father,' Ms Batty said.
+
+Mr Anderson's contact with Luke was restricted by an intervention order from May 2012, but that was changed to block access to his son in April 2013. 
+
+An inquest into Luke's death has heard Mr Anderson begged Ambulance workers to 'let him die'
+
+Counsel assisting the inquest, Rachel Ellyard, said the order was changed again in July 2013 to allow Mr Anderson access to Luke at football and cricket matches on the weekend. 
+
+Ms Ellyard said Mr Anderson was technically in breach of that order by seeing Luke at cricket training on a weekday.
+
+The inquest heard Ms Batty was not told Mr Anderson had failed to appear in court on charges of assault and not answering bail.
+
+She learned that Anderson's housemate sought and was granted an intervention order in January this year through media reports.
+
+Ms Batty said when she saw Mr Anderson at the cricket oval on the night of Luke's death it occurred to her to call the police, but she decided not to. 
+
+ When ambulance workers tried to approach Luke, Mr Anderson said 'he's in heaven now'
+
+Luke's mother Rosie Batty (pictured) said she had always wanted her son to have a relationship with his father
+
+She said she had previously had unpleasant situations trying to get the police involved at the cricket club.
+
+Ms Batty said she didn't trust the situation, and previous attempts had been traumatic, stressful and unpredictable.
+
+She said she thought: 'This will be the third time I've tried to get this man arrested in front of Luke and his friends at that bloody oval.'
+
+The police had Anderson's address, so she thought it would be better if they arrested him there, discretely, Ms Batty told the inquest. 
+
+Ms Ellyard said key issues to be explored during the inquest included the assessments of Mr Anderson made by police and the Department of Human Services (DHS) and the supervision orders dictating Mr Anderson's contact with Luke.
+
+The information sharing between Ms Batty, the DHS and police, and any changes DHS and police have made to their procedures since Luke's murder, would also be investigated.
+
+More broadly, Ms Ellyard said the inquest would look into whether there were any signs Anderson had the potential for violence towards Luke and whether they could have been acted on.  
+
+*Readers seeking support and information about suicide prevention can contact Lifeline on 13 11 14 or Suicide Call Back Service 1300 659 467.
+
+ 
+
+   
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+@highlight
+
+Greg Anderson, 56, was shot  by police after lunging at emergency workers
+
+@highlight
+
+Mr Anderson killed his 11-year-old son, Luke Batty, with a cricket bat and knife on a Victorian cricket oval on February 12
+
+@highlight
+
+He begged paramedics to 'let him die' and told them his son 'was in heaven'  
+
+@highlight
+
+An inquest heard Mr Anderson threatened Luke's life months before the murder
+
+@highlight
+
+Mother, Rosie Batty, wanted Luke to have a relationship with father 

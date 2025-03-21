@@ -1,0 +1,35 @@
+Manchester City have emerged as the biggest threat to Arsenal in the race for Charlton’s highly-rated defender Joe Gomez.
+
+The England Under-19 defender, valued at £8m by the Championship team, is one of the most wanted young players in the country after his breakthrough season at The Valley.
+
+City, beaten 3-1 by Chelsea in the first leg of the FA Youth Cup final on Monday evening, are determined to sign more young English players.
+
+Joe Gomez has played at right back for Charlton this season and is wanted by Manchester City and Arsenal
+
+Gomez has emerged as a key talent in the England junior set up, but his rapid progress at first team level with Charlton has alerted City.
+
+He has been earmarked to play centre half in the future, but he initially broke into the Charlton side at right back.
+
+Gomez, 17, signed a three year contract at Charlton in November last year, but the Addicks face a battle to hold on to their rising star in the summer.
+
+Manchester City lost to Chelsea in an FA Youth Cup final first leg and are looking for young English players
+
+ 
+
+ 
+
+@highlight
+
+Arsenal target Joe Gomez is one of the most wanted British youngsters
+
+@highlight
+
+He has enjoyed a breakthrough season at Charlton and is rated at £8m
+
+@highlight
+
+Gomez is currently playing at right back but could be a centre half
+
+@highlight
+
+Manchester City want more young English players and are Arsenal's biggest threat

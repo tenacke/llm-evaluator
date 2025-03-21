@@ -1,0 +1,49 @@
+Australian artist George Gittoes says his 2015 Sydney Peace Prize is welcome recognition that 'creativity is the opposite of war'.
+
+The 65-year-old was named as the recipient on Saturday in recognition of his 45 years chronicling conflicts around the world.
+
+The jury recognised Gittoes 'for his courage to witness and confront violence in the war zones of the world' and for 'enlisting the arts to subdue aggression'. 
+
+Australian artist George Gittoes, pictured at his studio in Bundeena - south of Sydney in 2007, has just been awarded the Sydney Peace Prize
+
+The 65-year-old was named as the recipient on Saturday in recognition of his 45 years chronicling conflicts around the world
+
+Gittoes told AAP he doesn't consider himself in the same league as previous winners, which include Archbishop Desmond Tutu and academic Noam Chomsky but said it's great to have an artist recognised in a peace award.
+
+'Artists can make a huge difference. We're communicators and we're creating, and creativity is the opposite of war, where they're destroying,' he said.
+
+'It doesn't matter which artist gets it, its great that that's been acknowledged.'
+
+Gittoes, born in southern Sydney, has chronicled conflicts in Africa, Asia, Europe and the Middle East through painting, photography and film.
+
+Gittoes, born in southern Sydney, has chronicled conflicts in Africa, Asia, Europe and the Middle East through painting, photography and film. The pictured artwork is from his 30 Years – Long Journey exhibition in 2007
+
+'George Gittoes is daring, brash an irreverent - qualities Australians identify with,' said chair of the Sydney Peace Foundation, David Hirsh.
+
+'The jury felt his unique approach to peace building and social justice should be recognised and applauded.'
+
+Mr Gittoes recently visited war-torn Afghanistan, establishing an artist collective in the city of Jalalabad.
+
+He will receive the prize at a November ceremony in Sydney.
+
+Sorry we are not currently accepting comments on this article.
+
+@highlight
+
+George Gittoes was awarded the Sydney Peace Prize on Saturday
+
+@highlight
+
+It was in recognition of his 45 years chronicling conflicts around the world
+
+@highlight
+
+The Australian artist did this through painting, photography and film 
+
+@highlight
+
+The 65-year-old will receive the prize at a November ceremony in Sydney
+
+@highlight
+
+Gittoes says he doesn't consider himself in the same league as previous winners such as Desmond Tutu and Noam Chomsky

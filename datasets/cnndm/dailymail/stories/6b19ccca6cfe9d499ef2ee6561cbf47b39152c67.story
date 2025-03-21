@@ -1,0 +1,54 @@
+By
+Daily Mail Reporter
+
+Space scientist Colin Pillinger has had a mountain feature on Mars named after him by NASA.
+
+The US space agency has been steering a robotic rover called Opportunity on Mars and has christened a rocky ridge Pillinger Point.
+
+The mutton-chopped, Bristol-born professor died in Cambridge earlier this month of a brain haemorrhage, aged 70.
+
+Tribute: NASA has paid tribute to Bristol-born Colin Pillinger with 'Pillinger's Point' on Mars
+
+His UK-built probe Beagle 2 crashed when it reached Mars on Christmas Day, 2003.
+
+Pillinger Point is an outcrop of ancient rock high on the slopes above Endeavour Crater.
+
+NASA is keen to study it in detail to learn more about Mars’ early history.
+
+Although ill-fated, Beagle 2 touched the hearts of the public. Built in the UK, it would have sent back pictures and analysis of the planet's surface.
+
+Opportunity arrived there a month later with a sister rover, Spirit, to explore the martian surface.
+
+Professor Pillinger said the most important spin-off from the mission was to be able to build an instrument capable of being deployed to remote parts of Africa to help tuberculosis sufferers.
+
+He said: 'You don't spend any money in space. That money is invested in knowledge and technology that can be used for a variety of other things.'
+
+In 2005, Prof Pillinger, then 62, was diagnosed with multiple sclerosis, a disease of the nervous system.
+
+NASA hopes to study Pillinger Point to learn more about the planet's early history (picture of landscape in 1976)
+
+He said he had been diagnosed with primary progressive multiple sclerosis (MS), which meant he was likely to face a steady decline.
+
+But he was always keen to try another British to Mars and reignite interest in the planet in the public.
+
+'We have unfinished business on Mars,' he said.
+
+'The science is more important now than it ever was because of discoveries that were made with Mars Express, the Nasa rovers and ground-based astronomy.
+
+'It all suggests that we were right to look for life on Mars and we might be able to find both past and present life, and the experiments haven't been done yet and it's up to us to do them.'
+
+Spirit packed up in 2010, but 
+Opportunity is still working more than ten years after beginning a 
+mission that was due to last just 90 days.
+
+@highlight
+
+US space agency paid tribute to Bristol-born professor who died this month
+
+@highlight
+
+Outcrop of ancient rock high on the slopes on Mars named Pillinger Point
+
+@highlight
+
+NASA is keen to study it in detail to learn more about Mars' early history

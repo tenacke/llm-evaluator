@@ -1,0 +1,91 @@
+By 
+Daily Mail Reporter
+
+PUBLISHED:
+
+09:07 EST, 17 October 2013
+
+
+| 
+
+UPDATED:
+
+18:53 EST, 17 October 2013
+
+American director and producer Michael Bay has confirmed that he was attacked on the set of the latest Transformers movie while filming in Hong Kong.
+
+It had previously been reported that a man apparently made his way onto the set where he swung at Bay's head with an air conditioning unit after accosting several other workers to get to him.
+
+However, 48-year-old Bay revealed on his blog on Thursday what really happened, and filled in details about the violent assault by the 'drugged up zombie,' saying: 'The story being passed around is not all true!'
+
+Scroll down for video
+
+On set: Michael Bay (left) filming the latest Transformers installment in Hong Kong on Thursday, the same day he was attacked on set
+
+'Yes, some drugged up guys were being belligerent a**es to my crew for hours in the morning of our first shoot day in Hong Kong,' explained the Pearl Harbor director on MichaelBay.com
+
+'One guy rolled metal carts into some of my actors trying to shake us down for thousands of dollars to not play his loud music or hit us with bricks.
+
+'Every vendor where we shot got paid a fair price for our inconvenience, but he wanted four times that amount. I personally told this man and his friends to forget it we were not going to let him extort us,' he further explained.
+
+'He didn’t like that answer. So an hour later he came by my crew as we were shooting, carrying a long air conditioner unit.
+
+'He walked right up to me and tried to smack my face, but I ducked, threw the air unit on the floor and pushed him away,' explained Bay about the attack that was first reported by TMZ.
+
+On location: Bay, centre, with his film crew. A man apparently swung at the director with an air conditioning unit
+
+'That’s when the security jumped on him. But it took seven big guys to subdue him. It was like a Zombie in Brad Pitt’s movie World War Z,' he exclaimed, describing the man's drug-induced strength.
+
+'He lifted seven guys up and tried to bite them. He actually bit into one of the guards Nike shoe, insane. Thank god it was an Air Max, the bubble popped, but the toe was saved.
+
+'Then it took fifteen Hong Kong cops in riot gear to deal with these punks. In all, four guys were arrested for assaulting the officers. After that, we had a great day shooting here in Hong Kong,' he added.
+
+TMZ claims that there was only one 
+attacker and reports of two men involved are false, despite authorities 
+naming two brothers as the main perpetrators.
+
+Getting ready for action: The director was filming on a city rooftop
+
+A police spokeswoman had earlier said that two 
+brothers, surnamed Mak, aged 27 and 28, approached Bay on the set for 
+the American science fiction film and the younger brother demanded 
+payment of HK$100,000 ($12,900, £8,000).
+
+As a discussion ensued in a busy area 
+of Hong Kong island, the elder Mak reportedly walked up and assaulted the director,
+the spokeswoman said, adding that the elder brother attacked three police officers who tried to intervene.
+
+The
+younger brother was arrested on suspicion of blackmail and assault, 
+while the elder Mak was also arrested on suspicion of assault, she said.
+
+Bay
+sustained injuries to the right side of his face, although he declined 
+to seek treatment, the spokeswoman said, adding she did not believe his 
+injuries were serious. 
+
+Leading man: Bay arrived in Hong Kong on Wednesday with Transformers 4 star Mark Wahlberg
+
+When Reuters visited the scene after the assault, the film crew and others working on the set declined to comment.
+
+The three police officers were treated in hospital for minor injuries, while it was reported that the younger Mak asked to be taken for treatment, saying he did not feel well.
+
+According to reports, also arrested at the scene was a third man surnamed Chan. All three are in custody and police are investigating.
+
+Cast arrivals: Li Bingbing and Nicola Peltz were also spotted jetting into Hong Kong
+
+@highlight
+
+Bay confirms he assaulted during filming for Transformers 4 on Hong Kong island
+
+@highlight
+
+Sustained injuries to side of his face, but declined medical treatment
+
+@highlight
+
+It took seven men to subdue the attacker, who Bay described as 'like a Zombie in Brad Pitt's World War Z'
+
+@highlight
+
+Police spokeswoman named two brothers as the perpetrators, but TMZ claim only one man was involved

@@ -1,0 +1,67 @@
+A British rapper who joined rebels fighting the Syrian regime has claimed he was kidnapped, tortured and robbed by members of rival Islamic terror groups.
+
+Abdel-Majed Abdel Bary, 23, walked out of his family's £1million home in Maida Vale, west London, last year to join militant groups, telling them he was 'leaving everything for the sake of Allah'.
+
+Now Bary - whose music has featured on BBC Radio 1 - has posted on Twitter that he and another Briton were abducted and robbed, with their money, phones and guns stolen by other jihadists.
+
+'Hip-hop jihadist': Abdel-Majed Abdel Bary, 23, walked out of his family's £1million home in Maida Vale, west London, last year to join militant groups, telling them he was 'leaving everything for the sake of Allah'
+
+Bary walked out of the family home last year in order to join rebels fighting in Syria. Since then he has been tweeting under the names 'Terrorist' and 'Abu Klasnikov' though his account in now suspended
+
+Bary, who posts under the name 'Terrorist', said: 'Me & Abu Hussein al britani got kidnapped /tortured by FSA/IF scum they stole our 4 ak's and a 7mm, my vechile & our phones and cash.'
+
+The tweet was posted last month. A Foreign Office spokesman said he had no details on the claims.
+
+Friends said Bary - an aspiring rapper on the 'grime' music scene - grew increasingly radical and violent after mixing with thugs linked to hate preacher Anjem Choudary.
+
+He has posted a series of photographs online, including shots of him masked and posing with g guns under the title 'soldier of Allah'.
+
+In other messages he called on Allah to 'grant us martyrdom', and praised Osama Bin Laden. Bary, whose music has featured on Radio 1, is one of six children of Adel Abdul Bary, 53.
+
+Bary launched a twitter rant against anti-terror police who raided his family home in west London calling them 'kuffar' (non-believers) and pagans
+
+Bary Snr was extradited from Britain to the US in 2011 after an eight-year legal battle that made him a cause celebre of the Left as lawyers took his publicly funded case to the European Court of Human Rights in Strasbourg.
+
+'Me & Abu Hussein al britani got kidnapped /tortured by FSA/IF scum they stole our 4 ak's and a 7mm, my vechile & our phones and cash'
+
+Abdel-Majed Abdel Bary
+
+Investigators believe Bary Snr was one of Bin Laden's closest lieutenants in the infancy of Al Qaeda and ran a London cell of the terror network.
+
+He faces life in prison if convicted of involvement in the bombings of US embassies in East Africa in 1998.
+
+His son's appearance among the ranks of UK jihadists in Syria, where several Britons fighting for the militants have already been killed, will add to concerns about their potential threat to the West. 
+
+Video courtesy of SBTV
+
+'Tortured': It has been claimed that Bary - whose music has featured on BBC Radio One - and another Briton were abducted and robbed, with their money, phones and guns stolen by other jihadists
+
+Bary lived with his mother Ragaa for more than a decade in a home in Maida Vale, owned by Westminster Council. If it were sold on the open market it would be worth £1million.
+
+She travelled to Britain from Egypt in 1990 after her husband was granted refugee status.
+
+Friends said Bary's conversion to radical Islam happened as he grew increasingly frustrated with the British authorities over the wars in Iraq and Afghanistan.
+
+And it came despite his fledgling success on the underground grime music scene, where he rapped under the names Lyricist Jinn and L Jinny Bary appeared in dozens of videos, including one in which he posed outside the Bank of England and declared his allegiance to the global hacking group Anonymous.
+
+Connection: Friends said Bary - an aspiring rapper on the 'grime' music scene - grew increasingly radical and violent after mixing with thugs linked to hate preacher Anjem Choudary (pictured)
+
+On July 1 last year, he announced that he was turning his back on music as 'I have left everything for the sake of Allah'.
+
+It is understood that soon afterwards he travelled to Syria, where one of his oldest friends had already joined the fighting.
+
+He changed his Twitter name to Soldier of Allah and posed for pictures wearing a mask and military fatigues while carrying an AK-47 and other large assault rifles.
+
+Last November he said, 'Oh Allah, grant us martyrdom' and praised Bin Laden, calling him a 'lion'. Referring to conditions in Syria, he said it is the 'real jungle out here'.
+
+@highlight
+
+Abdel-Majed Abdel Bary left Maida Vale home last year to go to Syria
+
+@highlight
+
+23-year-old's cash, phones and guns allegedly stolen by other jihadists
+
+@highlight
+
+Bary is an aspiring rapper whose music has featured on BBC Radio 1

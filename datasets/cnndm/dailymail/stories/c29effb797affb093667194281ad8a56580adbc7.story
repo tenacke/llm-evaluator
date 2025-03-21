@@ -1,0 +1,27 @@
+Glasgow Warriors have been placed on high alert after it was revealed Richie Gray will be sold to the highest bidder if Castres are relegated from the Top 14.
+
+Gray has one year left on his contract but will be released should the club go down, with fellow Scotland internationals Johnnie Beattie and Max Evans also expected to leave.
+
+The 45-times capped second row was ruled out for the rest of the season in February after suffering an upper-arm injury in the Six Nations defeat by Wales. His club have been on a dismal run of form and are second bottom with just 38 points after 21 games.
+
+Glasgow Warriors have been placed on high alert after it was revealed Richie Gray could be sold
+
+Finding the money to bring Gray back to Glasgow, where he started his career before moving to Sale Sharks and then Castres, would be a huge statement of intent by the SRU. 
+
+However, over and above funding the club to the tune of over £4.2million a year, they do release money in exceptional circumstances to sign marquee players - the signing of Sean Maitland being the most recent example.
+
+The SRU would face stiff competition for Gray, with Bordeaux Begles, Racing Metro and Toulon all monitoring the situation, while Aviva Premiership clubs would also be interested.
+
+Gray has one year left on his contract but will be released should Castres Olympique go down
+
+@highlight
+
+Richie Gray will be sold if Castres Olympique are relegated from the Top 14
+
+@highlight
+
+It has put Glasgow Warriors on high alert surrounding Gray's future
+
+@highlight
+
+Gray has one year left on his Castres deal but could soon be released

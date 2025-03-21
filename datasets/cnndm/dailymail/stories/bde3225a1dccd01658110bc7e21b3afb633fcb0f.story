@@ -1,0 +1,67 @@
+The three daughters of a New York SUV driver involved in a train wreck that claimed six lives claim that their mother 'is not a murderer'. 
+
+The defense from the daughters comes nearly two months after their mother Ellen Brody was killed along with five passengers when a train crashed into her SUV on the tracks at a railroad crossing in the Westchester County town of Valhalla.
+
+Though the cause of the collision remains unknown, Danielle, Julia and Alexa Brody say that their mother has been criticized and that people have jumped to conclusions about what happened.
+
+Scroll down for video  
+
+Ellen Brody's (second from right) three daughters, Alexa (left), Danielle (second from left) and Julia (right) Brody, have spoken out to say that their mother is not a murderer and that it was an accident that she drove on to the tracks
+
+Ellen Brody was killed along with five passengers when a train crashed into her SUV on the tracks at a railroad crossing in early February. Her car had gotten stuck between the railroad crossings and instead of reversing she drove on to the tracks
+
+Visit NBCNews.com for breaking news, world news, and news about the economy
+
+'I went on Google, and I searched my mom's name and I was just reading the comments,' Julia told NBC's Matt Lauer. 'And just the fact that people are like, 'You know, I don't even feel bad for her. How could she possibly do that?''
+
+Julia went on to admit that she first thought that a driver had intentionally driven on to the tracks, before she knew her mother was driving. 
+
+'So I was like, "Why? Why? Why would this woman do that?'" When we were watching that, though, when he described the woman, I was like, "That could've been Mommy." And my sisters were just like, "Julia, no,"' she said. 
+
+According to investigators' preliminary findings,  Brody's car was in the danger zone inside railroad crossing gates for about half a minute before the train hit.
+
+Brody got ahead of the crossing gate in inching traffic, then got out of her car to examine it after the gate came down and hit the back of it, a witness has said.
+
+Nearly two months after the crash Alexa (left), Julia (center) and Danielle (right) Brody told Matt Lauer that people are still jumping to conclusions about what happened
+
+The cause of the collision remains unknown and Brody's daughters remain adamant that their mother never meant to hurt anyone
+
+But then she got back in, seeming unhurried, and advanced onto the track, the witness told news outlets and investigators.
+
+The train's engineer also told investigators that he saw the Mercedes SUV moving onto the tracks. 
+
+ But her daughters are adamant that their mother wouldn't have meant to hurt anyone. 
+
+'I know who my mom was,' Alexa told NBC. 'I know that she would never, never intentionally hurt people.'
+
+'A lot of times people just want to find a reason,' Danielle added. 'It's just not true. It was an accident.'
+
+And Julia put it simply: 'She's not a murderer,' she said.
+
+Julia (second from left), Danielle (center) and Alexa (right), pictured with their mother Ellen (left) and father Alan Brody (second from right),  say when they Google their mother's name, they see that commenters have been criticizing their mother
+
+Alexa said that her mother was her best friend and that she would think of her every time she smiled. 
+
+Trains hit cars on the tracks many times a year, but such crashes rarely kill train riders. Investigators emphasized in February that they want to figure out why this one did, becoming the deadliest accident in the 32-year history of one of the nation's busiest commuter railroads.
+
+Investigators looked for any elements that may have intensified the fire, which they believe was ignited by the SUV's gas tank.
+
+The NTSB has examined such factors as the adequacy of emergency exits, the train cars and the unusual design of the Metro-North line's third rail.
+
+There is no barrier at the crossing between the street and the tracks where the crash occurred. 
+
+MTA is considering all possible safety enhancements that would prevent deadly accidents in the future, the company's chairman said.  
+
+ 
+
+@highlight
+
+Ellen Brody, a mother-of-three was killed along with five rail passengers in February in the horrific crash in Valhalla, New York
+
+@highlight
+
+Daughters Danielle, Julia and Alexa Brody have spoken out to say that they believe their mother drove on to the tracks by accident
+
+@highlight
+
+The cause of the collision that killed six still remains unknown  

@@ -1,0 +1,45 @@
+Bayern Munich holding midfielder Bastian Schweinsteiger is doubtful for their German Cup quarter-final against Bayer Leverkusen on Wednesday after picking up an ankle injury.
+
+Schweinsteiger limped off with an ankle problem in their 1-0 victory over Borussia Dortmund in the Bundesliga on Saturday but Bayern said it was not too serious after early concerns for a player ravaged by injuries.
+
+'He luckily did not suffer any serious injury on Saturday but his ankle is still a bit of a problem. Schweinsteiger did not train on Monday. His participation on Wednesday is in doubt,' the club said.
+
+Bastian Schweinsteiger suffered an ankle injury during Bayern Munich's weekend win over Dortmund
+
+Schweinsteiger will miss Bayern's German Cup quarter-final against Bayer Leverkusen on Wednesday
+
+Bayern said that Schweinsteiger's injury wasn't serious but he will miss the Cup tie on Wednesday
+
+The Germany captain missed the opening four months of the season with a knee injury, only making his first start in December.
+
+Bayern, chasing a repeat of their 2013 treble-winning season, saw their injury list grow even longer on Monday with reserve goalkeeper Tom Starke ruled out for four weeks after suffering an ankle ligament tear in training.
+
+Bayern's players celebrate in front of their fans at Signal Iduna Park after their 1-0 win 
+
+Robert Lewandowski heads home the winner against his former club on Saturday night
+
+The Bavarians, top of the league and through to the Champions League last eight where they face Porto later this month, are already without top scorer Arjen Robben, David Alaba, Holger Badstuber and Franck Ribery.
+
+Ribery, on his way back from an ankle injury, also missed training on Monday.
+
+ 
+
+@highlight
+
+Schweinsteiger will miss DFB-Pokal tie with Bayer Leverkusen
+
+@highlight
+
+Germany captain suffered ankle injury in 1-0 win over Borussia Dortmund
+
+@highlight
+
+Bayern confirmed the injury wasn't serious but he didn't train on Monday
+
+@highlight
+
+Reserve goalkeeper Tom Starke ruled out for four weeks 
+
+@highlight
+
+Arjen Robben and Franck Ribery are also on the Bayern injury list 
