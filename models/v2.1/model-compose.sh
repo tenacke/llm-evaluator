@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ollama pull llama3.1:8b
+ollama pull llama3.1:70b
 
 ollama create evallm-coherence:v2.1 -f $(dirname "$(realpath "$0")")/ModelfileCoherence
 
