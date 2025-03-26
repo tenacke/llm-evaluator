@@ -182,3 +182,6 @@ papers/
 # exception files
 *exceptions.txt
 excluded/
+
+# logs
+logs/
