@@ -3,11 +3,12 @@
 #SBATCH --container-image ghcr.io\#tenacke/llm-evaluator
 #SBATCH --container-mounts=/users/emre.kilic/llm-evaluator/csv:/opt/llm-evaluator/csv,/users/emre.kilic/llm-evaluator/logs:/opt/llm-evaluator/logs
 #SBATCH --time=08:00:00
-#SBATCH --gpus=2
+#SBATCH --gpus=1
 #SBATCH --cpus-per-gpu=8
 #SBATCH --mem-per-gpu=40G
 
 source /opt/llm-evaluator/venv/bin/activate
+mkdir -p /opt/llm-evaluator/logs
 git fetch --all && \
 git checkout container && \
 git pull origin container
