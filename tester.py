@@ -28,7 +28,14 @@ if sys.argv[1] == "--help":
 
 # Get the model name from the command line arguments
 model_name = sys.argv[1]
-if model_name not in get_models():
+model_base_name = model_name.split(":")[0]
+model_version = model_name.split(":")[1]
+coherence_model_name = model_base_name + "-coherence:" + model_version
+fluency_model_name = model_base_name + "-fluency:" + model_version
+relevance_model_name = model_base_name + "-relevance:" + model_version
+consistency_model_name = model_base_name + "-consistency:" + model_version
+if coherence_model_name not in get_models():
+    # if model_name not in get_models():
     print("Invalid model name. Please provide a valid model name.")
     sys.exit()
 
@@ -58,9 +65,7 @@ except:
 client = ollama.Client()
 
 exception_count = 0
-exception_file = open(
-    f"{model_name.split(':')[1]}_{evaluation_type}_exceptions.txt", "w"
-)
+exception_file = open(f"{model_version}_{evaluation_type}_exceptions.txt", "w")
 
 # Evaluate the model
 results = pd.DataFrame(columns=["coherence", "fluency", "relevance", "consistency"])
@@ -82,31 +87,70 @@ for index, row in test_data.iterrows():
     count = 0
     for i in range(number_of_repetitions):
         print(f"Repetition {i+1}...", flush=True)
-        response = client.generate(model_name, query).response
-
+        exception_ = False
+        coherence_response = client.generate(coherence_model_name, query).response
         try:
-            coherence = response.split("Coherence: ")[1][0]
-            fluency = response.split("Fluency: ")[1][0]
-            relevance = response.split("Relevance: ")[1][0]
-            consistency = response.split("Consistency: ")[1][0]
-
+            coherence_response = coherence_response.split("</think>")[1]
+            coherence = coherence_response.split("Score: ")[1][0]
             repetition_results["coherence"] += int(coherence)
-            repetition_results["fluency"] += int(fluency)
-            repetition_results["relevance"] += int(relevance)
-            repetition_results["consistency"] += int(consistency)
-
-            count += 1
+            coherence_count += 1
         except:
             print(f"Error parsing response index {index} repetition {i}", flush=True)
-            exception_file.write(f'{index},{i},"{response.replace(",", ";")}"\n')
-            exception_count += 1
+            exception_file.write(
+                f'{index},{i},"{coherence_response.replace(",", ";")}"\n'
+            )
+            exception_ = True
             exception_file.flush()
 
-    if count == 3:
+        fluency_response = client.generate(fluency_model_name, query).response
+        try:
+            fluency_response = fluency_response.split("</think>")[1]
+            fluency = fluency_response.split("Score: ")[1][0]
+            repetition_results["fluency"] += int(fluency)
+            fluency_count += 1
+        except:
+            print(f"Error parsing response index {index} repetition {i}", flush=True)
+            exception_file.write(
+                f'{index},{i},"{fluency_response.replace(",", ";")}"\n'
+            )
+            exception_ = True
+            exception_file.flush()
+
+        relevance_response = client.generate(relevance_model_name, query).response
+        try:
+            relevance_response = relevance_response.split("</think>")[1]
+            relevance = relevance_response.split("Score: ")[1][0]
+            repetition_results["relevance"] += int(relevance)
+            relevance_count += 1
+        except:
+            print(f"Error parsing response index {index} repetition {i}", flush=True)
+            exception_file.write(
+                f'{index},{i},"{relevance_response.replace(",", ";")}"\n'
+            )
+            exception_ = True
+            exception_file.flush()
+
+        consistency_response = client.generate(consistency_model_name, query).response
+        try:
+            consistency_response = consistency_response.split("</think>")[1]
+            consistency = consistency_response.split("Score: ")[1][0]
+            repetition_results["consistency"] += int(consistency)
+            consistency_count += 1
+        except:
+            print(f"Error parsing response index {index} repetition {i}", flush=True)
+            exception_file.write(
+                f'{index},{i},"{consistency_response.replace(",", ";")}"\n'
+            )
+            exception_ = True
+            exception_file.flush()
+
+    if not exception_:
         print(f"Successfully evaluated index {index+1}", flush=True)
 
-    for key in repetition_results:
-        repetition_results[key] /= count
+    repetition_results["coherence"] /= coherence_count
+    repetition_results["fluency"] /= fluency_count
+    repetition_results["relevance"] /= relevance_count
+    repetition_results["consistency"] /= consistency_count
 
     results.loc[index] = repetition_results
 

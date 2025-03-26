@@ -29,7 +29,7 @@ Evaluation Criteria.
 
 Please rate the summary based on the above metrics and provide your scores and explanations in the response box.
 Please use the following format for your response:
-Fluency: score
+Score: point
 Explanation: explanation
 """
 
