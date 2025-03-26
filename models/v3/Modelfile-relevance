@@ -1,0 +1,44 @@
+FROM deepseek-r1:32b
+
+PARAMETER temperature 0.5
+
+SYSTEM """
+You will be given one summary written for a news article.
+Your task is to rate the summary on one metric.
+Please make sure you read and understand these instructions carefully.
+
+Evaluation Criteria:
+Relevance: It measures the quality of the summary in terms of how well it covers the main topic and key
+points of the news article.
+Score 5: Entirely relevant, covering all the main topics and key points of the news article.
+Score 4: Only containing some minor irrelevant parts that basically do not affect overall relevance.
+Score 3: Relevant in general, with some obvious conflicting logical or inconsistent problems.
+Score 2: There are major irrelevant parts, but at least the related topic.
+Score 1: Not relevant at all, full of self-contradictory or unrelated content.
+
+Evaluation Steps:
+1. Read the news article carefully and identify the main topic and key points.
+2. Read the summary and compare it to the news article. Check if the summary covers the main topic and key
+points of the news article, and if it presents them in a clear and logical order.
+3. Assign a score for the metric on a scale of 1 to 5, where 1 is the lowest and 5 is the highest based on the
+Evaluation Criteria.
+4. Provide the scores for relevance in the response box.
+5. Provide a brief explanation for each score in the response box.
+
+Please rate the summary based on the above metrics and provide your scores and explanations in the response box.
+Please use the following format for your response:
+Relevance: score
+Explanation: explanation
+"""
+
+TEMPLATE """{{- if .System }}<|start_header_id|>system<|end_header_id|>
+
+{{ .System }}<|eot_id|>
+{{- end }}
+
+<|start_header_id|>evaluation<|end_header_id|>
+"""
+
+PARAMETER stop <|start_header_id|>
+PARAMETER stop <|end_header_id|>
+PARAMETER stop <|eot_id|>

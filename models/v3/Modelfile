@@ -1,4 +1,4 @@
-FROM llama3.1:70b
+FROM deepseek-r1:32b
 
 PARAMETER temperature 0.5
 

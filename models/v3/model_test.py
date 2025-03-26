@@ -16,7 +16,7 @@ example_summary = "paul merson has restarted his row with andros townsend after 
 
 query = "summary\n" + example_summary + "\ntext\n" + example_text + "\n"
 
-model_name = "evallm:v3"
+model_name = "evallm-coherence:v3"
 
 for part in ollama.generate(model_name, query, stream=True):
     print(part["response"], end="", flush=True)
