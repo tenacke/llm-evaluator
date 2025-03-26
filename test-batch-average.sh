@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=slurm-test
+#SBATCH --job-name=average-test
 #SBATCH --container-image ghcr.io\#tenacke/llm-evaluator
 #SBATCH --container-mounts=/users/emre.kilic/llm-evaluator/csv:/opt/llm-evaluator/csv,/users/emre.kilic/llm-evaluator/logs:/opt/llm-evaluator/logs
 #SBATCH --time=08:00:00
@@ -12,17 +12,17 @@ mkdir -p /opt/llm-evaluator/logs
 git fetch --all && \
 git checkout container && \
 git pull origin container
-ollama serve > /opt/llm-evaluator/logs/ollama.log 2>&1 < /dev/null &
+ollama serve > /dev/null 2>&1 < /dev/null &
 echo "Waiting for the server to start..."
 sleep 5
 echo "Server is up! Proceeding with the next command."
 # bash models/v3/model-compose.sh
-ollama pull llama3.1:70b && \
+ollama pull deepseek-r1:32b && \
 python3 models/v3/model_test.py && \
-python3 tester.py llama3.1:70b average 3 coherence && \
-python3 tester.py llama3.1:70b average 3 fluency && \
-python3 tester.py llama3.1:70b average 3 relevance && \
-python3 tester.py llama3.1:70b average 3 consistency 
+python3 tester.py deepseek-r1:32b average 3 coherence && \
+python3 tester.py deepseek-r1:32b average 3 fluency && \
+python3 tester.py deepseek-r1:32b average 3 relevance && \
+python3 tester.py deepseek-r1:32b average 3 consistency 
 
 
 

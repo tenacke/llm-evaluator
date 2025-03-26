@@ -226,19 +226,19 @@ for index, row in test_data.iterrows():
         print(f"Repetition {i+1}...", flush=True)
         exception_ = False
         response = client.generate(model_name, query).response
-        log_file.write(f'{index},{i},"{response.replace(",", ";")}"\n')
-        log_file.flush()
         try:
             if "</think>" in response:
                 response = response.split("</think>")[1]
-            coherence = response.split("Score: ")[1][0]
-            repetition_results["result"] += int(coherence)
+            score = response.split("Score: ")[1][0]
+            repetition_results["result"] += int(score)
             count += 1
         except:
             print(
                 f"Error parsing response index {index} repetition {i}",
                 flush=True,
             )
+            log_file.write(f'{index},{i},"{response.replace(",", ";")}"\n')
+            log_file.flush()
             exception_ = True
 
     if not exception_:
