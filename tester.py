@@ -99,8 +99,8 @@ for index, row in test_data.iterrows():
         print(f"Repetition {i+1}...", flush=True)
         exception_ = False
         response = client.generate(model_name, query).response
-        log_file_name.write(f'{index},{i},"{response.replace(",", ";")}"\n')
-        log_file_name.flush()
+        log_file.write(f'{index},{i},"{response.replace(",", ";")}"\n')
+        log_file.flush()
         try:
             if "</think>" in response:
                 response = response.split("</think>")[1]
