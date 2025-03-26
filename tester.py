@@ -12,6 +12,11 @@ def get_models():
 # Get the path to the datasets folder
 datasets_path = os.path.join(os.path.dirname(__file__), "datasets")
 csv_files_path = os.path.join(os.path.dirname(__file__), "csv")
+logs_path = os.path.join(os.path.dirname(__file__), "logs")
+if not os.path.exists(csv_files_path):
+    os.makedirs(csv_files_path)
+if not os.path.exists(logs_path):
+    os.makedirs(logs_path)
 
 # Check if command line arguments are provided
 if len(sys.argv) < 5:
@@ -74,7 +79,8 @@ except:
 client = ollama.Client()
 
 exception_count = 0
-exception_file = open(f"{model_version}_{evaluation_type}_exceptions.txt", "w")
+log_file_name = f"{model_version}_{metric}_{evaluation_type}_logs.csv"
+log_file = open(os.path.join(logs_path, log_file_name), "w")
 
 # Evaluate the model
 results = pd.DataFrame(columns=["result"])
@@ -93,6 +99,8 @@ for index, row in test_data.iterrows():
         print(f"Repetition {i+1}...", flush=True)
         exception_ = False
         response = client.generate(model_name, query).response
+        log_file_name.write(f'{index},{i},"{response.replace(",", ";")}"\n')
+        log_file_name.flush()
         try:
             if "</think>" in response:
                 response = response.split("</think>")[1]
@@ -104,9 +112,7 @@ for index, row in test_data.iterrows():
                 f"Error parsing response index {index} repetition {i}",
                 flush=True,
             )
-            exception_file.write(f'{index},{i},"{response.replace(",", ";")}"\n')
             exception_ = True
-            exception_file.flush()
 
     if not exception_:
         print(f"Successfully evaluated index {index+1}", flush=True)
