@@ -12,5 +12,5 @@ source /opt/llm-evaluator/venv/bin/activate
 ollama serve > /dev/null 2>&1 < /dev/null &
 bash models/v3/model-compose.sh
 python3 models/v3/model_test.py
-python3 tester.py evallm:v3 poor 3
+python3 tester-separate.py v2.1 poor 3
 
