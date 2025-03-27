@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=poor-test
-#SBATCH --container-image ghcr.io\#tenacke/latest-container
+#SBATCH --container-image ghcr.io\#tenacke/llm-evaluator:latest-container
 #SBATCH --container-mounts=/users/bilge.guneyli/llm-evaluator/outputs:/opt/llm-evaluator/outputs,/users/bilge.guneyli/llm-evaluator/logs:/opt/llm-evaluator/logs
 #SBATCH --time=08:00:00
 #SBATCH --cpus-per-task=8
