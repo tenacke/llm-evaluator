@@ -92,13 +92,16 @@ def get_models():
 
 
 # Get the path to the datasets folder
-datasets_path = os.path.join(os.path.dirname(__file__), "datasets")
-csv_files_path = os.path.join(os.path.dirname(__file__), "csv")
-logs_path = os.path.join(os.path.dirname(__file__), "logs")
+datasets_path = os.path.join(os.path.dirname(_file_), "datasets")
+csv_files_path = os.path.join(os.path.dirname(_file_), "csv")
+logs_path = os.path.join(os.path.dirname(_file_), "logs")
+output_path = os.path.join(os.path.dirname(_file_), "output")
 if not os.path.exists(csv_files_path):
     os.makedirs(csv_files_path)
 if not os.path.exists(logs_path):
     os.makedirs(logs_path)
+if not os.path.exists(output_path):
+    os.makedirs(output_path)
 
 # Check if command line arguments are provided
 if len(sys.argv) < 5:
@@ -161,7 +164,7 @@ except:
 client = ollama.Client()
 
 exception_count = 0
-log_file_name = f"{model_name}_{metric}_{evaluation_type}_logs.csv"
+log_file_name = f"{model_name}{metric}{evaluation_type}_logs.csv"
 log_file = open(os.path.join(logs_path, log_file_name), "w")
 
 if metric == "coherence":
@@ -214,8 +217,8 @@ for index, row in test_data.iterrows():
 
 results.to_csv(
     os.path.join(
-        csv_files_path,
-        f"{model_name}_{metric}_{evaluation_type}_results.csv",
+        output_path,
+        f"{model_name}{metric}{evaluation_type}_results.csv",
     )
 )
 print("Results saved to csv file.", flush=True)
