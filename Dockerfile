@@ -10,6 +10,6 @@ RUN venv/bin/pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-RUN chmod +x /entrypoint.sh
+RUN chmod +x entrypoint.sh
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["./entrypoint.sh"]
