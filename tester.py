@@ -18,15 +18,6 @@ Score 3: Coherent in general, with some obvious conflicting logical or inconsist
 Score 2: There are major unreasonable logic and semantic inconsistencies, but at least the related topic.
 Score 1: Not coherent at all, full of self-contradictory or unrelated content.
 
-Evaluation Steps:
-1. Read the news article carefully and identify the main topic and key points.
-2. Read the summary and compare it to the news article. Check if the summary covers the main topic and key
-points of the news article, and if it presents them in a clear and logical order.
-3. Assign a score for the metric on a scale of 1 to 5, where 1 is the lowest and 5 is the highest based on the
-Evaluation Criteria.
-4. Provide the scores for coherence in the response box.
-5. Provide a brief explanation for each score in the response box.
-
 Please rate the summary based on the above metrics and provide your scores and explanations in the response box.
 Please use the following format for your response:
 Score: point
@@ -46,15 +37,6 @@ Score 4: Only containing some minor inconsistent parts that basically do not aff
 Score 3: Consistent in general, with some obvious conflicting tone and style problems.
 Score 2: There are major inconsistent tone and style, but at least the related topic.
 Score 1: Not consistent at all, full of self-contradictory or unrelated tone and style.
-
-Evaluation Steps:
-1. Read the news article carefully and identify the main topic and key points.
-2. Read the summary and compare it to the news article. Check if the summary covers the main topic and key
-points of the news article, and if it presents them in a clear and logical order.
-3. Assign a score for the metric on a scale of 1 to 5, where 1 is the lowest and 5 is the highest based on the
-Evaluation Criteria.
-4. Provide the scores for consistency in the response box.
-5. Provide a brief explanation for each score in the response box.
 
 Please rate the summary based on the above metrics and provide your scores and explanations in the response box.
 Please use the following format for your response:
@@ -78,15 +60,6 @@ Score 2: There are major grammatical errors, duplication, unfamiliar phrases and
 and missing components, but some fluent segments.
 Score 1: Not fluent at all, full of meaningless fragments and unclear contents.
 
-Evaluation Steps:
-1. Read the news article carefully and identify the main topic and key points.
-2. Read the summary and compare it to the news article. Check if the summary covers the main topic and key
-points of the news article, and if it presents them in a clear and logical order.
-3. Assign a score for the metric on a scale of 1 to 5, where 1 is the lowest and 5 is the highest based on the
-Evaluation Criteria.
-4. Provide the scores for fluency in the response box.
-5. Provide a brief explanation for each score in the response box.
-
 Please rate the summary based on the above metrics and provide your scores and explanations in the response box.
 Please use the following format for your response:
 Score: point
@@ -106,15 +79,6 @@ Score 4: Only containing some minor irrelevant parts that basically do not affec
 Score 3: Relevant in general, with some obvious conflicting logical or inconsistent problems.
 Score 2: There are major irrelevant parts, but at least the related topic.
 Score 1: Not relevant at all, full of self-contradictory or unrelated content.
-
-Evaluation Steps:
-1. Read the news article carefully and identify the main topic and key points.
-2. Read the summary and compare it to the news article. Check if the summary covers the main topic and key
-points of the news article, and if it presents them in a clear and logical order.
-3. Assign a score for the metric on a scale of 1 to 5, where 1 is the lowest and 5 is the highest based on the
-Evaluation Criteria.
-4. Provide the scores for relevance in the response box.
-5. Provide a brief explanation for each score in the response box.
 
 Please rate the summary based on the above metrics and provide your scores and explanations in the response box.
 Please use the following format for your response:
