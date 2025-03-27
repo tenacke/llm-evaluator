@@ -3,7 +3,7 @@ name: Build and Push Docker Image
 on:
   push:
     branches:
-      - main
+      - container
   workflow_dispatch:
 
 jobs:
@@ -27,10 +27,10 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t ghcr.io/${{ github.repository }}:latest .
-          docker tag ghcr.io/${{ github.repository }}:latest ghcr.io/${{ github.repository }}:${{ github.sha }}
-      
+          docker build -t ghcr.io/${{ github.repository }}:latest-container .
+          docker tag ghcr.io/${{ github.repository }}:latest-container ghcr.io/${{ github.repository }}:${{ github.sha }}
+
       - name: Push Docker image
         run: |
-          docker push ghcr.io/${{ github.repository }}:latest
+          docker push ghcr.io/${{ github.repository }}:latest-container
           docker push ghcr.io/${{ github.repository }}:${{ github.sha }}
