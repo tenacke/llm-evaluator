@@ -1,28 +1,15 @@
 #!/bin/bash
 #SBATCH --job-name=powerful-test
-#SBATCH --container-image ghcr.io\#tenacke/llm-evaluator
-#SBATCH --container-mounts=/users/emre.kilic/llm-evaluator/csv:/opt/llm-evaluator/csv,/users/emre.kilic/llm-evaluator/logs:/opt/llm-evaluator/logs
+#SBATCH --container-image ghcr.io\#tenacke/llm-evaluator:latest-container
+#SBATCH --container-mounts=/users/emre.kilic/llm-evaluator/outputs:/opt/llm-evaluator/outputs,/users/emre.kilic/llm-evaluator/logs:/opt/llm-evaluator/logs
 #SBATCH --time=08:00:00
-#SBATCH --gpus=1
-#SBATCH --cpus-per-gpu=8
-#SBATCH --mem-per-gpu=40G
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=4G
 
 source /opt/llm-evaluator/venv/bin/activate
-mkdir -p /opt/llm-evaluator/logs
-git fetch --all && \
-git checkout container && \
-git pull origin container
-ollama serve > /dev/null 2>&1 < /dev/null &
-echo "Waiting for the server to start..."
-sleep 5
-echo "Server is up! Proceeding with the next command."
-# bash models/v3/model-compose.sh
-ollama pull deepseek-r1:32b && \
+
 python3 models/v3/model_test.py && \
 python3 tester.py deepseek-r1:32b powerful 3 coherence && \
 python3 tester.py deepseek-r1:32b powerful 3 fluency && \
 python3 tester.py deepseek-r1:32b powerful 3 relevance && \
 python3 tester.py deepseek-r1:32b powerful 3 consistency 
-
-
-

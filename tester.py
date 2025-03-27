@@ -131,10 +131,13 @@ def get_models():
 datasets_path = os.path.join(os.path.dirname(__file__), "datasets")
 csv_files_path = os.path.join(os.path.dirname(__file__), "csv")
 logs_path = os.path.join(os.path.dirname(__file__), "logs")
+output_path = os.path.join(os.path.dirname(__file__), "output")
 if not os.path.exists(csv_files_path):
     os.makedirs(csv_files_path)
 if not os.path.exists(logs_path):
     os.makedirs(logs_path)
+if not os.path.exists(output_path):
+    os.makedirs(output_path)
 
 # Check if command line arguments are provided
 if len(sys.argv) < 5:
@@ -250,7 +253,7 @@ for index, row in test_data.iterrows():
 
 results.to_csv(
     os.path.join(
-        csv_files_path,
+        output_path,
         f"{model_name}_{metric}_{evaluation_type}_results.csv",
     )
 )
