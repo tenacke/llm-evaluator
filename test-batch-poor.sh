@@ -9,9 +9,9 @@
 source /opt/llm-evaluator/venv/bin/activate
 
 python3 models/v3/model_test.py && \
-python3 tester.py deepseek-r1:32b poor 3 coherence && \
-python3 tester.py deepseek-r1:32b poor 3 fluency && \
-python3 tester.py deepseek-r1:32b poor 3 relevance && \
-python3 tester.py deepseek-r1:32b poor 3 consistency 
+python3 tester.py llama3.1:70b poor 3 coherence && \
+python3 tester.py llama3.1:70b poor 3 fluency && \
+python3 tester.py llama3.1:70b poor 3 relevance && \
+python3 tester.py llama3.1:70b poor 3 consistency 
 
 
