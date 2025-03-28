@@ -34,7 +34,7 @@ for model in models:
             "filepath",
             "decoded",
             "model_id",
-            "references",
+            "reference",
         ],
         inplace=True,
     )

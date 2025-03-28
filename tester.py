@@ -8,7 +8,6 @@ coherence_prompt = """
 You will be given one summary written for a news article.
 Your task is to rate the summary on one metric.
 Please make sure you read and understand these instructions carefully.
-You can use the references in the summary to help you understand the content of the news article.
 
 Evaluation Criteria:
 Coherence: It measures the quality of all sentences collectively, do they make sense as a whole, with the
@@ -19,16 +18,8 @@ Score 3: Coherent in general, with some obvious conflicting logical or inconsist
 Score 2: There are major unreasonable logic and semantic inconsistencies, but at least the related topic.
 Score 1: Not coherent at all, full of self-contradictory or unrelated content.
 
-Evaluation Steps:
-1. Read the news article carefully and identify the main topic and key points.
-2. Read the summary and compare it to the news article. Check if the summary covers the main topic and key
-points of the news article, and if it presents them in a clear and logical order.
-3. Assign a score for the metric on a scale of 1 to 5, where 1 is the lowest and 5 is the highest based on the
-Evaluation Criteria.
-4. Provide the scores for coherence in the response box.
-5. Provide a brief explanation for each score in the response box.
-
-Please rate the summary based on the above metrics and provide your scores and explanations in the response box.
+First find correct method to evaluate the coherence of the summary.
+Then rate the summary based on coherence and provide your scores and explanations in the response box.
 Please use the following format for your response:
 Score: point
 Explanation: explanation
@@ -38,7 +29,6 @@ consistency_prompt = """
 You will be given one summary written for a news article.
 Your task is to rate the summary on one metric.
 Please make sure you read and understand these instructions carefully.
-You can use the references in the summary to help you understand the content of the news article.
 
 Evaluation Criteria:
 Consistency: It measures the quality of the summary in terms of how well it maintains the same tone and
@@ -49,16 +39,8 @@ Score 3: Consistent in general, with some obvious conflicting tone and style pro
 Score 2: There are major inconsistent tone and style, but at least the related topic.
 Score 1: Not consistent at all, full of self-contradictory or unrelated tone and style.
 
-Evaluation Steps:
-1. Read the news article carefully and identify the main topic and key points.
-2. Read the summary and compare it to the news article. Check if the summary covers the main topic and key
-points of the news article, and if it presents them in a clear and logical order.
-3. Assign a score for the metric on a scale of 1 to 5, where 1 is the lowest and 5 is the highest based on the
-Evaluation Criteria.
-4. Provide the scores for consistency in the response box.
-5. Provide a brief explanation for each score in the response box.
-
-Please rate the summary based on the above metrics and provide your scores and explanations in the response box.
+First find correct method to evaluate the coherence of the summary.
+Then rate the summary based on consistency and provide your scores and explanations in the response box.
 Please use the following format for your response:
 Score: point
 Explanation: explanation
@@ -68,7 +50,6 @@ fluency_prompt = """
 You will be given one summary written for a news article.
 Your task is to rate the summary on one metric.
 Please make sure you read and understand these instructions carefully.
-You can use the references in the summary to help you understand the content of the news article.
 
 Evaluation Criteria:
 Fluency: It measures the quality of individual sentences, are they grammatically correct, non-repetitive,
@@ -81,16 +62,8 @@ Score 2: There are major grammatical errors, duplication, unfamiliar phrases and
 and missing components, but some fluent segments.
 Score 1: Not fluent at all, full of meaningless fragments and unclear contents.
 
-Evaluation Steps:
-1. Read the news article carefully and identify the main topic and key points.
-2. Read the summary and compare it to the news article. Check if the summary covers the main topic and key
-points of the news article, and if it presents them in a clear and logical order.
-3. Assign a score for the metric on a scale of 1 to 5, where 1 is the lowest and 5 is the highest based on the
-Evaluation Criteria.
-4. Provide the scores for fluency in the response box.
-5. Provide a brief explanation for each score in the response box.
-
-Please rate the summary based on the above metrics and provide your scores and explanations in the response box.
+First find correct method to evaluate the coherence of the summary.
+Then rate the summary based on fluency and provide your scores and explanations in the response box.
 Please use the following format for your response:
 Score: point
 Explanation: explanation
@@ -100,7 +73,6 @@ relevance_prompt = """
 You will be given one summary written for a news article.
 Your task is to rate the summary on one metric.
 Please make sure you read and understand these instructions carefully.
-You can use the references in the summary to help you understand the content of the news article.
 
 Evaluation Criteria:
 Relevance: It measures the quality of the summary in terms of how well it covers the main topic and key
@@ -111,16 +83,8 @@ Score 3: Relevant in general, with some obvious conflicting logical or inconsist
 Score 2: There are major irrelevant parts, but at least the related topic.
 Score 1: Not relevant at all, full of self-contradictory or unrelated content.
 
-Evaluation Steps:
-1. Read the news article carefully and identify the main topic and key points.
-2. Read the summary and compare it to the news article. Check if the summary covers the main topic and key
-points of the news article, and if it presents them in a clear and logical order.
-3. Assign a score for the metric on a scale of 1 to 5, where 1 is the lowest and 5 is the highest based on the
-Evaluation Criteria.
-4. Provide the scores for relevance in the response box.
-5. Provide a brief explanation for each score in the response box.
-
-Please rate the summary based on the above metrics and provide your scores and explanations in the response box.
+First find correct method to evaluate the coherence of the summary.
+Then rate the summary based on relevance and provide your scores and explanations in the response box.
 Please use the following format for your response:
 Score: point
 Explanation: explanation
@@ -225,12 +189,15 @@ for index, row in test_data.iterrows():
     with open(os.path.join(datasets_path, text_file), "r") as f:
         text = f.read()
 
+    if "@highlight" in text:
+        text = text.split("@highlight")[0]
+
     query = (
         prompt
         + "Summary\n"
         + row["decoded"]
-        + "\n\nReference"
-        + row["reference"]
+        # + "\n\nReference"
+        # + row["reference"]
         + "\n\nText\n"
         + text
     )
