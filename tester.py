@@ -131,7 +131,7 @@ def get_models():
 datasets_path = os.path.join(os.path.dirname(__file__), "datasets")
 csv_files_path = os.path.join(os.path.dirname(__file__), "csv")
 logs_path = os.path.join(os.path.dirname(__file__), "logs")
-output_path = os.path.join(os.path.dirname(__file__), "output")
+output_path = os.path.join(os.path.dirname(__file__), "outputs")
 if not os.path.exists(csv_files_path):
     os.makedirs(csv_files_path)
 if not os.path.exists(logs_path):
