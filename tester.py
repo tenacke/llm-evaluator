@@ -8,6 +8,7 @@ coherence_prompt = """
 You will be given one summary written for a news article.
 Your task is to rate the summary on one metric.
 Please make sure you read and understand these instructions carefully.
+You can use the references in the summary to help you understand the content of the news article.
 
 Evaluation Criteria:
 Coherence: It measures the quality of all sentences collectively, do they make sense as a whole, with the
@@ -37,6 +38,7 @@ consistency_prompt = """
 You will be given one summary written for a news article.
 Your task is to rate the summary on one metric.
 Please make sure you read and understand these instructions carefully.
+You can use the references in the summary to help you understand the content of the news article.
 
 Evaluation Criteria:
 Consistency: It measures the quality of the summary in terms of how well it maintains the same tone and
@@ -66,6 +68,7 @@ fluency_prompt = """
 You will be given one summary written for a news article.
 Your task is to rate the summary on one metric.
 Please make sure you read and understand these instructions carefully.
+You can use the references in the summary to help you understand the content of the news article.
 
 Evaluation Criteria:
 Fluency: It measures the quality of individual sentences, are they grammatically correct, non-repetitive,
@@ -97,6 +100,7 @@ relevance_prompt = """
 You will be given one summary written for a news article.
 Your task is to rate the summary on one metric.
 Please make sure you read and understand these instructions carefully.
+You can use the references in the summary to help you understand the content of the news article.
 
 Evaluation Criteria:
 Relevance: It measures the quality of the summary in terms of how well it covers the main topic and key
@@ -221,7 +225,15 @@ for index, row in test_data.iterrows():
     with open(os.path.join(datasets_path, text_file), "r") as f:
         text = f.read()
 
-    query = prompt + "Summary\n" + row["decoded"] + "\n\nText\n" + text
+    query = (
+        prompt
+        + "Summary\n"
+        + row["decoded"]
+        + "\n\nReference"
+        + row["reference"]
+        + "\n\nText\n"
+        + text
+    )
 
     repetition_results = {"result": 0}
     count = 0
