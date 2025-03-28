@@ -10,13 +10,17 @@ Your task is to rate the summary on one metric.
 Please make sure you read and understand these instructions carefully.
 
 Evaluation Criteria:
-Coherence: It measures the quality of all sentences collectively, do they make sense as a whole, with the
-context organized and connected logically.
-Score 5: Entirely coherent, with good context-relatedness among all the sentences.
-Score 4: Only containing some minor illogical parts that basically do not affect overall coherency.
-Score 3: Coherent in general, with some obvious conflicting logical or inconsistent problems.
-Score 2: There are major unreasonable logic and semantic inconsistencies, but at least the related topic.
-Score 1: Not coherent at all, full of self-contradictory or unrelated content.
+Coherence:  (1-5) - the collective quality of all sentences. 
+We align this dimension with the DUC quality question of structure and coherence whereby "the summary should be well-structured and well-organized.
+The summary should not just be a heap of related information, but should build from sentence to a coherent body of information about a topic."
+
+Evaluation Steps:
+1. Read the news article carefully and identify the main topic and key points.
+2. Read the summary and compare it to the news article. Check if the summary covers the main topic and key points of the news article, and if it presents them in a clear and logical order.
+3. Assign a score for coherence on a scale of 1 to 5, where 1 is the lowest and 5 is the highest based on the Evaluation Criteria.
+
+Question:
+How coherent is the summary? That is, how well do the sentences in the summary fit together? (On a scale of 1-5, with 1 being the lowest)
 
 Please rate the summary based on the above metrics and provide your scores and explanations in the response box.
 Please use the following format for your response:
@@ -30,13 +34,17 @@ Your task is to rate the summary on one metric.
 Please make sure you read and understand these instructions carefully.
 
 Evaluation Criteria:
-Consistency: It measures the quality of the summary in terms of how well it maintains the same tone and
-style throughout the text.
-Score 5: Entirely consistent, with the same tone and style maintained throughout the text.
-Score 4: Only containing some minor inconsistent parts that basically do not affect overall consistency.
-Score 3: Consistent in general, with some obvious conflicting tone and style problems.
-Score 2: There are major inconsistent tone and style, but at least the related topic.
-Score 1: Not consistent at all, full of self-contradictory or unrelated tone and style.
+Consistency (1-5) - the factual alignment between the summary and the summarized source.
+A factually consistent summary contains only statements that are entailed by the source document.
+Annotators were also asked to penalize summaries that contained hallucinated facts.
+
+Evaluation Steps:
+1. Read the news article carefully and identify the main facts and details it presents.
+2. Read the summary and compare it to the news article. Check if the summary contains any factual errors that are not supported by the article.
+3. Assign a score for consistency based on the Evaluation Criteria.
+
+Question:
+How consistent is the summary with the source document in terms of the factual alignment? (On a scale of 1-5, with 1 being the lowest)
 
 Please rate the summary based on the above metrics and provide your scores and explanations in the response box.
 Please use the following format for your response:
@@ -49,16 +57,16 @@ You will be given one summary written for a news article.
 Your task is to rate the summary on one metric.
 Please make sure you read and understand these instructions carefully.
 
-Evaluation Criteria:
-Fluency: It measures the quality of individual sentences, are they grammatically correct, non-repetitive,
-and in accord with common English usage, with clear meanings.
-Score 5: Entirely fluent, grammatically correct, and well-written.
-Score 4: Only containing some minor non-fluent parts or grammatical errors that basically have no effect
-on fluency.
-Score 3: Fluent in general, with some obvious grammatical errors and unfamiliar phrases.
-Score 2: There are major grammatical errors, duplication, unfamiliar phrases and syntactic structures,
-and missing components, but some fluent segments.
-Score 1: Not fluent at all, full of meaningless fragments and unclear contents.
+Fluency (1-5): This rating measures the quality of individual sentences, are they well-written and grammatically correct.
+Consider the quality of individual sentences.
+
+Evaluation steps:
+1. Read the given summary.
+2. Evaluate the fluency of the summary on a scale of 1-5 based on the criteria provided.
+3. Provide the rating.
+
+Question:
+Based on the evaluation criteria, how fluent is the summary? (On a scale of 1-5, with 1 being the lowest)
 
 Please rate the summary based on the above metrics and provide your scores and explanations in the response box.
 Please use the following format for your response:
@@ -72,13 +80,15 @@ Your task is to rate the summary on one metric.
 Please make sure you read and understand these instructions carefully.
 
 Evaluation Criteria:
-Relevance: It measures the quality of the summary in terms of how well it covers the main topic and key
-points of the news article.
-Score 5: Entirely relevant, covering all the main topics and key points of the news article.
-Score 4: Only containing some minor irrelevant parts that basically do not affect overall relevance.
-Score 3: Relevant in general, with some obvious conflicting logical or inconsistent problems.
-Score 2: There are major irrelevant parts, but at least the related topic.
-Score 1: Not relevant at all, full of self-contradictory or unrelated content.
+Relevance (1-5) - selection of important content from the source.
+The summary should include only important information from the source document. 
+Annotators were instructed to penalize summaries which contained redundancies and excess
+
+Evaluation Steps:
+1. Read the summary and the source
+2. Compare the summary to the source document and identify the main points of the article.
+3. Assess how well the summary covers the main points of the article, and how much irrelevant or redundant information it contains.
+4. Assign a relevance score from 1 to 5.
 
 Please rate the summary based on the above metrics and provide your scores and explanations in the response box.
 Please use the following format for your response:
