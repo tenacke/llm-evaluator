@@ -8,6 +8,7 @@
 
 source /opt/llm-evaluator/venv/bin/activate
 git fetch --all && \
+git stash && \
 git checkout kaan-container && \
 git pull origin kaan-container
 
