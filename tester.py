@@ -102,10 +102,10 @@ def get_models():
 
 
 # Get the path to the datasets folder
-datasets_path = os.path.join(os.path.dirname(_file_), "datasets")
-csv_files_path = os.path.join(os.path.dirname(_file_), "csv")
-logs_path = os.path.join(os.path.dirname(_file_), "logs")
-output_path = os.path.join(os.path.dirname(_file_), "output")
+datasets_path = os.path.join(os.path.dirname(__file__), "datasets")
+csv_files_path = os.path.join(os.path.dirname(__file__), "csv")
+logs_path = os.path.join(os.path.dirname(__file__), "logs")
+output_path = os.path.join(os.path.dirname(__file__), "output")
 if not os.path.exists(csv_files_path):
     os.makedirs(csv_files_path)
 if not os.path.exists(logs_path):
