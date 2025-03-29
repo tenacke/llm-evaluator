@@ -13,12 +13,6 @@ git commit -m "Update entrypoint.sh" && \
 git checkout kaan-container && \
 git pull origin kaan-container
 
-# ollama serve > /dev/null 2>&1 < /dev/null &
-# echo "Waiting for the server to start..."
-# sleep 5
-# echo "Server is up! Proceeding with the next command."
-# ollama pull llama3.1:70b && \
-
 python3 models/v3/model_test.py && \
 python3 tester.py llama3.1:70b powerful 3 coherence && \
 python3 tester.py llama3.1:70b powerful 3 fluency && \

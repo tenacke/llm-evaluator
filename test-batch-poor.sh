@@ -8,7 +8,8 @@
 
 source /opt/llm-evaluator/venv/bin/activate
 git fetch --all && \
-git checkout -- entrypoint.sh && \
+git add entrypoint.sh && \
+git commit -m "Update entrypoint.sh" && \
 git checkout kaan-container && \
 git pull origin kaan-container
 
