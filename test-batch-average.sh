@@ -8,16 +8,8 @@
 
 source /opt/llm-evaluator/venv/bin/activate
 git fetch --all && \
-git stash && \
 git checkout kaan-container && \
 git pull origin kaan-container
-
-# ollama serve > /dev/null 2>&1 < /dev/null &
-# echo "Waiting for the server to start..."
-# sleep 5
-# echo "Server is up! Proceeding with the next command."
-
-# ollama pull llama3.1:70b && \
 
 python3 models/v3/model_test.py && \
 python3 tester.py llama3.1:70b average 3 coherence && \
