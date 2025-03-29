@@ -188,6 +188,7 @@ elif metric == "relevance":
 
 # Evaluate the model
 results = pd.DataFrame(columns=["result"])
+print(f'Using the prompt: {prompt}', flush=True)
 for index, row in test_data.iterrows():
     print(f"Evaluating index {index+1}...", flush=True)
 
