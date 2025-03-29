@@ -8,11 +8,11 @@
 
 source /opt/llm-evaluator/venv/bin/activate
 git branch
-# git fetch --all && \
+git fetch --all && \
 # git add entrypoint.sh && \
 # git commit -m "Update entrypoint.sh" && \
-# git checkout kaan-container && \
-# git pull origin kaan-container
+git checkout kaan-container && \
+git pull origin kaan-container
 
 # ollama serve > /dev/null 2>&1 < /dev/null &
 # echo "Waiting for the server to start..."
