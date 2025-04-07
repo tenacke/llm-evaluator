@@ -86,7 +86,7 @@ try:
     # Load the test data
     read_columns = ['sentence1', 'sentence2']
     test_data = pd.read_json(
-        os.path.join(datasets_path, "snli", "snli_1.0", "snli_1.0_train.jsonl"), 
+        os.path.join(datasets_path, "snli", "snli_1.0", "snli_1.0_test_batch.jsonl"), 
         lines=True,
         nrows=number_of_rows
     )[read_columns]
