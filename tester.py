@@ -76,7 +76,11 @@ number_of_repetitions = int(sys.argv[2])
 try:
     number_of_rows = int(sys.argv[3])
 except:
-    number_of_rows = 500000
+    number_of_rows = 500
+
+if number_of_rows <= 0 or number_of_rows > 500:
+    print("Invalid number of rows. Converting to 500.")
+    number_of_rows = 500
 
 try:
     # Load the test data
