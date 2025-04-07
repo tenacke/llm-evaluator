@@ -15,84 +15,28 @@ if not os.path.exists(path):
     print(f"Path {path} does not exist")
     sys.exit(1)
 
-metrics = ["coherence", "relevance", "fluency", "consistency"]
-models = ["average", "poor", "powerful"]
 
 csv_dir_path = os.path.join(os.path.dirname(__file__), "csv")
+datasets_path = os.path.join(os.path.dirname(__file__), "datasets")
 
-expert_pearson_correlations = []
-expert_spearman_correlations = []
+model_answers_df = pd.read_csv(os.path.join(path, f"{model_name}_nli_results.csv"))
+number_of_rows = len(model_answers_df)
 
-turker_pearson_correlations = []
-turker_spearman_correlations = []
-
-for model in models:
-    scores_df = pd.read_csv(os.path.join(csv_dir_path, f"{model}_model.csv"))
-    scores_df.drop(
-        columns=[
-            "Unnamed: 0",
-            "filepath",
-            "decoded",
-            "model_id",
-            "references",
-        ],
-        inplace=True,
+read_columns = ['annotator_labels', 'sentence1', 'sentence2']
+real_answers_df = pd.read_json(
+        os.path.join(datasets_path, "snli", "snli_1.0", "snli_1.0_train.jsonl"), 
+        lines=True,
+        nrows=number_of_rows
     )
 
-    for metric in metrics:
-        results_df_path = os.path.join(
-            path, f"{model_name}_{metric}_{model}_results.csv"
-        )
-        if not os.path.exists(results_df_path):
-            print(f"File {results_df_path} does not exist")
-            expert_pearson_correlations.append([model, metric, None])
-            expert_spearman_correlations.append([model, metric, None])
-            turker_pearson_correlations.append([model, metric, None])
-            turker_spearman_correlations.append([model, metric, None])
-            continue
-        results_df = pd.read_csv(results_df_path)
-        results_df.drop(columns=["Unnamed: 0"], inplace=True)
-        result = results_df["result"]
+true_count = 0
+for i in range(len(model_answers_df)):
+    print(f'{real_answers_df.iloc[i]["sentence1"]} vs. {real_answers_df.iloc[i]["sentence2"]}')
+    print(f'{i}: {model_answers_df.iloc[i]["result"]} vs. {real_answers_df.iloc[i]["annotator_labels"][0].strip().lower()}' )
+    if model_answers_df.iloc[i]["result"] == real_answers_df.iloc[i]["annotator_labels"][0].strip().lower():
+        true_count += 1
 
-        expert_scores = scores_df[f"expert_{metric}_score"]
-        turker_scores = scores_df[f"turker_{metric}_score"]
-
-        pearson_expert = expert_scores.corr(result, method="pearson")
-        pearson_turker = turker_scores.corr(result, method="pearson")
-
-        spearman_expert = expert_scores.corr(result, method="spearman")
-        spearman_turker = turker_scores.corr(result, method="spearman")
-
-        expert_pearson_correlations.append([model, metric, pearson_expert])
-        expert_spearman_correlations.append([model, metric, spearman_expert])
-
-        turker_pearson_correlations.append([model, metric, pearson_turker])
-        turker_spearman_correlations.append([model, metric, spearman_turker])
-
-expert_pearson_correlations_df = pd.DataFrame(
-    expert_pearson_correlations, columns=["model", "metric", "pearson"]
+print(f"Correctly gueesed {true_count} out of {number_of_rows} answers")
+print(
+    f"Accuracy: {true_count / number_of_rows * 100:.2f}%"
 )
-
-expert_spearman_correlations_df = pd.DataFrame(
-    expert_spearman_correlations, columns=["model", "metric", "spearman"]
-)
-
-turker_pearson_correlations_df = pd.DataFrame(
-    turker_pearson_correlations, columns=["model", "metric", "pearson"]
-)
-
-turker_spearman_correlations_df = pd.DataFrame(
-    turker_spearman_correlations, columns=["model", "metric", "spearman"]
-)
-
-print("Expert Pearson Correlations")
-print(expert_pearson_correlations_df)
-
-print("Expert Spearman Correlations")
-print(expert_spearman_correlations_df)
-
-print("Turker Pearson Correlations")
-print(turker_pearson_correlations_df)
-
-print("Turker Spearman Correlations")
-print(turker_spearman_correlations_df)

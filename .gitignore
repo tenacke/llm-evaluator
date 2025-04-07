@@ -185,3 +185,9 @@ excluded/
 
 # logs
 logs/
+
+# output files
+output/*
+
+# datasets
+datasets/snli/snli_1.0/*
