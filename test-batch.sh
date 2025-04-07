@@ -13,7 +13,7 @@ git commit -m "Update entrypoint.sh" && \
 git checkout kaan-nli && \
 git pull origin kaan-nli
 
-python3 tester.py llama3.1:70b powerful 3 100000 
+python3 tester.py llama3.1:70b 3 500 
 
 
 
