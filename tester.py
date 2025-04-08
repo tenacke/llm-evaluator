@@ -5,28 +5,33 @@ import ollama
 from collections import Counter
 
 prompt = """
-You are given two sentences: a premise and a hypothesis. Your task is to determine the relationship between the two sentences. The relationship can be one of the following:
+You are given two sentences: a Premise and a Hypothesis. Your task is to determine the logical relationship between these two sentences and provide a well-reasoned explanation for your decision. The relationship can be one of the following:
 
-Entailment: The hypothesis logically follows from the premise.
-Contradiction: The hypothesis directly contradicts the premise.
-Neutral: The hypothesis is neither entailed by nor contradicted by the premise.
-
-Example:
-Premise: "John is playing the guitar."
-Hypothesis: "John is performing music."
-Label: Entailment
-
-Premise: "John is playing the guitar."
-Hypothesis: "John is swimming."
-Label: Contradiction
-
-Premise: "John is playing the guitar."
-Hypothesis: "John is outdoors."
-Label: Neutral
-
-Please use the following format for your response:
+Entailment: The Hypothesis is a logical consequence of the Premise. The information in the Hypothesis must be true if the Premise is true. (E.g., specific to general, part to whole, synonyms, paraphrasing)
+Contradiction: The Hypothesis directly conflicts with the Premise. If the Premise is true, the Hypothesis cannot be true. (E.g., opposite meanings, factual disagreements, mutually exclusive statements)
+Neutral: The Hypothesis is plausible but not guaranteed by the Premise. The Premise provides insufficient information to determine the truth of the Hypothesis. (E.g., additional details, unrelated content, implications that are not certain)
+Response Format:
 Answer: [entailment | contradiction | neutral]
-Explanation: explanation
+Explanation: Explain your reasoning clearly, identifying any clues or keywords that helped you make the decision. Provide logical steps and reference any implicit knowledge or assumptions used.
+Examples:
+Example 1:
+
+Premise: "A woman is running a marathon."
+Hypothesis: "A woman is engaging in a physical activity."
+Answer: Entailment
+Explanation: The hypothesis is a logical consequence of the premise. Running a marathon is a form of physical activity. The broader category of "physical activity" includes activities such as running, so the hypothesis follows logically.
+Example 2:
+
+Premise: "A cat is sleeping on the sofa."
+Hypothesis: "A cat is chasing a mouse."
+Answer: Contradiction
+Explanation: The hypothesis describes an activity that directly contradicts the premise. Sleeping and chasing are mutually exclusive actions; a cat cannot be doing both simultaneously.
+Example 3:
+
+Premise: "A man is playing the piano at a concert."
+Hypothesis: "The man is famous."
+Answer: Neutral
+Explanation: The premise provides no information about the man's fame. Playing the piano at a concert does not necessarily imply fame; it could be a local or amateur performance. Therefore, the hypothesis is neither entailed nor contradicted by the premise.
 """
 
 def get_models():
