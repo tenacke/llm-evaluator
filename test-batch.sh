@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=powerful-test
+#SBATCH --job-name=nli-test
 #SBATCH --container-image ghcr.io\#tenacke/llm-evaluator:latest-container
 #SBATCH --container-mounts=/users/bilge.guneyli/llm-evaluator/output:/opt/llm-evaluator/output,/users/bilge.guneyli/llm-evaluator/logs:/opt/llm-evaluator/logs
 #SBATCH --time=08:00:00

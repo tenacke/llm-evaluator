@@ -11,6 +11,19 @@ Entailment: The hypothesis logically follows from the premise.
 Contradiction: The hypothesis directly contradicts the premise.
 Neutral: The hypothesis is neither entailed by nor contradicted by the premise.
 
+Example:
+Premise: "John is playing the guitar."
+Hypothesis: "John is performing music."
+Label: Entailment
+
+Premise: "John is playing the guitar."
+Hypothesis: "John is swimming."
+Label: Contradiction
+
+Premise: "John is playing the guitar."
+Hypothesis: "John is outdoors."
+Label: Neutral
+
 Please use the following format for your response:
 Answer: [entailment | contradiction | neutral]
 Explanation: explanation
