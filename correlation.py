@@ -36,7 +36,7 @@ for i in range(len(model_answers_df)):
     if model_answers_df.iloc[i]["result"] == real_answers_df.iloc[i]["annotator_labels"][0].strip().lower():
         true_count += 1
 
-print(f"Correctly gueesed {true_count} out of {number_of_rows} answers")
+print(f"Correctly guessed {true_count} out of {number_of_rows} answers")
 print(
     f"Accuracy: {true_count / number_of_rows * 100:.2f}%"
 )
