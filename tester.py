@@ -5,33 +5,38 @@ import ollama
 from collections import Counter
 
 prompt = """
-You are given two sentences: a Premise and a Hypothesis. Your task is to determine the logical relationship between these two sentences and provide a well-reasoned explanation for your decision. The relationship can be one of the following:
+You are given a Premise and a Hypothesis. Your task is to determine the logical relationship between the two statements. Analyze whether the Hypothesis logically follows from, contradicts, or is unrelated to the Premise. Choose one of the following labels:
 
-Entailment: The Hypothesis is a logical consequence of the Premise. The information in the Hypothesis must be true if the Premise is true. (E.g., specific to general, part to whole, synonyms, paraphrasing)
-Contradiction: The Hypothesis directly conflicts with the Premise. If the Premise is true, the Hypothesis cannot be true. (E.g., opposite meanings, factual disagreements, mutually exclusive statements)
-Neutral: The Hypothesis is plausible but not guaranteed by the Premise. The Premise provides insufficient information to determine the truth of the Hypothesis. (E.g., additional details, unrelated content, implications that are not certain)
-Response Format:
+Entailment: The Hypothesis must be true if the Premise is true. It logically follows without needing any additional information. This includes paraphrasing, synonymous phrases, or generalizations that preserve truth.
+
+Contradiction: The Hypothesis must be false if the Premise is true. The two statements contain conflicting information and cannot both be true at the same time.
+
+Neutral: The Hypothesis could be true or false based on the Premise. The Premise does not provide enough information to determine the truth of the Hypothesis. This often includes new, unrelated, or speculative information.
+
+Instructions:
+
+Read both sentences carefully.
+Determine whether the Hypothesis is a necessary consequence, a contradiction, or logically independent of the Premise.
+Avoid making assumptions beyond the given information.
+Output Format:
 Answer: [entailment | contradiction | neutral]
-Explanation: Explain your reasoning clearly, identifying any clues or keywords that helped you make the decision. Provide logical steps and reference any implicit knowledge or assumptions used.
+Explanation: A clear justification for your choice, referring to specific parts of both sentences and any logical reasoning used.
+
 Examples:
-Example 1:
+Premise: "A man is playing the guitar."
+Hypothesis: "A man is performing music."
+Answer: entailment
+Explanation: Playing the guitar is a form of performing music, so the hypothesis logically follows from the premise.
 
-Premise: "A woman is running a marathon."
-Hypothesis: "A woman is engaging in a physical activity."
-Answer: Entailment
-Explanation: The hypothesis is a logical consequence of the premise. Running a marathon is a form of physical activity. The broader category of "physical activity" includes activities such as running, so the hypothesis follows logically.
-Example 2:
+Premise: "A man is playing the guitar."
+Hypothesis: "A man is swimming."
+Answer: contradiction
+Explanation: The man cannot be playing the guitar and swimming at the same time, so the statements are logically incompatible.
 
-Premise: "A cat is sleeping on the sofa."
-Hypothesis: "A cat is chasing a mouse."
-Answer: Contradiction
-Explanation: The hypothesis describes an activity that directly contradicts the premise. Sleeping and chasing are mutually exclusive actions; a cat cannot be doing both simultaneously.
-Example 3:
-
-Premise: "A man is playing the piano at a concert."
-Hypothesis: "The man is famous."
-Answer: Neutral
-Explanation: The premise provides no information about the man's fame. Playing the piano at a concert does not necessarily imply fame; it could be a local or amateur performance. Therefore, the hypothesis is neither entailed nor contradicted by the premise.
+Premise: "A man is playing the guitar."
+Hypothesis: "A man is outdoors."
+Answer: neutral
+Explanation: The location is not specified in the premise. The man could be indoors or outdoors, so we can't determine if the hypothesis is true.
 """
 
 def get_models():
