@@ -1,42 +1,23 @@
 import os
 import sys
-import pandas as pd
 import ollama
-from collections import Counter
+import pandas as pd
 
 prompt = """
-You are given a Premise and a Hypothesis. Your task is to determine the logical relationship between the two statements. Analyze whether the Hypothesis logically follows from, contradicts, or is unrelated to the Premise. Choose one of the following labels:
+You are given a Natural Language Inference (NLI) task output to evaluate. You will receive:
 
-Entailment: The Hypothesis must be true if the Premise is true. It logically follows without needing any additional information. This includes paraphrasing, synonymous phrases, or generalizations that preserve truth.
+- A premise: the original statement
+- A hypothesis: a statement that may or may not logically follow from the premise
+- An answer: the model's predicted relationship between the premise and the hypothesis ("entailment", "contradiction", or "neutral")
 
-Contradiction: The Hypothesis must be false if the Premise is true. The two statements contain conflicting information and cannot both be true at the same time.
+Your task is to evaluate whether the answer is correct or not, and explain your reasoning.
 
-Neutral: The Hypothesis could be true or false based on the Premise. The Premise does not provide enough information to determine the truth of the Hypothesis. This often includes new, unrelated, or speculative information.
+Return your output in the following format:
 
-Instructions:
+Answer: [True/False]  
+Reason: [Your explanation why the answer is correct or incorrect, based strictly on the logical relationship between the premise and hypothesis]
 
-Read both sentences carefully.
-Determine whether the Hypothesis is a necessary consequence, a contradiction, or logically independent of the Premise.
-Avoid making assumptions beyond the given information.
-Output Format:
-Answer: [entailment | contradiction | neutral]
-Explanation: A clear justification for your choice, referring to specific parts of both sentences and any logical reasoning used.
-
-Examples:
-Premise: "A man is playing the guitar."
-Hypothesis: "A man is performing music."
-Answer: entailment
-Explanation: Playing the guitar is a form of performing music, so the hypothesis logically follows from the premise.
-
-Premise: "A man is playing the guitar."
-Hypothesis: "A man is swimming."
-Answer: contradiction
-Explanation: The man cannot be playing the guitar and swimming at the same time, so the statements are logically incompatible.
-
-Premise: "A man is playing the guitar."
-Hypothesis: "A man is outdoors."
-Answer: neutral
-Explanation: The location is not specified in the premise. The man could be indoors or outdoors, so we can't determine if the hypothesis is true.
+Here is the data:
 """
 
 def get_models():
@@ -54,84 +35,75 @@ if not os.path.exists(logs_path):
 if not os.path.exists(output_path):
     os.makedirs(output_path)
 
-# Check if command line arguments are provided
-if len(sys.argv) < 3:
-    print(
-        "Usage: python tester.py <model_name> <number_of_repetitions> <test_size>"
-    )
-    sys.exit()
+if len(sys.argv) != 4:
+    print("Usage: python tester.py <model_name> <path> <number_of_repetitions>")
+    sys.exit(1)
 
 if sys.argv[1] == "--help":
     print(
-        "Usage: python tester.py <model_name> <number_of_repetitions> <test_size>"
+        "Usage: python tester.py <model_name> <path> <number_of_repetitions>"
     )
     sys.exit()
 
-# Get the model name from the command line arguments
 model_name = sys.argv[1]
 if ":" not in model_name:
     print(
         "Invalid model name format. Please provide a valid model name. Example: evallm:v3"
     )
     sys.exit()
-# model_base_name = model_name.split(":")[0]
-# model_version = model_name.split(":")[1]
 
 if model_name not in get_models():
     print("Invalid model name. Please provide a valid model name.")
     sys.exit()
 
-number_of_repetitions = int(sys.argv[2])
+path = sys.argv[2]
+
+path = os.path.join(os.path.dirname(__file__), path)
+if not os.path.exists(path):
+    print(f"Path {path} does not exist")
+    sys.exit(1)
+
+number_of_repetitions = int(sys.argv[3])
+
+csv_dir_path = os.path.join(os.path.dirname(__file__), "csv")
+datasets_path = os.path.join(os.path.dirname(__file__), "datasets")
 
 try:
-    number_of_rows = int(sys.argv[3])
-except:
-    number_of_rows = 500
-
-if number_of_rows <= 0 or number_of_rows > 500:
-    print("Invalid number of rows. Converting to 500.")
-    number_of_rows = 500
-
-try:
-    # Load the test data
-    read_columns = ['sentence1', 'sentence2']
-    test_data = pd.read_json(
-        os.path.join(datasets_path, "snli", "snli_1.0", "snli_1.0_test_batch.jsonl"), 
-        lines=True,
-        nrows=number_of_rows
-    )[read_columns]
-except:
-    print("Error loading the test data.")
-    sys.exit()
+    model_answers_df = pd.read_csv(os.path.join(path, f"{model_name}_nli_model_answers.csv"))
+except FileNotFoundError:
+    print(f"File {model_name}_nli_results.csv not found in {path}")
+    sys.exit(1)
 
 client = ollama.Client()
 
 exception_count = 0
-log_file_name = f"{model_name}_nli_logs.csv"
+log_file_name = f"{model_name}_nli_tester_logs.csv"
 log_file = open(os.path.join(logs_path, log_file_name), "w")
 
-# Evaluate the model
+treshold = number_of_repetitions / 2
 results = pd.DataFrame(columns=["result"])
-print(f'Using the prompt: {prompt}', flush=True)
-for index, row in test_data.iterrows():
-    if index == number_of_rows:
-        break
+
+print(f'Evaluating with prompt:\n{prompt}', flush=True)
+
+for index, row in model_answers_df.iterrows():
     print(f"Evaluating index {index+1}...", flush=True)
-
-    query = f'{prompt} \nPremise: {row["sentence1"]} \nHypothesis: {row["sentence2"]}'
-    print(f'Premise: {row["sentence1"]} Hypothesis: {row["sentence2"]}', flush=True)
+    
+    query = f'{prompt}\nPremise: {row["sentence1"]}\nHypothesis: {row["sentence2"]}\nAnswer of model: {row["result"]}'
     repetition_results = {"result": ''}
-
+    # answers = []
+    true_count = 0
     for i in range(number_of_repetitions):
-        print(f"Repetition {i+1}...", flush=True)
+        print(f"Repetition {i+1}...", flush=True, end=" ")
         exception_ = False
         response = client.generate(model_name, query).response
-        answers = []
+
         try:
             if "</think>" in response:
                 response = response.split("</think>")[1]
             answer = response.split("Answer: ")[1].split('\n')[0].strip().lower()
-            answers.append(answer)
+            print(f"Answer: {answer}", flush=True)
+            if "true" in answer:
+                true_count += 1
         except:
             print(
                 f"Error parsing response index {index} repetition {i}",
@@ -144,19 +116,11 @@ for index, row in test_data.iterrows():
     if not exception_:
         print(f"Successfully evaluated index {index+1}", flush=True)
 
-    counter = Counter(answers)
-    try:
-        repetition_results["result"] = counter.most_common(1)[0][0]
-    except:
-        exception_count += 1
-        repetition_results["result"] = "error"
-        # log the error
-        log_file.write(
-            f"Error: {index} - {repetition_results['result']}\n"
-        )
-        log_file.flush()        
-
-    results.loc[index] = repetition_results
+    print(f"True count: {true_count}", flush=True)
+    if true_count > treshold:
+        results.loc[index] = 'true'
+    else:
+        results.loc[index] = 'false'
 
 results.to_csv(
     os.path.join(
@@ -164,4 +128,4 @@ results.to_csv(
         f"{model_name}_nli_results.csv",
     )
 )
-print("Results saved to csv file.", flush=True)
+print(f"Results saved to {output_path}/{model_name}_nli_results.csv.", flush=True)

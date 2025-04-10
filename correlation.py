@@ -3,40 +3,49 @@ import sys
 
 import pandas as pd
 
-if len(sys.argv) < 3:
-    print("Usage: python correlation.py <model_name> <path>")
+if len(sys.argv) != 4:
+    print("Usage: python correlation.py <model_name> <base_data_path> <test_data_path>")
     sys.exit(1)
 
 model_name = sys.argv[1]
-path = sys.argv[2]
+base_path = sys.argv[2]
+test_path = sys.argv[3]
 
-path = os.path.join(os.path.dirname(__file__), path)
-if not os.path.exists(path):
-    print(f"Path {path} does not exist")
+base_path = os.path.join(os.path.dirname(__file__), base_path)
+if not os.path.exists(base_path):
+    print(f"Path {base_path} does not exist")
     sys.exit(1)
 
+test_path = os.path.join(os.path.dirname(__file__), test_path)
+if not os.path.exists(test_path):
+    print(f"Path {test_path} does not exist")
+    sys.exit(1)
 
 csv_dir_path = os.path.join(os.path.dirname(__file__), "csv")
 datasets_path = os.path.join(os.path.dirname(__file__), "datasets")
 
-model_answers_df = pd.read_csv(os.path.join(path, f"{model_name}_nli_results.csv"))
-number_of_rows = len(model_answers_df)
+base_df = pd.read_csv(
+    os.path.join(base_path, f"{model_name}_nli_model_answers.csv"),
+    usecols=['gold_label', 'result']
+    )
 
-read_columns = ['annotator_labels', 'sentence1', 'sentence2']
-real_answers_df = pd.read_json(
-        os.path.join(datasets_path, "snli", "snli_1.0", "snli_1.0_train.jsonl"), 
-        lines=True,
-        nrows=number_of_rows
+# new column: true if other two columns are the same, false otherwise
+base_df['tf'] = base_df.apply(
+    lambda row: str(row["gold_label"]).strip().lower() == str(row["result"]).strip().lower(),
+    axis=1
+)
+
+test_df = pd.read_csv(
+    os.path.join(test_path, f"{model_name}_nli_results.csv"),
+    usecols=['result']
     )
 
 true_count = 0
-for i in range(len(model_answers_df)):
-    print(f'{real_answers_df.iloc[i]["sentence1"]} vs. {real_answers_df.iloc[i]["sentence2"]}')
-    print(f'{i}: {model_answers_df.iloc[i]["result"]} vs. {real_answers_df.iloc[i]["annotator_labels"][0].strip().lower()}' )
-    if model_answers_df.iloc[i]["result"] == real_answers_df.iloc[i]["annotator_labels"][0].strip().lower():
+for i in range(len(base_df)):
+    if str(base_df.iloc[i]["tf"]).strip().lower() == str(test_df.iloc[i]["result"]).strip().lower():
         true_count += 1
 
-print(f"Correctly guessed {true_count} out of {number_of_rows} answers")
+print(f"Correctly guessed {true_count} out of {len(base_df)} answers")
 print(
-    f"Accuracy: {true_count / number_of_rows * 100:.2f}%"
+    f"Accuracy: {true_count / len(base_df) * 100:.2f}%"
 )
