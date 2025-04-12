@@ -188,6 +188,7 @@ logs/
 
 # output files
 output/*
+outputs/*
 
 # datasets
 datasets/snli/snli_1.0/README.txt
