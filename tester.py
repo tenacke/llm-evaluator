@@ -35,13 +35,15 @@ if not os.path.exists(logs_path):
 if not os.path.exists(output_path):
     os.makedirs(output_path)
 
-if len(sys.argv) != 4:
-    print("Usage: python tester.py <model_name> <path> <number_of_repetitions>")
+if len(sys.argv) != 5:
+    print(
+        "Usage: python tester.py <model_name> <nli-model> <path> <number_of_repetitions>"
+    )
     sys.exit(1)
 
 if sys.argv[1] == "--help":
     print(
-        "Usage: python tester.py <model_name> <path> <number_of_repetitions>"
+        "Usage: python tester.py <model_name> <nli-model> <path> <number_of_repetitions>"
     )
     sys.exit()
 
@@ -53,25 +55,29 @@ if ":" not in model_name:
     sys.exit()
 
 if model_name not in get_models():
-    print("Invalid model name. Please provide a valid model name.")
+    print(
+        "Invalid model name. Please provide a valid model name."
+    )
     sys.exit()
 
-path = sys.argv[2]
+nli_model = sys.argv[2]
+
+path = sys.argv[3]
 
 path = os.path.join(os.path.dirname(__file__), path)
 if not os.path.exists(path):
     print(f"Path {path} does not exist")
     sys.exit(1)
 
-number_of_repetitions = int(sys.argv[3])
+number_of_repetitions = int(sys.argv[4])
 
 csv_dir_path = os.path.join(os.path.dirname(__file__), "csv")
 datasets_path = os.path.join(os.path.dirname(__file__), "datasets")
 
 try:
-    model_answers_df = pd.read_csv(os.path.join(path, f"{model_name}_nli_model_answers.csv"))
+    model_answers_df = pd.read_csv(os.path.join(path, f"{nli_model}_nli_model_answers.csv"))
 except FileNotFoundError:
-    print(f"File {model_name}_nli_results.csv not found in {path}")
+    print(f"File {nli_model}_nli_results.csv not found in {path}")
     sys.exit(1)
 
 client = ollama.Client()
@@ -125,7 +131,7 @@ for index, row in model_answers_df.iterrows():
 results.to_csv(
     os.path.join(
         output_path,
-        f"{model_name}_nli_results.csv",
+        f"{model_name}_{nli_model}_nli_results.csv",
     )
 )
-print(f"Results saved to {output_path}/{model_name}_nli_results.csv.", flush=True)
+print(f"Results saved to {output_path}/{model_name}_{nli_model}_nli_results.csv.", flush=True)
