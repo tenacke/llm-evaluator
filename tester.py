@@ -77,7 +77,7 @@ datasets_path = os.path.join(os.path.dirname(__file__), "datasets")
 try:
     model_answers_df = pd.read_csv(os.path.join(path, f"{nli_model}_nli_model_answers.csv"))
 except FileNotFoundError:
-    print(f"File {nli_model}_nli_results.csv not found in {path}")
+    print(f"File {nli_model}_nli_model_answers.csv not found in {path}")
     sys.exit(1)
 
 client = ollama.Client()
