@@ -182,3 +182,5 @@ papers/
 # exception files
 *exceptions.txt
 excluded/
+
+llm_evaluator/staticfiles

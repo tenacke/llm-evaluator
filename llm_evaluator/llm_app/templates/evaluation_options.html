@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluation Options</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <script>
+        let currentLineData = {};
+
+        function showText(option) {
+            // Hide all text containers
+            document.querySelectorAll('.box').forEach(box => box.classList.add('hidden'));
+            // Show the selected text container
+            const selectedBox = document.getElementById(option);
+            selectedBox.classList.remove('hidden');
+
+            // If Option 1, fetch a random line
+            if (option === 'option1') {
+                const option1Paragraph = document.getElementById('option1-text'); // Target the specific <p> by id
+                option1Paragraph.innerText = 'Loading...'; // Provide feedback while fetching
+                fetch('/get-random-line/')
+                    .then(response => response.json())
+                    .then(data => {
+                        option1Paragraph.innerText = JSON.stringify(data.line, null, 2) || 'No data found.';
+                        currentLineData = data.line;
+                        const idParts = data.line.id.split('-');
+                        const story_id = idParts[2];
+                        const option1story = document.getElementById('option1-story');
+                        fetch(`/get-file-content/${idParts[0]}/${story_id}/`)
+                            .then(response => response.json())
+                            .then(data => {
+                                if (data.file_content) {
+                                    document.getElementById('option1-story').innerText = data.file_content;
+                                } else {
+                                    document.getElementById('option1-story').innerText = 'File not found or could not be read.';
+                                }
+                            })
+                            .catch(error => {
+                                console.error('Error fetching file content:', error);
+                                document.getElementById('option1-story').innerText = 'An error occurred while fetching the file content.';
+                            });
+                        option1story.innerText = `${story_id}` || 'No story found';
+                    })
+                    .catch(error => {
+                        console.error('Error fetching data:', error);
+                        option1Paragraph.innerText = 'Error fetching data.';
+                    });
+                    const summaryDisplay = document.getElementById('summary');
+                    summaryDisplay.innerHTML = `<textarea id="user-answer" rows="4" cols="250" placeholder="Type your answer here..."></textarea>`;
+
+            }
+        }
+        function displaySummary() {
+        const summaryDisplay = document.getElementById('summary');
+        
+        // Extract summary from current JSON line data
+        const summary = currentLineData.decoded || 'No summary available.';
+        
+        // Display the summary in the div
+        summaryDisplay.style.display = 'block';
+        summaryDisplay.innerHTML = `<h3>Summary:</h3> <p>${summary}</p>`;
+    }
+    </script>
+
+</head>
+<body>
+    <header>
+        LLM-Evaluator
+    </header>
+    <main>
+        <h1>Select an Evaluation Type</h1>
+        <button onclick="showText('option1')">Point Evaluation (Summary)</button>
+        <button onclick="showText('option2')">Pass/Fail Evaluation (NLI)</button>
+        <button onclick="showText('option3')">Pairwise Evaluation</button>
+
+        <div id="option1" class="box hidden">
+            <h2>Point Evaluation</h2>
+            <p>In this task our evaluator gives a score on a story summary's coherence, consistency, fluency, and relevance. </p>
+            <div class="styled-box">
+                <h3>Story:</h3>
+                <p id="option1-story">Loading...</p>
+                <button onclick="showText('option1')">Generate a different story</button>
+
+            </div>
+            <div id="summary"><textarea id="user-answer" rows="4" cols="250" placeholder="Type your answer here..."></textarea></div>
+            <button id="summary-button" onclick="displaySummary()">Try Our Summary</button>
+            <p id="option1-text" class="box hidden">Loading...</p> 
+        </div>
+        
+        <div id="option2" class="box hidden">
+            <h2>Pass/Fail Evaluation</h2>
+            <p>Premise...</p>
+        </div>
+        <div id="option3" class="box hidden">
+            <h2>Option 3 Selected</h2>
+            <p>This is the content for Option 3.</p>
+        </div>
+    </main>
+</body>
+</html>
