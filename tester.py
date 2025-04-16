@@ -2,6 +2,10 @@ import os
 import sys
 import ollama
 import pandas as pd
+# import openai
+
+# openai.api_key = os.getenv("OPENAI_API_KEY")
+
 
 prompt = """
 You are given a Natural Language Inference (NLI) task output to evaluate. You will receive:
@@ -101,7 +105,16 @@ for index, row in model_answers_df.iterrows():
     for i in range(number_of_repetitions):
         print(f"Repetition {i+1}...", flush=True, end=" ")
         exception_ = False
-        response = client.generate(model_name, query).response
+
+        # response = openai.ChatCompletion.create(
+        #             model="gpt-4o",
+        #             messages=[
+        #                 {"role": "user", "content": query}
+        #             ],
+        #             temperature=0.0
+        #         )["choices"][0]["message"]["content"]
+
+        # response = client.generate(model_name, query).response
 
         try:
             if "</think>" in response:
