@@ -139,7 +139,7 @@ for index, row in model_answers_df.iterrows():
         #             temperature=0.0
         #         )["choices"][0]["message"]["content"]
 
-        # response = client.generate(model_name, query).response
+        response = client.generate(model_name, query).response
 
         try:
             if "</think>" in response:
