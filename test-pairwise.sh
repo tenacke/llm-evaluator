@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=poor-test
+#SBATCH --job-name=average-test
 #SBATCH --container-image ghcr.io\#tenacke/llm-evaluator:latest-container
 #SBATCH --container-mounts=/users/emre.kilic/llm-evaluator/outputs:/opt/llm-evaluator/outputs,/users/emre.kilic/llm-evaluator/logs:/opt/llm-evaluator/logs
 #SBATCH --time=08:00:00
@@ -8,10 +8,9 @@
 
 source /opt/llm-evaluator/venv/bin/activate
 
-python3 models/v3/model_test.py && \
-python3 tester.py llama3.1:70b poor 3 coherence && \
-python3 tester.py llama3.1:70b poor 3 fluency && \
-python3 tester.py llama3.1:70b poor 3 relevance && \
-python3 tester.py llama3.1:70b poor 3 consistency 
+python3 tester.py llama3.1:70b random_200 3 && \
+python3 tester.py llama3.1:70b vicukoala_100 3 && \
+python3 tester.py llama3.1:70b vicukoala_100_swapped 3
+
 
 
