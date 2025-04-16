@@ -3,96 +3,96 @@ import sys
 
 import pandas as pd
 
-if len(sys.argv) < 3:
-    print("Usage: python correlation.py <model_name> <path>")
+if len(sys.argv) != 5:
+    print(
+        "Usage: python correlation.py <model_name> <datafile-name> <base_data_path> <test_data_path>"
+    )
     sys.exit(1)
 
 model_name = sys.argv[1]
-path = sys.argv[2]
+datafile_name = sys.argv[2]
+base_path = sys.argv[3]
+test_path = sys.argv[4]
 
-path = os.path.join(os.path.dirname(__file__), path)
-if not os.path.exists(path):
-    print(f"Path {path} does not exist")
+base_path = os.path.join(os.path.dirname(__file__), base_path)
+if not os.path.exists(base_path):
+    print(f"Path {base_path} does not exist")
     sys.exit(1)
 
-metrics = ["coherence", "relevance", "fluency", "consistency"]
-models = ["average", "poor", "powerful"]
+test_path = os.path.join(os.path.dirname(__file__), test_path)
+if not os.path.exists(test_path):
+    print(f"Path {test_path} does not exist")
+    sys.exit(1)
 
 csv_dir_path = os.path.join(os.path.dirname(__file__), "csv")
+datasets_path = os.path.join(os.path.dirname(__file__), "datasets")
 
-expert_pearson_correlations = []
-expert_spearman_correlations = []
-
-turker_pearson_correlations = []
-turker_spearman_correlations = []
-
-for model in models:
-    scores_df = pd.read_csv(os.path.join(csv_dir_path, f"{model}_model.csv"))
-    scores_df.drop(
-        columns=[
-            "Unnamed: 0",
-            "filepath",
-            "decoded",
-            "model_id",
-            "reference",
-        ],
-        inplace=True,
-    )
-
-    for metric in metrics:
-        results_df_path = os.path.join(
-            path, f"{model_name}_{metric}_{model}_results.csv"
-        )
-        if not os.path.exists(results_df_path):
-            print(f"File {results_df_path} does not exist")
-            expert_pearson_correlations.append([model, metric, None])
-            expert_spearman_correlations.append([model, metric, None])
-            turker_pearson_correlations.append([model, metric, None])
-            turker_spearman_correlations.append([model, metric, None])
-            continue
-        results_df = pd.read_csv(results_df_path)
-        results_df.drop(columns=["Unnamed: 0"], inplace=True)
-        result = results_df["result"]
-
-        expert_scores = scores_df[f"expert_{metric}_score"]
-        turker_scores = scores_df[f"turker_{metric}_score"]
-
-        pearson_expert = expert_scores.corr(result, method="pearson")
-        pearson_turker = turker_scores.corr(result, method="pearson")
-
-        spearman_expert = expert_scores.corr(result, method="spearman")
-        spearman_turker = turker_scores.corr(result, method="spearman")
-
-        expert_pearson_correlations.append([model, metric, pearson_expert])
-        expert_spearman_correlations.append([model, metric, spearman_expert])
-
-        turker_pearson_correlations.append([model, metric, pearson_turker])
-        turker_spearman_correlations.append([model, metric, spearman_turker])
-
-expert_pearson_correlations_df = pd.DataFrame(
-    expert_pearson_correlations, columns=["model", "metric", "pearson"]
+base_df = pd.read_csv(
+    os.path.join(base_path, f"{datafile_name}.csv"),
+    # usecols=["gold_label", "result"],
 )
 
-expert_spearman_correlations_df = pd.DataFrame(
-    expert_spearman_correlations, columns=["model", "metric", "spearman"]
+test_df = pd.read_csv(
+    os.path.join(test_path, f"{model_name}_{datafile_name}_pw.csv"),
+    # usecols=["result"],
 )
 
-turker_pearson_correlations_df = pd.DataFrame(
-    turker_pearson_correlations, columns=["model", "metric", "pearson"]
-)
+one_one = 0
+one_two = 0
+two_two = 0
+two_one = 0
+no_answer = 0
+for i in range(len(base_df)):
+    if str(base_df.iloc[i]["winner"]).strip().lower() == "model_a":
+        if test_df.iloc[i]["result"] == 1:
+            one_one += 1
+        elif test_df.iloc[i]["result"] == 2:
+            one_two += 1
+        else:
+            no_answer += 1
+    else:
+        if test_df.iloc[i]["result"] == 2:
+            two_two += 1
+        elif test_df.iloc[i]["result"] == 1:
+            two_one += 1
+        else:
+            no_answer += 1
+true_count = one_one + two_two
+false_count = one_two + two_one
 
-turker_spearman_correlations_df = pd.DataFrame(
-    turker_spearman_correlations, columns=["model", "metric", "spearman"]
-)
+# # Calculate precision, recall, and F-score
+# precision = (
+#     true_positive / (true_positive + false_positive)
+#     if (true_positive + false_positive) > 0
+#     else 0
+# )
+# recall = (
+#     true_positive / (true_positive + false_negative)
+#     if (true_positive + false_negative) > 0
+#     else 0
+# )
+# f_score = (
+#     2 * (precision * recall) / (precision + recall) if (precision + recall) > 0 else 0
+# )
 
-print("Expert Pearson Correlations")
-print(expert_pearson_correlations_df)
+# print(f"Evaluation of {nli_model_name} using {model_name}")
+# print("\nConfusion Matrix:")
+# print("-" * 41)
+# print("|" + " " * 17 + "|     Predicted       |")
+# print("|" + " " * 17 + "| Positive | Negative |")
+# print("|" + "-" * 39 + "|")
+# print(f"| Actual Positive | {true_positive:8} | {false_negative:8} |")
+# print(f"| Actual Negative | {false_positive:8} | {true_negative:8} |")
+# print("-" * 41)
+# print(f"\nPrecision: {precision:.4f}")
+# print(f"Recall: {recall:.4f}")
+# print(f"F-score: {f_score:.4f}")
 
-print("Expert Spearman Correlations")
-print(expert_spearman_correlations_df)
-
-print("Turker Pearson Correlations")
-print(turker_pearson_correlations_df)
-
-print("Turker Spearman Correlations")
-print(turker_spearman_correlations_df)
+print(f"1: {one_one + one_two}")
+print(f"2: {two_one + two_two}")
+print(f"1-2: {one_two}")
+print(f"2-1: {two_one}")
+print(f"1-1: {one_one}")
+print(f"2-2: {two_two}")
+print(f"no_answer: {no_answer}")
+print(f"Accuracy: {true_count / len(base_df) * 100:.2f}%")

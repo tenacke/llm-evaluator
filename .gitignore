@@ -188,3 +188,7 @@ logs/
 
 # output files
 outputs/
+
+output/
+
+datasets/snli/
