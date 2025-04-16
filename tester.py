@@ -103,13 +103,10 @@ if not os.path.exists(path):
 
 number_of_repetitions = int(sys.argv[4])
 
-csv_dir_path = os.path.join(os.path.dirname(__file__), "csv")
-datasets_path = os.path.join(os.path.dirname(__file__), "datasets")
-
 try:
-    model_answers_df = pd.read_csv(os.path.join(path, f"{nli_model}_nli_model_answers.csv"))
+    model_answers_df = pd.read_csv(os.path.join(csv_files_path, f"{nli_model}_nli_model_answers.csv"))
 except FileNotFoundError:
-    print(f"File {nli_model}_nli_model_answers.csv not found in {path}")
+    print(f"File {nli_model}_nli_model_answers.csv not found in {csv_files_path}")
     sys.exit(1)
 
 client = ollama.Client()
