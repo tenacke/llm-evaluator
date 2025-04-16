@@ -13,8 +13,8 @@ git commit -m "Update entrypoint.sh" && \
 git checkout kaan-nli && \
 git pull origin kaan-nli
 
-python3 tester.py llama3.1:70b roberta output 3 
-python3 tester.py llama3.1:70b deberta output 3 
+python3 tester.py llama3.1:70b roberta output 3 && \
+python3 tester.py llama3.1:70b deberta output 3 && \
 python3 tester.py llama3.1:70b random output 3 
 
 
