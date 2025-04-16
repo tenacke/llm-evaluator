@@ -114,11 +114,9 @@ except FileNotFoundError:
 
 client = ollama.Client()
 
-exception_count = 0
 log_file_name = f"{model_name}_nli_tester_logs.csv"
 log_file = open(os.path.join(logs_path, log_file_name), "w")
 
-treshold = number_of_repetitions / 2
 results = pd.DataFrame(columns=["result"])
 
 print(f'Evaluating with prompt:\n{prompt}', flush=True)
@@ -128,11 +126,10 @@ for index, row in model_answers_df.iterrows():
     
     query = f'{prompt}\nPremise: {row["sentence1"]}\nHypothesis: {row["sentence2"]}\nAnswer of model: {row["result"]}'
     repetition_results = {"result": ''}
-    # answers = []
+    exception_count = 0
     true_count = 0
     for i in range(number_of_repetitions):
         print(f"Repetition {i+1}...", flush=True, end=" ")
-        exception_ = False
 
         # response = openai.ChatCompletion.create(
         #             model="gpt-4o",
@@ -158,13 +155,14 @@ for index, row in model_answers_df.iterrows():
             )
             log_file.write(f'{index},{i},"{response.replace(",", ";")}"\n')
             log_file.flush()
-            exception_ = True
+            exception_count += 1
 
-    if not exception_:
+    if exception_count < number_of_repetitions:
         print(f"Successfully evaluated index {index+1}", flush=True)
 
     print(f"True count: {true_count}", flush=True)
-    if true_count > treshold:
+    threshold = (number_of_repetitions - exception_count) / 2
+    if true_count >= threshold:  # favors true
         results.loc[index] = 'true'
     else:
         results.loc[index] = 'false'
