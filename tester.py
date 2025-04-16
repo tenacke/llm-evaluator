@@ -10,11 +10,39 @@ import pandas as pd
 prompt = """
 You are given a Natural Language Inference (NLI) task output to evaluate. You will receive:
 
-- A premise: the original statement
-- A hypothesis: a statement that may or may not logically follow from the premise
-- An answer: the model's predicted relationship between the premise and the hypothesis ("entailment", "contradiction", or "neutral")
+•⁠  ⁠A premise: the original statement
+•⁠  ⁠A hypothesis: a statement that may or may not logically follow from the premise
+•⁠  ⁠An answer: the model's predicted relationship between the premise and the hypothesis ("entailment", "contradiction", or "neutral")
 
-Your task is to evaluate whether the answer is correct or not, and explain your reasoning.
+Below you can see the definitions and examples for each one of the possible answers
+
+Entailment: The Hypothesis is a logical consequence of the Premise. The information in the Hypothesis must be true if the Premise is true. (E.g., specific to general, part to whole, synonyms, paraphrasing)
+Contradiction: The Hypothesis directly conflicts with the Premise. If the Premise is true, the Hypothesis cannot be true. (E.g., opposite meanings, factual disagreements, mutually exclusive statements)
+Neutral: The Hypothesis is plausible but not guaranteed by the Premise. The Premise provides insufficient information to determine the truth of the Hypothesis. (E.g., additional details, unrelated content, implications that are not certain)
+
+Explanation: Explain your reasoning clearly, identifying any clues or keywords that helped you make the decision. Provide logical steps and reference any implicit knowledge or assumptions used.
+Examples:
+
+Example 1:
+
+Premise: "A woman is running a marathon."
+Hypothesis: "A woman is engaging in a physical activity."
+Answer: Entailment
+Explanation: The hypothesis is a logical consequence of the premise. Running a marathon is a form of physical activity. The broader category of "physical activity" includes activities such as running, so the hypothesis follows logically.
+
+Example 2:
+
+Premise: "A cat is sleeping on the sofa."
+Hypothesis: "A cat is chasing a mouse."
+Answer: Contradiction
+Explanation: The hypothesis describes an activity that directly contradicts the premise. Sleeping and chasing are mutually exclusive actions; a cat cannot be doing both simultaneously.
+
+Example 3:
+
+Premise: "A man is playing the piano at a concert."
+Hypothesis: "The man is famous."
+Answer: Neutral
+Explanation: The premise provides no information about the man's fame. Playing the piano at a concert does not necessarily imply fame; it could be a local or amateur performance. Therefore, the hypothesis is neither entailed nor contradicted by the premise.
 
 Return your output in the following format:
 
