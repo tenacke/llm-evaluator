@@ -3,32 +3,31 @@ import sys
 
 import pandas as pd
 
-if len(sys.argv) != 5:
+if len(sys.argv) != 3:
     print(
-        "Usage: python correlation.py <model_name> <nli_model_name> <base_data_path> <test_data_path>"
+        "Usage: python correlation.py <model_name> <nli_model_name>"
     )
     sys.exit(1)
 
 model_name = sys.argv[1]
 nli_model_name = sys.argv[2]
-base_path = sys.argv[3]
-test_path = sys.argv[4]
-
-base_path = os.path.join(os.path.dirname(__file__), base_path)
-if not os.path.exists(base_path):
-    print(f"Path {base_path} does not exist")
-    sys.exit(1)
-
-test_path = os.path.join(os.path.dirname(__file__), test_path)
-if not os.path.exists(test_path):
-    print(f"Path {test_path} does not exist")
-    sys.exit(1)
 
 csv_dir_path = os.path.join(os.path.dirname(__file__), "csv")
 datasets_path = os.path.join(os.path.dirname(__file__), "datasets")
+output_path = os.path.join(os.path.dirname(__file__), "output")
+
+if not os.path.exists(csv_dir_path):
+    print(f"Path {csv_dir_path} does not exist")
+    sys.exit(1)
+
+if not os.path.exists(output_path):
+    print(f"Path {output_path} does not exist")
+    sys.exit(1)
+
+
 
 base_df = pd.read_csv(
-    os.path.join(base_path, f"{nli_model_name}_nli_model_answers.csv"),
+    os.path.join(csv_dir_path, f"{nli_model_name}_nli_model_answers.csv"),
     usecols=["gold_label", "result"],
 )
 
@@ -40,7 +39,7 @@ base_df["tf"] = base_df.apply(
 )
 
 test_df = pd.read_csv(
-    os.path.join(test_path, f"{model_name}_{nli_model_name}_nli_results.csv"),
+    os.path.join(output_path, f"{model_name}_{nli_model_name}_nli_results.csv"),
     usecols=["result"],
 )
 

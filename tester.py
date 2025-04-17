@@ -67,15 +67,15 @@ if not os.path.exists(logs_path):
 if not os.path.exists(output_path):
     os.makedirs(output_path)
 
-if len(sys.argv) != 5:
+if len(sys.argv) != 4:
     print(
-        "Usage: python tester.py <model_name> <nli-model> <path> <number_of_repetitions>"
+        "Usage: python tester.py <model_name> <nli-model> <number_of_repetitions>"
     )
     sys.exit(1)
 
 if sys.argv[1] == "--help":
     print(
-        "Usage: python tester.py <model_name> <nli-model> <path> <number_of_repetitions>"
+        "Usage: python tester.py <model_name> <nli-model> <number_of_repetitions>"
     )
     sys.exit()
 
@@ -94,14 +94,14 @@ if model_name not in get_models():
 
 nli_model = sys.argv[2]
 
-path = sys.argv[3]
+# path = sys.argv[3]
 
-path = os.path.join(os.path.dirname(__file__), path)
-if not os.path.exists(path):
-    print(f"Path {path} does not exist")
-    sys.exit(1)
+# path = os.path.join(os.path.dirname(__file__), path)
+# if not os.path.exists(path):
+#     print(f"Path {path} does not exist")
+#     sys.exit(1)
 
-number_of_repetitions = int(sys.argv[4])
+number_of_repetitions = int(sys.argv[3])
 
 try:
     model_answers_df = pd.read_csv(os.path.join(csv_files_path, f"{nli_model}_nli_model_answers.csv"))

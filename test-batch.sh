@@ -2,7 +2,7 @@
 #SBATCH --job-name=test-nli
 #SBATCH --container-image ghcr.io\#tenacke/llm-evaluator:latest-container
 #SBATCH --container-mounts=/users/bilge.guneyli/llm-evaluator/output:/opt/llm-evaluator/output,/users/bilge.guneyli/llm-evaluator/logs:/opt/llm-evaluator/logs
-#SBATCH --time=08:00:00
+#SBATCH --time=24:00:00
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=4G
 
@@ -13,9 +13,9 @@ git commit -m "Update entrypoint.sh" && \
 git checkout kaan-nli && \
 git pull origin kaan-nli
 
-python3 tester.py llama3.1:70b roberta output 3 && \
-python3 tester.py llama3.1:70b deberta output 3 && \
-python3 tester.py llama3.1:70b random output 3 
+python3 tester.py llama3.1:70b roberta 3 && \
+python3 tester.py llama3.1:70b deberta 3 && \
+python3 tester.py llama3.1:70b random 3 
 
 
 
