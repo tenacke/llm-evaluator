@@ -2,7 +2,7 @@
 #SBATCH --job-name=pairwise
 #SBATCH --container-image ghcr.io\#tenacke/llm-evaluator:latest-container
 #SBATCH --container-mounts=/users/bilge.guneyli/llm-evaluator/output:/opt/llm-evaluator/output,/users/bilge.guneyli/llm-evaluator/logs:/opt/llm-evaluator/logs
-#SBATCH --time=08:00:00
+#SBATCH --time=24:00:00
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=4G
 
