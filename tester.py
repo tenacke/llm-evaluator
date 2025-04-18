@@ -10,9 +10,9 @@ import pandas as pd
 prompt = """
 You are given a Natural Language Inference (NLI) task output to evaluate. You will receive:
 
-•⁠  ⁠A premise: the original statement
-•⁠  ⁠A hypothesis: a statement that may or may not logically follow from the premise
-•⁠  ⁠An answer: the model's predicted relationship between the premise and the hypothesis ("entailment", "contradiction", or "neutral")
+- A premise: the original statement
+- A hypothesis: a statement that may or may not logically follow from the premise
+- An answer: the model's predicted relationship between the premise and the hypothesis ("entailment", "contradiction", or "neutral")
 
 Below you can see the definitions and examples for each one of the possible answers
 
@@ -20,29 +20,28 @@ Entailment: The Hypothesis is a logical consequence of the Premise. The informat
 Contradiction: The Hypothesis directly conflicts with the Premise. If the Premise is true, the Hypothesis cannot be true. (E.g., opposite meanings, factual disagreements, mutually exclusive statements)
 Neutral: The Hypothesis is plausible but not guaranteed by the Premise. The Premise provides insufficient information to determine the truth of the Hypothesis. (E.g., additional details, unrelated content, implications that are not certain)
 
-Explanation: Explain your reasoning clearly, identifying any clues or keywords that helped you make the decision. Provide logical steps and reference any implicit knowledge or assumptions used.
-Examples:
+Your task is to evaluate the model's answer and return "True" if the answer is correct and "False" if the answer is incorrect. You should also provide an explanation of why the answer is correct or incorrect, based strictly on the logical relationship between the premise and hypothesis.
 
 Example 1:
 
 Premise: "A woman is running a marathon."
 Hypothesis: "A woman is engaging in a physical activity."
 Answer: Entailment
-Explanation: The hypothesis is a logical consequence of the premise. Running a marathon is a form of physical activity. The broader category of "physical activity" includes activities such as running, so the hypothesis follows logically.
+Explanation: The hypothesis is a logical consequence of the premise. Running a marathon is a form of physical activity. The broader category of "physical activity" includes activities such as running, so the hypothesis follows logically. Therefore, you should return "True" if the answer is "entailment" and "False" if any other answer is given.
 
 Example 2:
 
 Premise: "A cat is sleeping on the sofa."
 Hypothesis: "A cat is chasing a mouse."
 Answer: Contradiction
-Explanation: The hypothesis describes an activity that directly contradicts the premise. Sleeping and chasing are mutually exclusive actions; a cat cannot be doing both simultaneously.
+Explanation: The hypothesis describes an activity that directly contradicts the premise. Sleeping and chasing are mutually exclusive actions; a cat cannot be doing both simultaneously. Therefore, you should return "True" if the answer is "contradiction" and "False" if any other answer is given.
 
 Example 3:
 
 Premise: "A man is playing the piano at a concert."
 Hypothesis: "The man is famous."
 Answer: Neutral
-Explanation: The premise provides no information about the man's fame. Playing the piano at a concert does not necessarily imply fame; it could be a local or amateur performance. Therefore, the hypothesis is neither entailed nor contradicted by the premise.
+Explanation: The premise provides no information about the man's fame. Playing the piano at a concert does not necessarily imply fame; it could be a local or amateur performance. Therefore, the hypothesis is neither entailed nor contradicted by the premise. So, you should return "True" if the answer is "neutral" and "False" if any other answer is given.
 
 Return your output in the following format:
 

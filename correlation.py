@@ -3,14 +3,18 @@ import sys
 
 import pandas as pd
 
-if len(sys.argv) != 3:
+if len(sys.argv) < 4:
     print(
-        "Usage: python correlation.py <model_name> <nli_model_name>"
+        "Usage: python correlation.py <model_name> <nli_model_name> <path>"
     )
     sys.exit(1)
 
 model_name = sys.argv[1]
 nli_model_name = sys.argv[2]
+path = sys.argv[3]
+if not os.path.exists(path):
+    print(f"Path {path} does not exist")
+    sys.exit(1)
 
 csv_dir_path = os.path.join(os.path.dirname(__file__), "csv")
 datasets_path = os.path.join(os.path.dirname(__file__), "datasets")
@@ -23,8 +27,6 @@ if not os.path.exists(csv_dir_path):
 if not os.path.exists(output_path):
     print(f"Path {output_path} does not exist")
     sys.exit(1)
-
-
 
 base_df = pd.read_csv(
     os.path.join(csv_dir_path, f"{nli_model_name}_nli_model_answers.csv"),
@@ -39,7 +41,7 @@ base_df["tf"] = base_df.apply(
 )
 
 test_df = pd.read_csv(
-    os.path.join(output_path, f"{model_name}_{nli_model_name}_nli_results.csv"),
+    os.path.join(path, f"{model_name}_{nli_model_name}_nli_results.csv"),
     usecols=["result"],
 )
 
