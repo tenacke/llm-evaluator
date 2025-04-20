@@ -1,4 +1,5 @@
 .styled-box {
+    flex: 1; /* Ensure the boxes take equal width */
     border: 2px solid #d3b3ff; /* Pastel purple outline */
     border-radius: 12px; /* Rounded corners */
     padding: 20px; /* Inner padding */
@@ -6,7 +7,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     font-family: 'Arial', sans-serif; /* Nice readable font */
     color: #333; /* Text color */
-    margin: 20px 0; /* Space around the div */
+    margin: 10px; /* Adjust spacing around each box */
 }
 
 .styled-box:hover {
@@ -73,6 +74,17 @@ button:hover {
 .option:hover {
     background: #eaeaea;
 }
+.option2 {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.option2:hover {
+    background: #eaeaea;
+}
 .selected {
     font-weight: bold;
     color: #b792e6;
@@ -84,4 +96,9 @@ button:hover {
     position: absolute;
     left: -20px;
     font-size: 20px;
+}
+.answer-container {
+    display: flex; /* Enable flexbox for the container */
+    justify-content: space-between; /* Distribute boxes with space between */
+    gap: 20px; /* Add consistent space between boxes */
 }

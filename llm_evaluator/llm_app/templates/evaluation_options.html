@@ -19,6 +19,10 @@
 
             // If Option 1, fetch a random line
             if (option === 'option1') {
+                const summaryButton = document.getElementById('summary-button');
+                summaryButton.innerText = "Try Our Summary"
+                const exp_res_display = document.getElementById('exp_res');
+                exp_res_display.innerHTML = ``;
                 const option1Paragraph = document.getElementById('option1-text'); // Target the specific <p> by id
                 option1Paragraph.innerText = 'Loading...'; // Provide feedback while fetching
                 fetch('/get-random-line/')
@@ -68,17 +72,64 @@
                         option1Paragraph.innerText = 'Error fetching data.';
                     });
             }
+            if (option === 'option3') {
+                const options = document.querySelectorAll('.option2');
+            options.forEach(option => option.classList.remove('selected'));
+                fetch('/get-pairwise/')
+                    .then(response => response.json())
+                    .then(data => {
+                        const question = document.getElementById('question');
+                        question.innerText = `${data.line.question}` || 'No question found';
+                        const model1 = document.getElementById('model1');
+                        model1.innerText = `${data.line.model_a}` || 'No model 1 found';
+                        const answer1 = document.getElementById('answer1');
+                        answer1.innerText = `${data.line.answer_a}` || 'No answer 1 found';
+                        const model2 = document.getElementById('model2');
+                        model2.innerText = `${data.line.model_b}` || 'No model 2 found';
+                        const answer2 = document.getElementById('answer2');
+                        answer2.innerText = `${data.line.answer_b}` || 'No answer 2 found';
+                    })
+                    .catch(error => {
+                        console.error('Error fetching data:', error);
+                        option1Paragraph.innerText = 'Error fetching data.';
+                    });
+            }
         }
         function displaySummary() {
-        const summaryDisplay = document.getElementById('summary');
-        
+    const summaryDisplay = document.getElementById('summary');
+    const summaryButton = document.getElementById('summary-button');
+    
+    // Check the current state of the button
+    if (summaryButton.innerText === "Try Our Summary") {
+        // Change button text
+        summaryButton.innerText = "Type your own summary";
+
         // Extract summary from current JSON line data
         const summary = currentLineData.decoded || 'No summary available.';
-        
+        const exp_res = currentLineData.expert_annotations || 'No expert scores available';
+        const exp_res1 = exp_res[0];
+        const exp_res2 = exp_res[1];
+        const exp_res3 = exp_res[2];
+        const coherence = (exp_res1.coherence+exp_res2.coherence+exp_res3.coherence)/3;
+        const consistency = (exp_res1.consistency+exp_res2.consistency+exp_res3.consistency)/3;
+        const fluency = (exp_res1.fluency+exp_res2.fluency+exp_res3.fluency)/3;
+        const relevance = (exp_res1.relevance+exp_res2.relevance+exp_res3.relevance)/3;
         // Display the summary in the div
         summaryDisplay.style.display = 'block';
         summaryDisplay.innerHTML = `<h3>Summary:</h3> <p>${summary}</p>`;
+        const exp_res_display = document.getElementById('exp_res');
+        exp_res_display.innerHTML = `<h3>Expert scores:</h3> <p> coherence: ${coherence}, consistency: ${consistency}, fluency: ${fluency}, relevance: ${relevance} </p>`;
+    } else {
+        // Revert the button text
+        summaryButton.innerText = "Try Our Summary";
+
+        // Restore the textarea for user's own summary
+        summaryDisplay.innerHTML = `<textarea id="user-answer" rows="4" cols="250" placeholder="Type your answer here..."></textarea>`;
+        const exp_res_display = document.getElementById('exp_res');
+        exp_res_display.innerHTML = ``;
+   
     }
+}
     function selectOption(selectedElement) {
             // Remove 'selected' class from all options
             const options = document.querySelectorAll('.option');
@@ -87,8 +138,23 @@
             // Add 'selected' class to the clicked element
             selectedElement.classList.add('selected');
         }
+        function selectOption2(selectedElement) {
+            // Remove 'selected' class from all options
+            const options = document.querySelectorAll('.option2');
+            options.forEach(option => option.classList.remove('selected'));
+
+            // Add 'selected' class to the clicked element
+            selectedElement.classList.add('selected');
+        }
         function chooseRandomOption() {
             const options = document.querySelectorAll('.option');
+            options.forEach(option => option.classList.remove('selected'));
+            const randomIndex = Math.floor(Math.random() * options.length);
+            selectOption(options[randomIndex]);
+        }
+        function chooseRandomOption2() {
+            const options = document.querySelectorAll('.option2');
+            options.forEach(option => option.classList.remove('selected'));
             const randomIndex = Math.floor(Math.random() * options.length);
             selectOption(options[randomIndex]);
         }
@@ -114,8 +180,12 @@
                 <button onclick="showText('option1')">Generate a different story</button>
 
             </div>
-            <div id="summary"><textarea id="user-answer" rows="4" cols="250" placeholder="Type your answer here..."></textarea></div>
+            <div id="summary">
+                <textarea id="user-answer" rows="4" cols="250" placeholder="Type your answer here..."></textarea>
+            </div>
+            <p id="exp_res"></p>
             <button id="summary-button" onclick="displaySummary()">Try Our Summary</button>
+            
             <p id="option1-text" class="box hidden">Loading...</p> 
         </div>
         
@@ -139,8 +209,30 @@
             <button id="random-nli" onclick="chooseRandomOption()">Try a Random Response</button>
         </div>
         <div id="option3" class="box hidden">
-            <h2>Option 3 Selected</h2>
-            <p>This is the content for Option 3.</p>
+            <h2>Pairwise Evaluation</h2>
+            <p>In this task our evaluator chooses a better answer between two offered ones for a specific question.</p>
+            <h3>Question</h3>
+            <p id="question">Loading...</p>
+            <div class="answer-container">
+                <div class="styled-box">
+                    <h4>Model 1:</h4><p id="model1">Loading...</p>
+                    <h3>Answer 1:</h3>
+                    <p id="answer1">Loading...</p>
+                </div>
+                <div class="styled-box">
+                    <h4>Model 2:</h4><p id="model2">Loading...</p>
+                    <h3>Answer 2:</h3>
+                    <p id="answer2">Loading...</p>
+                </div>
+            </div>
+            <button onclick="showText('option3')">Generate a different question</button>
+            <div class="nli-container">
+                <h2>Select Your Answer</h2>
+                <div class="option2" onclick="selectOption2(this)">Answer 1</div>
+                <div class="option2" onclick="selectOption2(this)">Answer 2</div>
+            </div>
+            <button id="random-nli" onclick="chooseRandomOption2()">Try a Random Response</button>
+
         </div>
     </main>
 </body>
