@@ -52,6 +52,22 @@
                     summaryDisplay.innerHTML = `<textarea id="user-answer" rows="4" cols="250" placeholder="Type your answer here..."></textarea>`;
 
             }
+            if (option === 'option2') {
+                const options = document.querySelectorAll('.option');
+                options.forEach(option => option.classList.remove('selected'));
+                fetch('/get-random-nli/')
+                    .then(response => response.json())
+                    .then(data => {
+                        const option2premise = document.getElementById('option2-premise');
+                        option2premise.innerText = `${data.line.sentence1}` || 'No premise found';
+                        const option2hypothesis = document.getElementById('option2-hypothesis');
+                        option2hypothesis.innerText = `${data.line.sentence2}` || 'No hypothesis found';
+                    })
+                    .catch(error => {
+                        console.error('Error fetching data:', error);
+                        option1Paragraph.innerText = 'Error fetching data.';
+                    });
+            }
         }
         function displaySummary() {
         const summaryDisplay = document.getElementById('summary');
@@ -63,6 +79,19 @@
         summaryDisplay.style.display = 'block';
         summaryDisplay.innerHTML = `<h3>Summary:</h3> <p>${summary}</p>`;
     }
+    function selectOption(selectedElement) {
+            // Remove 'selected' class from all options
+            const options = document.querySelectorAll('.option');
+            options.forEach(option => option.classList.remove('selected'));
+
+            // Add 'selected' class to the clicked element
+            selectedElement.classList.add('selected');
+        }
+        function chooseRandomOption() {
+            const options = document.querySelectorAll('.option');
+            const randomIndex = Math.floor(Math.random() * options.length);
+            selectOption(options[randomIndex]);
+        }
     </script>
 
 </head>
@@ -92,7 +121,22 @@
         
         <div id="option2" class="box hidden">
             <h2>Pass/Fail Evaluation</h2>
-            <p>Premise...</p>
+            <p>In this task our evaluator gives a passing or a failing score on an NLI problem. Two sentences (a premise and a hypothesis) are given and a relationship between them is determined. It can be entailment where the second sentence can be logically inferred from the first one, contradiction where the second sentence clearly negates the information from the first one, or neutral where neither happens. Our evaluator does not perform the task, but evaluates whether the label given is correct or incorrect.</p>
+            <div class="styled-box">
+                <h3>Premise:</h3>
+                <p id="option2-premise">Loading...</p>
+                <h3>Hypothesis:</h3>
+                <p id="option2-hypothesis">Loading...</p>
+                <button onclick="showText('option2')">Generate a different premise and hypothesis</button>
+
+            </div>
+            <div class="nli-container">
+                <h2>Select Your Answer</h2>
+                <div class="option" onclick="selectOption(this)">Entailment</div>
+                <div class="option" onclick="selectOption(this)">Contradiction</div>
+                <div class="option" onclick="selectOption(this)">Neutral</div>
+            </div>
+            <button id="random-nli" onclick="chooseRandomOption()">Try a Random Response</button>
         </div>
         <div id="option3" class="box hidden">
             <h2>Option 3 Selected</h2>

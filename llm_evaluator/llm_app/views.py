@@ -26,6 +26,24 @@ def get_random_line(request):
 
     return JsonResponse({'error': 'Line not found'}, status=404)
 
+def get_random_nli(request):
+    file_path = os.path.join(settings.BASE_DIR, 'datasets/snli/snli_1.0/snli_1.0_test_batch.jsonl')
+
+    try:
+        random_line_number = random.randint(1, 500)
+
+        with open(file_path, 'r') as file:
+            for i, line in enumerate(file, start=1):
+                if i == random_line_number:
+                    line_data = json.loads(line.strip())
+                    return JsonResponse({'line': line_data})
+    except FileNotFoundError:
+        return JsonResponse({'error': 'File not found'}, status=404)
+    except Exception as e:
+        return JsonResponse({'error': str(e)}, status=500)
+
+    return JsonResponse({'error': 'Line not found'}, status=404)
+
 def get_file_content(request, storyId, type):
     if (type == "dm"):
         file_path = os.path.join(settings.BASE_DIR, 'datasets', 'cnndm', 'dailymail', 'stories', str(storyId)+".story")

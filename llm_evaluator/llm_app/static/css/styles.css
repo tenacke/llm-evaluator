@@ -54,3 +54,34 @@ button {
 button:hover {
     background-color: #836FFF; /* Slightly lighter purple */
 }
+.nli-container {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+.option {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.option:hover {
+    background: #eaeaea;
+}
+.selected {
+    font-weight: bold;
+    color: #b792e6;
+    position: relative;
+}
+.selected::before {
+    content: '•';
+    color: #9370DB;
+    position: absolute;
+    left: -20px;
+    font-size: 20px;
+}
