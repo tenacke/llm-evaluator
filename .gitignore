@@ -184,3 +184,5 @@ papers/
 excluded/
 
 llm_evaluator/staticfiles
+
+outputs/
