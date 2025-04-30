@@ -5,6 +5,7 @@ import os
 import csv
 from django.http import JsonResponse,HttpResponseNotFound
 from django.conf import settings
+# from llm_evaluator import LLMEvaluator
 
 def evaluation_options(request):
     return render(request, 'evaluation_options.html')
@@ -85,3 +86,58 @@ def get_pairwise(request):
         return JsonResponse({"error": "File not found."}, status=404)
     except UnicodeDecodeError as e:
         return JsonResponse({"error": f"Encoding error: {str(e)}"}, status=500)
+    
+def evaluate_summary(request, story, summary):
+    print("CU")
+    print("Story:", story)
+    print( "Summary:", summary)
+#     evaluator = LLMEvaluator(
+#         connection="ollama",
+#         task="summarization",
+#         repetition=1,
+#     )
+#     result = evaluator.evaluate(
+#         text=story,
+#         summary=summary,
+#         metric="all",
+#         explain=True,
+#     )
+#     print("Result:", result)
+#     return JsonResponse(result)
+
+def evaluate_nli(request, premise, hypothesis, label):
+    print("Premise:", premise)
+    print("Hypothesis:", hypothesis)
+    print("Label:", label)
+#     evaluator = LLMEvaluator(
+#         connection="ollama",
+#         task="nli",
+#         repetition=1,
+#     )
+#     result = evaluator.evaluate(
+#         premise=premise,
+#         hypothesis=hypothesis,
+#         label=label,
+#         explain=True,
+#     )
+#     print("Result:", result)
+#     return JsonResponse(result)
+
+def evaluate_pairwise(request, question, example1, example2, label):
+    print("Question:", question)
+    print("Example 1:", example1)
+    print("Example 2:", example2)
+    print("Label:", label)
+#     evaluator = LLMEvaluator(
+#         connection="ollama",
+#         task="pairwise",
+#         repetition=1,
+#     )
+#     result = evaluator.evaluate(
+#         example1=example1,
+#         example2=example2,
+#         label=label,
+#         explain=True,
+#     )
+#     print("Result:", result)
+#     return JsonResponse(result)

@@ -118,7 +118,7 @@
         summaryDisplay.style.display = 'block';
         summaryDisplay.innerHTML = `<h3>Summary:</h3> <p>${summary}</p>`;
         const exp_res_display = document.getElementById('exp_res');
-        exp_res_display.innerHTML = `<h3>Expert scores:</h3> <p> coherence: ${coherence}, consistency: ${consistency}, fluency: ${fluency}, relevance: ${relevance} </p>`;
+        exp_res_display.innerHTML = `<h3>Expert scores:</h3> <p> coherence: ${Math.round(coherence)}, consistency: ${Math.round(consistency)}, fluency: ${Math.round(fluency)}, relevance: ${Math.round(relevance)} </p>`;
     } else {
         // Revert the button text
         summaryButton.innerText = "Try Our Summary";
@@ -158,6 +158,68 @@
             const randomIndex = Math.floor(Math.random() * options.length);
             selectOption(options[randomIndex]);
         }
+        function evaluate_nli() {
+        const selectedOption = document.querySelector('.option.selected');
+        if (selectedOption) {
+            const selectedText = selectedOption.innerText;
+            const premise = document.getElementById('option2-premise').innerText;
+            const hypothesis = document.getElementById('option2-hypothesis').innerText;
+
+            fetch(`/evaluate_nli/${encodeURIComponent(premise)}/${encodeURIComponent(hypothesis)}/${encodeURIComponent(selectedText)}/`)
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        } else {
+            alert('Please select an option before evaluating.');
+        }
+        fetch(`/evaluate_nli/`)
+
+        }
+        function evaluate_summary() {
+            const summaryButton = document.getElementById('summary-button');
+            let user_summary = '';
+            if (summaryButton.innerText === "Try Our Summary") {
+                user_summary = document.getElementById('user-answer').value;
+
+            } else {
+                user_summary= currentLineData.decoded;
+
+            }
+            const story= document.getElementById('option1-story').innerText;
+            fetch(`/evaluate_summary/${encodeURIComponent(story)}/${encodeURIComponent(user_summary)}/`)
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+
+        }
+        function evaluate_pairwise(){
+            const selectedOption = document.querySelector('.option2.selected');
+            if (selectedOption) {
+                const selectedText = selectedOption.innerText;
+                const question = document.getElementById('question').innerText;
+                const answer1 = document.getElementById('answer1').innerText;
+                const answer2 = document.getElementById('answer2').innerText;
+
+                fetch(`/evaluate_pairwise/${encodeURIComponent(question)}/${encodeURIComponent(answer1)}/${encodeURIComponent(answer2)}/${encodeURIComponent(selectedText)}/`)
+                .then(response => response.json())
+                .then(data => {
+                    alert(data.message);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            } else {
+                alert('Please select an option before evaluating.');
+            }
+        }
     </script>
 
 </head>
@@ -167,12 +229,12 @@
     </header>
     <main>
         <h1>Select an Evaluation Type</h1>
-        <button onclick="showText('option1')">Point Evaluation (Summary)</button>
+        <button onclick="showText('option1')">Pointwise Evaluation (Summary)</button>
         <button onclick="showText('option2')">Pass/Fail Evaluation (NLI)</button>
         <button onclick="showText('option3')">Pairwise Evaluation</button>
 
         <div id="option1" class="box hidden">
-            <h2>Point Evaluation</h2>
+            <h2>Pointwise Evaluation</h2>
             <p>In this task our evaluator gives a score on a story summary's coherence, consistency, fluency, and relevance. </p>
             <div class="styled-box">
                 <h3>Story:</h3>
@@ -187,6 +249,8 @@
             <button id="summary-button" onclick="displaySummary()">Try Our Summary</button>
             
             <p id="option1-text" class="box hidden">Loading...</p> 
+            <button id="evaluate-summary" onclick="evaluate_summary()">Evaluate</button>
+
         </div>
         
         <div id="option2" class="box hidden">
@@ -207,6 +271,8 @@
                 <div class="option" onclick="selectOption(this)">Neutral</div>
             </div>
             <button id="random-nli" onclick="chooseRandomOption()">Try a Random Response</button>
+            <button id="nli-evaluate" onclick="evaluate_nli()">Evaluate</button>
+
         </div>
         <div id="option3" class="box hidden">
             <h2>Pairwise Evaluation</h2>
@@ -232,6 +298,8 @@
                 <div class="option2" onclick="selectOption2(this)">Answer 2</div>
             </div>
             <button id="random-nli" onclick="chooseRandomOption2()">Try a Random Response</button>
+            <button id="evaluate-pairwise" onclick="evaluate_pairwise()">Evaluate</button>
+
 
         </div>
     </main>
