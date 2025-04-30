@@ -36,7 +36,7 @@ def nli():
         premise=example_premise,
         hypothesis=example_hypothesis,
         label=example_label,
-        explain=False,
+        explain=True,
     )
     print("Result:", result)
 
