@@ -1,31 +1,30 @@
+from ..connection.base import BaseConnection
+
 from abc import ABC, abstractmethod
 
-from pydantic import BaseModel, Field
 
-
-class EvaluateConfig(BaseModel):
+class BaseTask(ABC):
     """
-    Configuration for the evaluation.
+    Base class for all task evaluators.
     """
 
-    # The prompt to evaluate
-    prompt: str = Field(
-        default="",
-        description="The prompt to evaluate.",
-    )
-
-
-class BaseEvaluator(ABC):
-    """
-    Base class for all evaluators.
-    """
-
-    def __init__(self):
-        pass
+    def __init__(
+        self,
+        *,
+        connection: BaseConnection,
+        repetition: int,
+        timeout: int,
+        **kwargs,
+    ):
+        # TODO : Add error handling for connection issues
+        # Initialize the connection to the LLM
+        self.connection = connection
+        self.repetition = repetition
+        self.timeout = timeout
 
     @abstractmethod
-    def evaluate(self, config: EvaluateConfig) -> str:
+    def perform(self, *args, **kwargs):
         """
-        Evaluate the model with the given prompt.
+        Perform the task with the given details.
         """
         pass

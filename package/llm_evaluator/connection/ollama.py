@@ -1,23 +1,7 @@
+from .base import BaseConnection
+from ..exceptions import OllamaConnectionError, OllamaModelError, OllamaResponseError
+
 from ollama import Client
-from pydantic import BaseModel, Field
-
-from .base import BaseConnection, SendInputConfig
-
-
-class OllamaConfig(BaseModel):
-    """Configuration for the Ollama LLM."""
-
-    # The URL of the Ollama server
-    url: str = Field(
-        default="http://localhost:11434",
-        description="The URL of the Ollama server.",
-    )
-
-    # The model to use
-    model: str = Field(
-        default="llama3.1:8b",
-        description="The LLM model to use.",
-    )
 
 
 class OllamaConnection(BaseConnection):
@@ -25,31 +9,63 @@ class OllamaConnection(BaseConnection):
     Connection to the Ollama LLM.
     """
 
-    def __init__(self, config: OllamaConfig):
-        self.config = config
+    def __init__(
+        self,
+        *,
+        url: str = "http://localhost:11434",
+        model: str = "llama3.1:8b",
+        **kwargs,
+    ):
+        """
+        Initialize the Ollama connection.
+        """
+
+        self.url = url
+        self.model = model
         # TODO : Add error handling for connection issues
         # Initialize the Ollama client
         # Check if the URL is valid
-        # Check if the model is available
         # Check if the server is running
+        # Check if the model is available
         try:
-            self.client = Client(host=config.url)
-            self.client.pull(model=config.model)
+            self.client = Client(host=self.url)
         except Exception as e:
-            pass
+            raise OllamaConnectionError(
+                f"Failed to connect to the Ollama server at {self.url}. Error: {str(e)}"
+            )
 
-    def send(self, message: SendInputConfig) -> str:
+        try:
+            self.client.pull(model=self.model)
+        except Exception as e:
+            raise OllamaModelError(
+                f"Failed to pull the model {self.model} from the Ollama server. Error: {str(e)}"
+            )
+
+    def send(
+        self,
+        *,
+        query: str,
+        **kwargs,
+    ) -> str:
         """
         Send a request to the Ollama LLM and return the response.
         """
-        # TODO : Add error handling for request issues
+        # TODO : Add error handling for timeout issues
         # Send the request to the LLM
         try:
             response = self.client.generate(
-                model=self.config.model,
-                prompt=message.query,
+                model=self.model,
+                prompt=query,
             ).response
         except Exception as e:
-            pass
-
+            raise OllamaResponseError(
+                f"Failed to get a response from the Ollama server. Error: {str(e)}"
+            )
+        if "</think>" in response:
+            response = response.split("</think>")[1]
+        # Check if the response is valid
+        if not response:
+            raise OllamaResponseError(
+                "Received an empty response from the Ollama server."
+            )
         return response

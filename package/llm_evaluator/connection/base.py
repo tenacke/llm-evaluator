@@ -1,17 +1,4 @@
 from abc import ABC, abstractmethod
-from pydantic import BaseModel, Field
-
-
-class SendInputConfig(BaseModel):
-    """
-    Input for the send method.
-    """
-
-    # The query to send to the LLM
-    query: str = Field(
-        default="",
-        description="The query to send to the LLM.",
-    )
 
 
 class BaseConnection(ABC):
@@ -19,8 +6,19 @@ class BaseConnection(ABC):
     Base class for all connection types.
     """
 
+    def __init__(self, *args, **kwargs):
+        """
+        Initialize the connection.
+        """
+        pass
+
     @abstractmethod
-    def send(self, message: SendInputConfig) -> str:
+    def send(
+        self,
+        *,
+        query: str,
+        **kwargs,
+    ) -> str:
         """
         Send a request to the provider and return the response.
         """
