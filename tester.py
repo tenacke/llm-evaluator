@@ -106,7 +106,7 @@ client = ollama.Client()
 log_file_name = f"{model_name}_logs.csv"
 log_file = open(os.path.join(logs_path, log_file_name), "w")
 
-results = pd.DataFrame(columns=["result"])
+results = pd.DataFrame(columns=["result_100", "result_5"])
 
 print(f'Evaluating with prompt:\n{prompt_100}', flush=True)
 
