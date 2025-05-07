@@ -7,24 +7,24 @@ import pandas as pd
 # openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
-prompt_100 = """
-You are a professional translation evaluator. You will be given 2 sentences:
+# prompt_100 = """
+# You are a professional translation evaluator. You will be given 2 sentences:
 
-- Source sentence (English): The original English sentence.
-- Translated sentence (Turkish): A sentence that is claimed to be its translation.
-Your task is to give a score from 0 to 100 as 100 being the highest, based on how good the Turkish translation is. Focus on the following:
+# - Source sentence (English): The original English sentence.
+# - Translated sentence (Turkish): A sentence that is claimed to be its translation.
+# Your task is to give a score from 0 to 100 as 100 being the highest, based on how good the Turkish translation is. Focus on the following:
 
-Does the translation accurately convey the meaning?
-- Is it fluent and natural in Turkish?
-- Are there any mistakes, unnatural phrases, or missing parts?
-- Do not just translate back into English — judge the Turkish sentence as a native Turkish speaker would.
+# Does the translation accurately convey the meaning?
+# - Is it fluent and natural in Turkish?
+# - Are there any mistakes, unnatural phrases, or missing parts?
+# - Do not just translate back into English — judge the Turkish sentence as a native Turkish speaker would.
 
-Use your expert judgment. A perfect or near-perfect translation would get close to 100, while incorrect, broken, or misleading translations would get a much lower score.
+# Use your expert judgment. A perfect or near-perfect translation would get close to 100, while incorrect, broken, or misleading translations would get a much lower score.
 
-Return your output in this format:
-Score: [number between 0 and 100]
-Reason: [Brief explanation of your decision]
-"""
+# Return your output in this format:
+# Score: [number between 0 and 100]
+# Reason: [Brief explanation of your decision]
+# """
 
 prompt_5 = """
 You are a professional translation evaluator. You will be given 2 sentences:
@@ -108,59 +108,58 @@ log_file = open(os.path.join(logs_path, log_file_name), "w")
 
 results = pd.DataFrame(columns=["result_100", "result_5"])
 
-print(f'Evaluating with prompt:\n{prompt_100}', flush=True)
+print(f'Evaluating with prompt:\n{prompt_5}', flush=True)
 
 for index, row in input_df.iterrows():
     print(f"Evaluating index {index+1}...", flush=True)
-    
-    for i in range(2):
-        if i == 0:
-            query = prompt_100 + f"\nSource sentence (English): {row['src']}\n" + f"Translated sentence (Turkish): {row['mt']}\n"
-        else:
-            query = prompt_5 + f"\nSource sentence (English): {row['src']}\n" + f"Translated sentence (Turkish): {row['mt']}\n"
-        repetition_results = {"result_100": 0, "result_5": 0}
-        count = 0
-        exception_ = False
-        for i in range(number_of_repetitions):
-            print(f"Repetition {i+1}...", flush=True, end=" ")
+    if index == 500:
+        print("Reached 1000 iterations, stopping...", flush=True)
+        break
+    # for i in range(2):
+    #     if i == 0:
+    #         query = prompt_100 + f"\nSource sentence (English): {row['src']}\n" + f"Translated sentence (Turkish): {row['mt']}\n"
+    #     else:
+    query = prompt_5 + f"\nSource sentence (English): {row['src']}\n" + f"Translated sentence (Turkish): {row['mt']}\n"
+    repetition_results = {"result_100": 0, "result_5": 0}
+    count = 0
+    exception_ = False
+    for i in range(number_of_repetitions):
+        print(f"Repetition {i+1}...", flush=True, end=" ")
 
-            # response = openai.ChatCompletion.create(
-            #             model="gpt-4o",
-            #             messages=[
-            #                 {"role": "user", "content": query}
-            #             ],
-            #             temperature=0.0
-            #         )["choices"][0]["message"]["content"]
+        # response = openai.ChatCompletion.create(
+        #             model="gpt-4o",
+        #             messages=[
+        #                 {"role": "user", "content": query}
+        #             ],
+        #             temperature=0.0
+        #         )["choices"][0]["message"]["content"]
 
-            response = client.generate(model_name, query).response
+        response = client.generate(model_name, query).response
 
-            try:
-                if "</think>" in response:
-                    response = response.split("</think>")[1]
-                score = response.split("Score: ")[1][0]
-                print(f"Score: {score}", flush=True)
-                if i == 0:
-                    repetition_results["result_100"] += int(score)
-                else:
-                    repetition_results["result_5"] += int(score)
-                count += 1
-            except:
-                print(
-                    f"Error parsing response index {index+1} repetition {i}",
-                    flush=True,
-                )
-                log_file.write(f'{index},{i},"{response.replace(",", ";")}"\n')
-                log_file.flush()
-                exception_ = True
+        try:
+            if "</think>" in response:
+                response = response.split("</think>")[1]
+            score = response.split("Score: ")[1][0]
+            print(f"Score: {score}", flush=True)
+            repetition_results["result_100"] = 0
+            repetition_results["result_5"] += int(score)
+            count += 1
+        except:
+            print(
+                f"Error parsing response index {index+1} repetition {i}",
+                flush=True,
+            )
+            log_file.write(f'{index},{i},"{response.replace(",", ";")}"\n')
+            log_file.flush()
+            exception_ = True
 
-            if not exception_:
-                print(f"Successfully evaluated index {index+1}", flush=True)
-            if i == 0:
-                repetition_results["result_100"] /= count
-            else:
-                repetition_results["result_5"] /= count
+        if not exception_:
+            print(f"Successfully evaluated index {index+1}", flush=True)
 
-            results.loc[index] = repetition_results
+        # repetition_results["result_100"] /= count
+        repetition_results["result_5"] /= count
+
+        results.loc[index] = repetition_results
 
 results.to_csv(
     os.path.join(
