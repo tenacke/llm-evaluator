@@ -1,50 +1,52 @@
-# EvalLM
+# 🧪 task-evaluator
 
-Authors: [Emre Kılıç](https://github.com/tenacke), [Kristina Trajkovski](https://github.com/kristinatrajkovski), [Bilge Kaan Güneyli](https://github.com/kaanguneyli)
+A lightweight, pluggable Python package to evaluate tasks using different model providers like **Ollama** and **OpenAI** — with a unified interface.
 
-The LLM Evaluator. An evaluator model which analyses and scores an LMM in terms of their performance in the summarization task.
+---
 
-## Dataset
-
-#### SummEval
-
-We use [SummEval](https://github.com/Yale-LILY/SummEval) project in our tests. It uses the CNN and Daily Mail stories as data sources. The summaries of the stories are created by different LLMs and annotated by human evaluators.
-To recreate the dataset, follow the instructions:
-
-1. Download CNN Stories and Daily Mail Stories from [here](https://cs.nyu.edu/~kcho/DMQA/).
-2. Create a cnndm directory and unpack downloaded files into the directory.
-3. Download the model outputs and human annotations from [here](https://storage.googleapis.com/sfr-summarization-repo-research/model_annotations.aligned.jsonl) and add the json file into the cnndm directory.
-4. Put the cnndm directory into the datasets directory.
-
-## Installation
-
-#### Ollama
-
-We use Ollama to form our evaluation models. To recreate the EvalLM models, you must install Ollama. You'll be able to do so from [here](https://ollama.com/download).
-
-We also use the Ollama's `python` package to run the tests. You can install it by running:
+## 📦 Installation
 
 ```bash
-pip install ollama
+pip install llm-evaluator
 ```
 
-#### Models
+## 🚀 Usage
 
-We store the descriptions of the models in the `models` directory. To recreate the models, you can run the following command:
+### Using Ollama
 
-```bash
-bash models/<version>/model-compose.sh
+This example assumes you are running a local Ollama server (e.g., at localhost:11434).
+
+```python
+from llm_evaluator import Evaluator
+
+# Initialize the Evaluator with Ollama
+evaluator = Evaluator(model="llama3.1:8b", provider="ollama",
+task="summarization")
+
+# Evaluate a task
+result = evaluator.evaluate(
+    text="The quick brown fox jumps over the lazy dog. The dog was not happy about it.",
+    summary="A fox jumps over a dog.",
+)
+print(result)
 ```
 
-#### Running the tests
+### Using OpenAI
 
-After recreating the dataset and composing a model, you can run the model's test to ensure everything goes well.
-To run the test of a model, you can use the following command:
+This example assumes you have set up your OpenAI API key in your environment variables.
 
-```bash
-python3 models/<version>/model_test.py
+```python
+from llm_evaluator import Evaluator
+
+import os
+
+# Initialize the Evaluator with OpenAI
+evaluator = Evaluator(model="gpt-3.5-turbo", provider="openai", api_key=os.getenv("OPENAI_API_KEY"), task="summarization")
+
+# Evaluate a task
+result = evaluator.evaluate(
+    text="The quick brown fox jumps over the lazy dog. The dog was not happy about it.",
+    summary="A fox jumps over a dog.",
+)
+print(result)
 ```
-
-## Usage
-
-TBW
