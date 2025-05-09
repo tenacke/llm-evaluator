@@ -25,6 +25,8 @@
                 exp_res_display.innerHTML = ``;
                 const option1Paragraph = document.getElementById('option1-text'); // Target the specific <p> by id
                 option1Paragraph.innerText = 'Loading...'; // Provide feedback while fetching
+                const result = document.getElementById('summary-result');
+                result.innerHTML = ``;
                 fetch('/get-random-line/')
                     .then(response => response.json())
                     .then(data => {
@@ -66,6 +68,8 @@
                         option2premise.innerText = `${data.line.sentence1}` || 'No premise found';
                         const option2hypothesis = document.getElementById('option2-hypothesis');
                         option2hypothesis.innerText = `${data.line.sentence2}` || 'No hypothesis found';
+                        const result = document.getElementById('nli-result');
+                        result.innerHTML = ``;
                     })
                     .catch(error => {
                         console.error('Error fetching data:', error);
@@ -88,6 +92,9 @@
                         model2.innerText = `${data.line.model_b}` || 'No model 2 found';
                         const answer2 = document.getElementById('answer2');
                         answer2.innerText = `${data.line.answer_b}` || 'No answer 2 found';
+                        const result = document.getElementById('pairwise-result');
+                    result.innerHTML = ``;
+                        
                     })
                     .catch(error => {
                         console.error('Error fetching data:', error);
@@ -159,6 +166,10 @@
             selectOption(options[randomIndex]);
         }
         function evaluate_nli() {
+        const loading = document.getElementById('nli-evaluate');
+        loading.innerText = 'Loading...';
+        // Make button non-clickable during evaluation
+        loading.disabled = true;
         const selectedOption = document.querySelector('.option.selected');
         if (selectedOption) {
             const selectedText = selectedOption.innerText;
@@ -168,10 +179,16 @@
             fetch(`/evaluate_nli/${encodeURIComponent(premise)}/${encodeURIComponent(hypothesis)}/${encodeURIComponent(selectedText)}/`)
             .then(response => response.json())
             .then(data => {
-                alert(data.message);
+                const result = document.getElementById('nli-result');
+                result.innerHTML = `<h3>Evaluation Result:</h3> <p>Answer: ${data.status}</p> <br> <p>Explanation: ${data.explanation}</p>`;
             })
             .catch(error => {
                 console.error('Error:', error);
+            })
+            .finally(() => {
+                loading.innerText = 'Evaluate';
+                // Make button clickable again
+                loading.disabled = false;
             });
         } else {
             alert('Please select an option before evaluating.');
@@ -180,6 +197,10 @@
 
         }
         function evaluate_summary() {
+            const loading = document.getElementById('evaluate-summary');
+            loading.innerText = 'Loading...';
+            // Make button non-clickable during evaluation
+            loading.disabled = true;
             const summaryButton = document.getElementById('summary-button');
             let user_summary = '';
             if (summaryButton.innerText === "Try Our Summary") {
@@ -193,14 +214,24 @@
             fetch(`/evaluate_summary/${encodeURIComponent(story)}/${encodeURIComponent(user_summary)}/`)
             .then(response => response.json())
             .then(data => {
-                alert(data.message);
+                const result = document.getElementById('summary-result');
+                result.innerHTML = `<h3>Evaluation Result:</h3> <p>Coherence Score: ${data.coherence_score}</p> <br> Coherence Explanation: <p>${data.coherence_explanation}</p> <br> <p>Consistency Score: ${data.consistency_score}</p> <br> Consistency Explanation: <p>${data.consistency_explanation}</p> <br> <p>Fluency Score: ${data.fluency_score}</p> <br> Fluency Explanation: <p>${data.fluency_explanation}</p> <br> <p>Relevance Score: ${data.relevance_score}</p> <br> Relevance Explanation: <p>${data.relevance_explanation}</p>`
             })
             .catch(error => {
                 console.error('Error:', error);
+            })
+            .finally(() => {
+                loading.innerText = 'Evaluate';
+                // Make button clickable again
+                loading.disabled = false;
             });
 
         }
         function evaluate_pairwise(){
+            const loading = document.getElementById('evaluate-pairwise');
+            loading.innerText = 'Loading...';
+            // Make button non-clickable during evaluation
+            loading.disabled = true;
             const selectedOption = document.querySelector('.option2.selected');
             if (selectedOption) {
                 const selectedText = selectedOption.innerText;
@@ -211,10 +242,16 @@
                 fetch(`/evaluate_pairwise/${encodeURIComponent(question)}/${encodeURIComponent(answer1)}/${encodeURIComponent(answer2)}/${encodeURIComponent(selectedText)}/`)
                 .then(response => response.json())
                 .then(data => {
-                    alert(data.message);
+                    const result = document.getElementById('pairwise-result');
+                    result.innerHTML = `<h3>Evaluation Result:</h3> <p>Answer: ${data.choice}</p> <br> <p>Explanation: ${data.explanation}</p>`                
                 })
                 .catch(error => {
                     console.error('Error:', error);
+                })
+                .finally(() => {
+                    loading.innerText = 'Evaluate';
+                    // Make button clickable again
+                    loading.disabled = false;
                 });
             } else {
                 alert('Please select an option before evaluating.');
@@ -250,7 +287,9 @@
             
             <p id="option1-text" class="box hidden">Loading...</p> 
             <button id="evaluate-summary" onclick="evaluate_summary()">Evaluate</button>
-
+            <div id="summary-result">
+                
+            </div>
         </div>
         
         <div id="option2" class="box hidden">
@@ -272,6 +311,9 @@
             </div>
             <button id="random-nli" onclick="chooseRandomOption()">Try a Random Response</button>
             <button id="nli-evaluate" onclick="evaluate_nli()">Evaluate</button>
+            <div id="nli-result">
+                
+            </div>
 
         </div>
         <div id="option3" class="box hidden">
@@ -299,7 +341,9 @@
             </div>
             <button id="random-nli" onclick="chooseRandomOption2()">Try a Random Response</button>
             <button id="evaluate-pairwise" onclick="evaluate_pairwise()">Evaluate</button>
-
+            <div id="pairwise-result">
+                
+            </div>
 
         </div>
     </main>
