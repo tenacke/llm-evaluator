@@ -5,10 +5,13 @@ setup(
     version="0.1.0",
     packages=find_packages(),
     install_requires=[
-        "typer>=0.15.2",
+        "typer>=0.15.3",
         "ollama>=0.4.8",
-        "openai>=1.75.0",
-        "beartype>=0.20.2",
+        "openai>=1.78.0",
+        "beartype>=0.19.0",
+    ],
+    test_requires=[
+        "pytest",
     ],
     entry_points={
         "console_scripts": [
@@ -25,5 +28,5 @@ setup(
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
     ],
-    python_requires=">=3.12",
+    python_requires=">=3.8",
 )
