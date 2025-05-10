@@ -1,4 +1,4 @@
-from typer import Typer, Option, Argument
+from typer import Typer, Option
 from evaluator import __version__
 
 
@@ -14,7 +14,6 @@ app = Typer(
 
 @app.callback()
 def main(
-    ctx: Typer.Context,
     version: bool = Option(
         False,
         "--version",
@@ -26,4 +25,5 @@ def main(
     A flexible task evaluation client.
     """
     if version:
-        ctx.exit(f"LLM Evaluator version: {__version__}")
+        print(f"LLM Evaluator version: {__version__}")
+        raise SystemExit(0)

@@ -3,7 +3,7 @@ from .prompts import NLI_PROMPT
 from ..exceptions import BaseConnectionError, InternalModelTiredError
 
 from dataclasses import dataclass
-from typing import Any, List, Union
+from beartype.typing import Any, List, Union
 
 
 @dataclass

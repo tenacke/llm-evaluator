@@ -12,7 +12,7 @@ from ..exceptions import (
 )
 
 from dataclasses import dataclass
-from typing import List, Union, Literal
+from beartype.typing import List, Union, Literal
 
 METRICS = [
     "coherence",
