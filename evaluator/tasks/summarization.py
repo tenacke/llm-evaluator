@@ -165,10 +165,10 @@ class Summarization(BaseTask):
             except IndexError or ValueError:
                 # Retry if the response format is not as expected
                 timeout -= 1
-                if timeout == 0:
-                    raise InternalModelTiredError(
-                        f"Timeout while waiting for the correct response. Please check the model and the connection."
-                    )
+                # if timeout == 0:
+                #     raise InternalModelTiredError(
+                #         f"Timeout while waiting for the correct response. Please check the model and the connection."
+                #     )
                 continue
             except BaseConnectionError as e:
                 # TODO Handle connection errors

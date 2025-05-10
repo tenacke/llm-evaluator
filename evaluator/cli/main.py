@@ -1,5 +1,5 @@
 from typer import Typer, Option, Argument
-from llm_evaluator import __version__
+from evaluator import __version__
 
 
 app = Typer(

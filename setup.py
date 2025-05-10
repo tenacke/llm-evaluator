@@ -12,7 +12,7 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "evaluate=llm_evaluator.cli.main:main",
+            "evaluate=evaluator.cli.main:main",
         ],
     },
     author="",

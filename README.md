@@ -17,11 +17,10 @@ pip install llm-evaluator
 This example assumes you are running a local Ollama server (e.g., at localhost:11434).
 
 ```python
-from llm_evaluator import Evaluator
+from evaluator import LLMEvaluator
 
 # Initialize the Evaluator with Ollama
-evaluator = Evaluator(model="llama3.1:8b", provider="ollama",
-task="summarization")
+evaluator = LLMEvaluator(model="llama3.1:8b", provider="ollama", task="summarization")
 
 # Evaluate a task
 result = evaluator.evaluate(
@@ -36,7 +35,7 @@ print(result)
 This example assumes you have set up your OpenAI API key in your environment variables.
 
 ```python
-from llm_evaluator import Evaluator
+from evaluator import LLMEvaluator
 
 import os
 
