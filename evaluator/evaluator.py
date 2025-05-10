@@ -87,17 +87,3 @@ class LLMEvaluator:
 
         except Exception as e:
             raise e
-
-    if False:
-        import os
-
-        example_text = ""
-        with open(
-            os.path.join(
-                "../..",
-                "datasets",
-                "cnndm/dailymail/stories/8764fb95bfad8ee849274873a92fb8d6b400eee2.story",
-            ),
-            "r",
-        ) as f:
-            example_text = f.read()
