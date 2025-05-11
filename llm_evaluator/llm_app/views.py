@@ -206,3 +206,17 @@ def evaluate_translation(request, eng, tur):
         explain=True,
     )
     return JsonResponse({"status": result.status, "explanation": result.explanation})
+
+def evaluate_generic(request, prompt, input, output):
+    evaluator = LLMEvaluator(
+        connection="ollama",
+        task="generic",
+        repetition=1,
+    )
+    result = evaluator.evaluate(
+        prompt=prompt,
+        input=input,
+        output=output,
+        explain=True,
+    )
+    return JsonResponse({"status": result.status, "explanation": result.explanation})

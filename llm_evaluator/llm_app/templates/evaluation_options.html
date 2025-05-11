@@ -129,6 +129,16 @@
                     const summaryDisplay = document.getElementById('tur-text');
                     summaryDisplay.innerHTML = `<textarea id="user-translation" rows="4" cols="250" placeholder="Type your answer here..."></textarea>`;
             }
+            if (option === 'option5') {
+                const genericResult = document.getElementById('generic-result');
+                genericResult.innerHTML = ``;
+                const genericPrompt = document.getElementById('generic-prompt');
+                genericPrompt.value = '';
+                const genericInput = document.getElementById('generic-input');
+                genericInput.value = '';
+                const genericOutput = document.getElementById('generic-output');
+                genericOutput.value = '';
+            }
         }
         function displaySummary() {
     const summaryDisplay = document.getElementById('summary');
@@ -369,6 +379,30 @@
                 alert('Please select an option before evaluating.');
             }
         }
+        function evaluate_generic() {
+            const loading = document.getElementById('evaluate-generic');
+            loading.innerText = 'Loading...';
+            // Make button non-clickable during evaluation
+            loading.disabled = true;
+            const prompt = document.getElementById('generic-prompt').value;
+            const inputText = document.getElementById('generic-input').value;
+            const outputText = document.getElementById('generic-output').value;
+
+            fetch(`/evaluate_generic/${encodeURIComponent(prompt)}/${encodeURIComponent(inputText)}/${encodeURIComponent(outputText)}/`)
+                .then(response => response.json())
+                .then(data => {
+                    const result = document.getElementById('generic-result');
+                    result.innerHTML = `<h3>Evaluation Result:</h3> <p>Score: ${data.score}</p> <br> <p>Explanation: ${data.explanation}</p>`;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                })
+                .finally(() => {
+                    loading.innerText = 'Evaluate';
+                    // Make button clickable again
+                    loading.disabled = false;
+                });
+        }
         function writeYourOwnStory() {
         // Replace story container with a large textarea
         const storyContainer = document.getElementById('option1-story');
@@ -450,10 +484,12 @@
         <button onclick="showText('option4')">Pointwise Evaluation (Translation)</button>
         <button onclick="showText('option2')">Pass/Fail Evaluation (NLI)</button>
         <button onclick="showText('option3')">Pairwise Evaluation</button>
+        <button onclick="showText('option5')">Try Your Own Prompt</button>
 
         <div id="option1" class="box hidden">
             <h2>Pointwise Evaluation - Summary</h2>
             <p>In this task our evaluator gives a score on a story summary's coherence, consistency, fluency, and relevance. </p>
+            <i>Evaluated by lama3.1:8b</i><br>
             <div class="styled-box">
                 <h3>Story:</h3>
                 <p id="option1-story">Loading...</p>
@@ -477,6 +513,7 @@
         <div id="option4" class="box hidden">
             <h2>Pointwise Evaluation - Translation</h2>
             <p>In this task our evaluator gives a score on an English text's Turkish translation. </p>
+            <i>Evaluated by lama3.1:8b</i><br>
             <div class="styled-box">
                 <h3>English:</h3>
                 <p id="option4-eng">Loading...</p>
@@ -496,10 +533,12 @@
             <div id="translation-result">
                 
         </div>
+        </div>
         
         <div id="option2" class="box hidden">
             <h2>Pass/Fail Evaluation</h2>
             <p>In this task our evaluator gives a passing or a failing score on an NLI problem. Two sentences (a premise and a hypothesis) are given and a relationship between them is determined. It can be entailment where the second sentence can be logically inferred from the first one, contradiction where the second sentence clearly negates the information from the first one, or neutral where neither happens. Our evaluator does not perform the task, but evaluates whether the label given is correct or incorrect.</p>
+            <i>Evaluated by lama3.1:8b</i><br>
             <div class="styled-box">
                 <h3>Premise:</h3>
                 <p id="option2-premise">Loading...</p>
@@ -525,6 +564,7 @@
         <div id="option3" class="box hidden">
             <h2>Pairwise Evaluation</h2>
             <p>In this task our evaluator chooses a better answer between two offered ones for a specific question.</p>
+            <i>Evaluated by lama3.1:8b</i><br>
             <h3>Question</h3>
             <p id="question">Loading...</p>
             <div class="answer-container">
@@ -552,6 +592,21 @@
                 
             </div>
 
+        </div>
+        <div id="option5" class="box hidden">
+            <h2>Try Your Own Prompt</h3>
+            <p>In this task our evaluator evaluates a user written prompt, text and response according to the given description</p>
+            <p>This section is used as a playground for prompt engineering. The prompts are not refined and therefore might not have as good of results as in the rest of the tasks.</p>
+            <i>Evaluated by lama3.1:8b</i><br>
+            <h3>Prompt:</h3>
+            <textarea id="generic-prompt" rows="10" cols="100" placeholder="Write your prompt here..."></textarea>
+            <h3>Input Text:</h3>
+            <textarea id="generic-input" rows="10" cols="100" placeholder="Write your input text here..."></textarea>
+            <h3>Output Text:</h3>
+            <textarea id="generic-output" rows="10" cols="100" placeholder="Write your output text to be evaluated here..."></textarea>
+            <br><button onclick="showText('option5')">Clear All</button>
+            <button id="evaluate-generic" onclick="evaluate_generic()">Evaluate</button>
+            <p id="generic-result"></p>
         </div>
     </main>
 </body>
