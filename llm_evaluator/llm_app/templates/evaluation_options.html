@@ -94,8 +94,11 @@
                         const answer2 = document.getElementById('answer2');
                         answer2.innerText = `${data.line.answer_b}` || 'No answer 2 found';
                         const result = document.getElementById('pairwise-result');
-                    result.innerHTML = ``;
-                        
+                        result.innerHTML = ``;
+                        const model1div = document.getElementById('model1-div');
+                        const model2div = document.getElementById('model2-div');
+                        model1div.style.display = 'block';
+                        model2div.style.display = 'block';
                     })
                     .catch(error => {
                         console.error('Error fetching data:', error);
@@ -252,10 +255,21 @@
             const selectedOption = document.querySelector('.option2.selected');
             if (selectedOption) {
                 const selectedText = selectedOption.innerText;
-                const question = document.getElementById('question').innerText;
-                const answer1 = document.getElementById('answer1').innerText;
-                const answer2 = document.getElementById('answer2').innerText;
-
+                let question = '';
+                let answer1 = '';
+                let answer2 = '';
+                const questionContainer = document.getElementById('question');
+                const answer1Container = document.getElementById('answer1');
+                const answer2Container = document.getElementById('answer2');
+                if (questionContainer.querySelector('textarea') && answer1Container.querySelector('textarea') && answer2Container.querySelector('textarea')) {
+                    question = questionContainer.querySelector('textarea').value;
+                    answer1 = answer1Container.querySelector('textarea').value;
+                    answer2 = answer2Container.querySelector('textarea').value;
+                } else {
+                    question = questionContainer.innerText;
+                    answer1 = answer1Container.innerText;
+                    answer2 = answer2Container.innerText;
+                }
                 fetch(`/evaluate_pairwise/${encodeURIComponent(question)}/${encodeURIComponent(answer1)}/${encodeURIComponent(answer2)}/${encodeURIComponent(selectedText)}/`)
                 .then(response => response.json())
                 .then(data => {
@@ -302,6 +316,27 @@
             <textarea id="user-hypothesis" rows="4" cols="100" placeholder="Write your hypothesis here..."></textarea>
         `;
         }
+        function writeYourOwnpairwise() {
+        // Replace question and answers with textareas
+        const questionContainer = document.getElementById('question');
+        const answer1Container = document.getElementById('answer1');
+        const answer2Container = document.getElementById('answer2');
+        questionContainer.innerHTML = `
+            <textarea id="user-question" rows="4" cols="80" placeholder="Write your question here..."></textarea>
+        `;
+        answer1Container.innerHTML = `
+            <textarea id="user-answer1" rows="20" cols="80" placeholder="Write your first answer here..."></textarea>
+        `;
+        answer2Container.innerHTML = `
+            <textarea id="user-answer2" rows="20" cols="80" placeholder="Write your second answer here..."></textarea>
+        `;
+        // hide the models
+        const model1 = document.getElementById('model1-div');
+        const model2 = document.getElementById('model2-div');
+        model1.style.display = 'none';
+        model2.style.display = 'none';
+        }
+
     </script>
 
 </head>
@@ -371,17 +406,18 @@
             <p id="question">Loading...</p>
             <div class="answer-container">
                 <div class="styled-box">
-                    <h4>Model 1:</h4><p id="model1">Loading...</p>
+                    <div id = "model1-div"><h4>Model 1:</h4><p id="model1">Loading...</p></div>
                     <h3>Answer 1:</h3>
                     <p id="answer1">Loading...</p>
                 </div>
                 <div class="styled-box">
-                    <h4>Model 2:</h4><p id="model2">Loading...</p>
+                    <div id = "model2-div"><h4>Model 2:</h4><p id="model2">Loading...</p></div>
                     <h3>Answer 2:</h3>
                     <p id="answer2">Loading...</p>
                 </div>
             </div>
             <button onclick="showText('option3')">Generate a different question</button>
+            <button onclick="writeYourOwnpairwise()">Write your own question and answers</button>
             <div class="nli-container">
                 <h2>Select Your Answer</h2>
                 <div class="option2" onclick="selectOption2(this)">Answer 1</div>
