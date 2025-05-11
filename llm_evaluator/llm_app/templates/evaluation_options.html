@@ -174,8 +174,19 @@
         const selectedOption = document.querySelector('.option.selected');
         if (selectedOption) {
             const selectedText = selectedOption.innerText;
-            const premise = document.getElementById('option2-premise').innerText;
-            const hypothesis = document.getElementById('option2-hypothesis').innerText;
+            let premise = '';
+            let hypothesis = '';
+            const premiseContainer = document.getElementById('option2-premise');
+            const hypothesisContainer = document.getElementById('option2-hypothesis');
+            if (premiseContainer.querySelector('textarea') && hypothesisContainer.querySelector('textarea')) {
+                premise = premiseContainer.querySelector('textarea').value;
+                hypothesis = hypothesisContainer.querySelector('textarea').value;
+            } else {
+                premise = premiseContainer.innerText;
+                hypothesis = hypothesisContainer.innerText;
+            }
+            // const premise = document.getElementById('option2-premise').innerText;
+            // const hypothesis = document.getElementById('option2-hypothesis').innerText;
 
             fetch(`/evaluate_nli/${encodeURIComponent(premise)}/${encodeURIComponent(hypothesis)}/${encodeURIComponent(selectedText)}/`)
             .then(response => response.json())
@@ -280,6 +291,17 @@
         const exp_res_display = document.getElementById('exp_res');
         exp_res_display.innerHTML = ``;
         }
+        function writeYourOwnNli() {
+        // Replace premise and hypothesis containers with textareas
+        const premiseContainer = document.getElementById('option2-premise');
+        const hypothesisContainer = document.getElementById('option2-hypothesis');
+        premiseContainer.innerHTML = `
+            <textarea id="user-premise" rows="4" cols="100" placeholder="Write your premise here..."></textarea>
+        `;
+        hypothesisContainer.innerHTML = `
+            <textarea id="user-hypothesis" rows="4" cols="100" placeholder="Write your hypothesis here..."></textarea>
+        `;
+        }
     </script>
 
 </head>
@@ -326,6 +348,7 @@
                 <h3>Hypothesis:</h3>
                 <p id="option2-hypothesis">Loading...</p>
                 <button onclick="showText('option2')">Generate a different premise and hypothesis</button>
+                <button onclick="writeYourOwnNli()">Write your own hypothesis and premise</button>
 
             </div>
             <div class="nli-container">
