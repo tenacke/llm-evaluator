@@ -33,6 +33,35 @@ def get_random_line(request):
 
     return JsonResponse({"error": "Line not found"}, status=404)
 
+def get_random_translation(request):
+    try:
+        file_path = os.path.join(settings.BASE_DIR, "datasets/2018-da-tr.csv")
+        with open(
+            file_path, "r", encoding="utf-8"
+        ) as csv_file:  # Specify UTF-8 encoding
+            reader = csv.DictReader(csv_file)
+
+            # Convert the reader to a list to access rows
+            rows = list(reader)
+
+            # Ensure there is at least one row
+            if not rows:
+                return JsonResponse(
+                    {"error": "The file is empty or has no rows."}, status=400
+                )
+
+            # Randomly select a row index
+            random_index = random.randint(1, len(rows) - 1)
+
+            # Extract the randomly selected row as a dictionary
+            selected_row = rows[random_index]
+            return JsonResponse({"line": selected_row})
+
+    except FileNotFoundError:
+        return JsonResponse({"error": "File not found."}, status=404)
+    except UnicodeDecodeError as e:
+        return JsonResponse({"error": f"Encoding error: {str(e)}"}, status=500)
+
 
 def get_random_nli(request):
     file_path = os.path.join(
@@ -164,3 +193,16 @@ def evaluate_pairwise(request, question, example1, example2, label):
         explain=True,
     )
     return JsonResponse({"choice": result.choice, "explanation": result.explanation})
+
+def evaluate_translation(request, eng, tur):
+    evaluator = LLMEvaluator(
+        connection="ollama",
+        task="translation",
+        repetition=1,
+    )
+    result = evaluator.evaluate(
+        text=eng,
+        translation=tur,
+        explain=True,
+    )
+    return JsonResponse({"status": result.status, "explanation": result.explanation})

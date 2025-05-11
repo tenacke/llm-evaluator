@@ -10,4 +10,6 @@ urlpatterns = [
     path('evaluate_summary/<str:story>/<str:summary>/', views.evaluate_summary, name='evaluate_summary'),
     path('evaluate_nli/<str:premise>/<str:hypothesis>/<str:label>/', views.evaluate_nli, name='evaluate_nli'),
     path('evaluate_pairwise/<str:question>/<str:example1>/<str:example2>/<str:label>/', views.evaluate_pairwise, name='evaluate_pairwise'),
+    path('get_random_translation/', views.get_random_translation, name='get_random_translation'),
+    path('evaluate_translation/<str:eng>/<str:tur>/', views.evaluate_translation, name='evaluate_translation'),
 ]

@@ -104,6 +104,30 @@
                         console.error('Error fetching data:', error);
                         option1Paragraph.innerText = 'Error fetching data.';
                     });
+            } 
+            if (option === 'option4') {
+                const translationButton = document.getElementById('translation-button');
+                translationButton.innerText = "Try Our Translation"
+                const exp_res_display = document.getElementById('exp_res_tr');
+                exp_res_display.innerHTML = ``;
+                const option4Paragraph = document.getElementById('option4-text'); // Target the specific <p> by id
+                option4Paragraph.innerText = 'Loading...'; // Provide feedback while fetching
+                const result = document.getElementById('translation-result');
+                result.innerHTML = ``;
+                translationButton.style.display = ''; // Show the button
+                fetch('/get_random_translation/')
+                    .then(response => response.json())
+                    .then(data => {
+                        const englishText = document.getElementById('option4-eng');
+                        englishText.innerText = `${data.line.src}` || 'No English text found';
+                        currentLineData = data;
+                    })
+                    .catch(error => {
+                        console.error('Error fetching data:', error);
+                        option4Paragraph.innerText = 'Error fetching data.';
+                    });
+                    const summaryDisplay = document.getElementById('tur-text');
+                    summaryDisplay.innerHTML = `<textarea id="user-translation" rows="4" cols="250" placeholder="Type your answer here..."></textarea>`;
             }
         }
         function displaySummary() {
@@ -141,6 +165,31 @@
    
     }
 }
+    function displayTranslation() {
+    const translationDisplay = document.getElementById('tur-text');
+    const translationButton = document.getElementById('translation-button');
+    
+    // Check the current state of the button
+    if (translationButton.innerText === "Try Our Translation") {
+        // Change button text
+        translationButton.innerText = "Type your own translation";
+        
+        const translation = currentLineData.line.mt || 'No translation available';
+
+        translationDisplay.style.display = 'block';
+        translationDisplay.innerHTML = `<h3>Turkish:</h3> <p id="translation">${translation}</p>`;
+        const exp_res_display = document.getElementById('exp_res_tr');
+        exp_res_display.innerHTML = `<h3>Expert score:</h3> <p> ${currentLineData.line.raw}</p><h3>Expert Translation:</h3><p> ${currentLineData.line.ref}</p>`;
+    } else {
+        // Revert the button text
+        translationButton.innerText = "Try Our Translation";
+
+        // Restore the textarea for user's own summary
+        translationDisplay.innerHTML = `<textarea id="user-translation" rows="4" cols="250" placeholder="Type your answer here..."></textarea>`;
+        const exp_res_display = document.getElementById('exp_res_tr');
+        exp_res_display.innerHTML = ``;
+    }
+    }
     function selectOption(selectedElement) {
             // Remove 'selected' class from all options
             const options = document.querySelectorAll('.option');
@@ -226,10 +275,10 @@
 
             }
             let story = '';
-            if (summaryButton.style.display === 'none') {
-                story = document.getElementById('user-story').value;
-            } else {
+            if (document.getElementById('option1-story').innerText) {
                 story = document.getElementById('option1-story').innerText;
+            } else {
+                story = document.getElementById('user-story').value;
             }
             fetch(`/evaluate_summary/${encodeURIComponent(story)}/${encodeURIComponent(user_summary)}/`)
             .then(response => response.json())
@@ -246,6 +295,38 @@
                 loading.disabled = false;
             });
 
+        }
+        function evaluate_translation() {
+            const loading = document.getElementById('evaluate-translation');
+            loading.innerText = 'Loading...';
+            // Make button non-clickable during evaluation
+            loading.disabled = true;
+            let user_translation = '';
+            let englishText = '';
+            if (document.getElementById('user-eng')) {
+                englishText = document.getElementById('user-eng').value;
+            } else {
+                englishText = document.getElementById('option4-eng').innerText;
+            }
+            if (document.getElementById('translation')) {
+                user_translation = document.getElementById('translation').innerText;
+            } else {
+                user_translation = document.getElementById('user-translation').value;
+            }
+            fetch(`/evaluate_translation/${encodeURIComponent(englishText)}/${encodeURIComponent(user_translation)}/`)
+            .then(response => response.json())
+            .then(data => {
+                const result = document.getElementById('translation-result');
+                result.innerHTML = `<h3>Evaluation Result:</h3> <p>Score: ${data.score}</p> <br> <p>Explanation: ${data.explanation}</p>`;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            })
+            .finally(() => {
+                loading.innerText = 'Evaluate';
+                // Make button clickable again
+                loading.disabled = false;
+            });
         }
         function evaluate_pairwise(){
             const loading = document.getElementById('evaluate-pairwise');
@@ -337,6 +418,25 @@
         model2.style.display = 'none';
         }
 
+        function writeYourOwnTranslation() {
+        // Replace story container with a large textarea
+        const storyContainer = document.getElementById('option4-eng');
+        storyContainer.innerHTML = `
+            <textarea id="user-eng" rows="10" cols="80" placeholder="Write your example in English here..."></textarea>
+        `;
+
+        // Hide the "Try Our Translation" button
+        const translationButton = document.getElementById('translation-button');
+        translationButton.style.display = 'none';
+        
+        // Add a textbox for the translation
+        const translationDisplay = document.getElementById('tur-text');
+        translationDisplay.innerHTML = `<textarea id="user-translation" rows="4" cols="80" placeholder="Type your translation to Turkish here..."></textarea>
+`;
+        const exp_res_display = document.getElementById('exp_res_tr');
+        exp_res_display.innerHTML = ``;
+        }
+
     </script>
 
 </head>
@@ -347,11 +447,12 @@
     <main>
         <h1>Select an Evaluation Type</h1>
         <button onclick="showText('option1')">Pointwise Evaluation (Summary)</button>
+        <button onclick="showText('option4')">Pointwise Evaluation (Translation)</button>
         <button onclick="showText('option2')">Pass/Fail Evaluation (NLI)</button>
         <button onclick="showText('option3')">Pairwise Evaluation</button>
 
         <div id="option1" class="box hidden">
-            <h2>Pointwise Evaluation</h2>
+            <h2>Pointwise Evaluation - Summary</h2>
             <p>In this task our evaluator gives a score on a story summary's coherence, consistency, fluency, and relevance. </p>
             <div class="styled-box">
                 <h3>Story:</h3>
@@ -372,6 +473,28 @@
             <div id="summary-result">
                 
             </div>
+        </div>
+        <div id="option4" class="box hidden">
+            <h2>Pointwise Evaluation - Translation</h2>
+            <p>In this task our evaluator gives a score on an English text's Turkish translation. </p>
+            <div class="styled-box">
+                <h3>English:</h3>
+                <p id="option4-eng">Loading...</p>
+                <button onclick="showText('option4')">Generate a different example</button>
+                <button onclick="writeYourOwnTranslation()">Write your own example</button>
+
+
+            </div>
+            <div id="tur-text">
+                <textarea id="user-translation" rows="4" cols="250" placeholder="Type your answer here..."></textarea>
+            </div>
+            <p id="exp_res_tr"></p>
+            <button id="translation-button" onclick="displayTranslation()">Try Our Translation</button>
+            
+            <p id="option4-text" class="box hidden">Loading...</p> 
+            <button id="evaluate-translation" onclick="evaluate_translation()">Evaluate</button>
+            <div id="translation-result">
+                
         </div>
         
         <div id="option2" class="box hidden">
