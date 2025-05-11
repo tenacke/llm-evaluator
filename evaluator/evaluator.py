@@ -52,16 +52,12 @@ class LLMEvaluator:
             raise e
 
         # Initialize the evaluator for the specified task
-        # TODO : Add error handling for task issues
-        try:
-            self.evaluator: BaseTask = TASK_MAP[task](
-                connection=self.connection,
-                repetition=repetition,
-                timeout=tireness,
-                **kwargs,
-            )
-        except Exception as e:
-            raise e
+        self.evaluator: BaseTask = TASK_MAP[task](
+            connection=self.connection,
+            repetition=repetition,
+            timeout=tireness,
+            **kwargs,
+        )
 
     def evaluate(
         self,
@@ -75,15 +71,7 @@ class LLMEvaluator:
         # TODO : Add error handling for evaluation issues
         try:
             result = self.evaluator.perform(*args, **kwargs)
-
-            # Check if the result is a list of scores or a single score
-            ## TODO WONT WORK FOR ALL TASKS CHANGE IT
             return result
-            # if isinstance(result, list):
-            #     print([r.explanation for r in result])
-            #     return [r.score for r in result], [r.metric for r in result]
-            # print(result.explanation)
-            # return result.score, result.metric
 
         except Exception as e:
             raise e

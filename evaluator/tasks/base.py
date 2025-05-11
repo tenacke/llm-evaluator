@@ -16,7 +16,6 @@ class BaseTask(ABC):
         timeout: int,
         **kwargs,
     ):
-        # TODO : Add error handling for connection issues
         # Initialize the connection to the LLM
         self.connection = connection
         self.repetition = repetition

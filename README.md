@@ -7,7 +7,7 @@ A lightweight, pluggable Python package to evaluate tasks using different model 
 ## 📦 Installation
 
 ```bash
-pip install llm-evaluator
+pip install evallm
 ```
 
 ## 🚀 Usage
@@ -79,3 +79,98 @@ result = evaluator.evaluate(
 )
 print(result)
 ```
+
+## 🔍 Tasks
+
+Currently, the following tasks are supported:
+
+- **📝 Summarization**: Evaluates the quality of a summary given an original text
+- **🔎 NLI**: Natural Language Inference to determine relationships between text pairs
+- **⚖️ Pairwise**: Compares two outputs to determine which one better meets specified criteria
+
+## 🧪 Evaluation
+
+The evaluation process is based on the task you choose. The `LLMEvaluator` class provides a unified interface for evaluating tasks using different model providers.
+
+### Summarization
+
+The `summarization` task evaluates the quality of a summary given an original text. It uses the `evaluate` method to compare the generated summary with the original text.
+
+```python
+from evaluator import LLMEvaluator
+
+evaluator = LLMEvaluator(connection="ollama", model="llama3.1:8b", task="summarization")
+result = evaluator.evaluate(
+    text="The quick brown fox jumps over the lazy dog. The dog was not happy about it.",
+    summary="A fox jumps over a dog.",
+    metric="all"  # or "coherence", "fluency", "relevancy", "consistency"
+)
+print(result)
+```
+
+The `evaluate` method takes the following parameters:
+
+- `text`: The original text to be summarized.
+- `summary`: The generated summary to be evaluated.
+- `metric`: The evaluation metric to be used. The default is `all`, which means all metrics will be used. You can also specify a single metric, such as `coherence`, `fluency`, `relevancy` and `consistency`.
+
+The method returns a dataclass object containing the evaluation results, including the score and the explanation comes from the evaluation.
+
+- `score`: The score of the evaluation (1-5).
+- `explanation`: The explanation of the evaluation.
+- `metric`: The metric used for the evaluation.
+
+Note that if you use the `all` metric, the result will be a list of dataclass objects, each containing the score and explanation for each metric.
+
+### NLI
+
+The `nli` task evaluates the relationship between two text pairs and the label of the relationship. It uses the `evaluate` method to compare the generated summary with the original text.
+
+```python
+from evaluator import LLMEvaluator
+
+evaluator = LLMEvaluator(connection="ollama", model="llama3.1:8b", task="nli")
+result = evaluator.evaluate(
+    premise="The quick brown fox jumps over the lazy dog.",
+    hypothesis="The dog was not happy about it.",
+    label="entailment",  # or "contradiction", "neutral"
+)
+```
+
+The `evaluate` method takes the following parameters:
+
+- `premise`: The premise of the inference.
+- `hypothesis`: The hypothesis of the inference.
+- `label`: The label of the inference. It should be one of these: `entailment`, `contradiction` or `neutral`.
+
+The method returns a dataclass object containing the evaluation results, including the pass/fail status and the explanation comes from the evaluation.
+
+- `status`: The status of the evaluation. It is `True` if the evaluation passed, otherwise `False`.
+- `explanation`: The explanation of the evaluation.
+
+### Pairwise
+
+The `pairwise` task evaluates a question and two outputs to determine which one better meets the needs in the question. It uses the `evaluate` method to compare the two outputs.
+
+```python
+from evaluator import LLMEvaluator
+
+evaluator = LLMEvaluator(connection="ollama", model="llama3.1:8b", task="pairwise")
+
+result = evaluator.evaluate(
+    question="Give me a sentence about a dog.",
+    output1="The quick brown fox jumps over the lazy cat.",
+    output2="The dog is barking at the cat.",
+)
+```
+
+The `evaluate` method takes the following parameters:
+
+- `question`: The question to be answered.
+- `output1`: The first output to be evaluated.
+- `output2`: The second output to be evaluated.
+
+The method returns a dataclass object containing the evaluation results, including the choice and the explanation comes from the evaluation.
+
+- `choice`: The choice of the evaluation. It is `1` if the first output is better, `2` if the second output is better.
+- `explanation`: The explanation of the evaluation.

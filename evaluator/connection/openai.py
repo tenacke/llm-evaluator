@@ -1,4 +1,5 @@
 from .base import BaseConnection
+from ..exceptions import OpenAIResponseError, OpenAIConnectionError
 
 from openai import OpenAI
 
@@ -16,12 +17,13 @@ class OpenAIConnection(BaseConnection):
         **kwargs,
     ):
         self.model = model
-        # TODO : Add error handling for connection issues
         # Initialize the OpenAI client
         try:
             self.client = OpenAI(api_key=api_key)
         except Exception as e:
-            raise e
+            raise OpenAIConnectionError(
+                f"Failed to connect to the OpenAI server. Error: {str(e)}"
+            ) from e
 
     def send(
         self,
@@ -32,7 +34,6 @@ class OpenAIConnection(BaseConnection):
         """
         Send a request to the OpenAI LLM and return the response.
         """
-        # TODO : Add error handling for request issues
         # Send the request to the LLM
         try:
             response = (
@@ -44,6 +45,8 @@ class OpenAIConnection(BaseConnection):
                 .message.content
             )
         except Exception as e:
-            raise e
+            raise OpenAIResponseError(
+                f"Error while sending request to OpenAI: {e}"
+            ) from e
 
         return response

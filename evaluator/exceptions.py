@@ -94,3 +94,25 @@ class OllamaTimeoutError(OllamaError):
     def __init__(self, message: str):
         super().__init__(message)
         self.message = message
+
+
+class OpenAIError(BaseConnectionError):
+    """Exception raised for OpenAI connection errors."""
+
+    pass
+
+
+class OpenAIConnectionError(OpenAIError):
+    """Exception raised for OpenAI connection errors."""
+
+    def __init__(self, message: str):
+        super().__init__(message)
+        self.message = message
+
+
+class OpenAIResponseError(OpenAIError):
+    """Exception raised for OpenAI response errors."""
+
+    def __init__(self, message: str):
+        super().__init__(message)
+        self.message = message

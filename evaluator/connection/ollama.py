@@ -22,7 +22,7 @@ class OllamaConnection(BaseConnection):
 
         self.url = url
         self.model = model
-        # TODO : Add error handling for connection issues
+
         # Initialize the Ollama client
         # Check if the URL is valid
         # Check if the server is running
@@ -32,14 +32,14 @@ class OllamaConnection(BaseConnection):
         except Exception as e:
             raise OllamaConnectionError(
                 f"Failed to connect to the Ollama server at {self.url}. Error: {str(e)}"
-            )
+            ) from e
 
         try:
             self.client.pull(model=self.model)
         except Exception as e:
             raise OllamaModelError(
                 f"Failed to pull the model {self.model} from the Ollama server. Error: {str(e)}"
-            )
+            ) from e
 
     def send(
         self,
@@ -50,7 +50,6 @@ class OllamaConnection(BaseConnection):
         """
         Send a request to the Ollama LLM and return the response.
         """
-        # TODO : Add error handling for timeout issues
         # Send the request to the LLM
         try:
             response = self.client.generate(
