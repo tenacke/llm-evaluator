@@ -27,6 +27,7 @@
                 option1Paragraph.innerText = 'Loading...'; // Provide feedback while fetching
                 const result = document.getElementById('summary-result');
                 result.innerHTML = ``;
+                summaryButton.style.display = ''; // Show the button
                 fetch('/get-random-line/')
                     .then(response => response.json())
                     .then(data => {
@@ -210,7 +211,12 @@
                 user_summary= currentLineData.decoded;
 
             }
-            const story= document.getElementById('option1-story').innerText;
+            let story = '';
+            if (summaryButton.style.display === 'none') {
+                story = document.getElementById('user-story').value;
+            } else {
+                story = document.getElementById('option1-story').innerText;
+            }
             fetch(`/evaluate_summary/${encodeURIComponent(story)}/${encodeURIComponent(user_summary)}/`)
             .then(response => response.json())
             .then(data => {
@@ -257,6 +263,23 @@
                 alert('Please select an option before evaluating.');
             }
         }
+        function writeYourOwnStory() {
+        // Replace story container with a large textarea
+        const storyContainer = document.getElementById('option1-story');
+        storyContainer.innerHTML = `
+            <textarea id="user-story" rows="10" cols="100" placeholder="Write your story here..."></textarea>
+        `;
+
+        // Hide the "Try Our Summary" button
+        const summaryButton = document.getElementById('summary-button');
+        summaryButton.style.display = 'none';
+        
+        // Add a textbox for the summary
+        const summaryDisplay = document.getElementById('summary');
+        summaryDisplay.innerHTML = `<textarea id="user-answer" rows="4" cols="250" placeholder="Type your answer here..."></textarea>`;
+        const exp_res_display = document.getElementById('exp_res');
+        exp_res_display.innerHTML = ``;
+        }
     </script>
 
 </head>
@@ -277,6 +300,8 @@
                 <h3>Story:</h3>
                 <p id="option1-story">Loading...</p>
                 <button onclick="showText('option1')">Generate a different story</button>
+                <button onclick="writeYourOwnStory()">Write your own story</button>
+
 
             </div>
             <div id="summary">
