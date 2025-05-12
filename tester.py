@@ -2,11 +2,9 @@ import os
 import sys
 import ollama
 import pandas as pd
-# import openai
-
-# openai.api_key = os.getenv("OPENAI_API_KEY")
-
-
+from openai import OpenAI
+from dotenv import load_dotenv
+load_dotenv()
 prompt = """
 You are given a Natural Language Inference (NLI) task output to evaluate. You will receive:
 
@@ -79,13 +77,13 @@ if sys.argv[1] == "--help":
     sys.exit()
 
 model_name = sys.argv[1]
-if ":" not in model_name:
-    print(
-        "Invalid model name format. Please provide a valid model name. Example: evallm:v3"
-    )
-    sys.exit()
+# if ":" not in model_name:
+#     print(
+#         "Invalid model name format. Please provide a valid model name. Example: evallm:v3"
+#     )
+#     sys.exit()
 
-if model_name not in get_models():
+if not (model_name in get_models() or model_name == "gpt-4o-mini"):
     print(
         "Invalid model name. Please provide a valid model name."
     )
@@ -108,7 +106,12 @@ except FileNotFoundError:
     print(f"File {nli_model}_nli_model_answers.csv not found in {csv_files_path}")
     sys.exit(1)
 
-client = ollama.Client()
+if model_name == "gpt-4o-mini":
+    api_key = os.getenv("OPENAI_API_KEY")
+    print(api_key)
+    client = OpenAI(api_key=api_key)
+else:
+    client = ollama.Client()
 
 log_file_name = f"{model_name}_nli_tester_logs.csv"
 log_file = open(os.path.join(logs_path, log_file_name), "w")
@@ -126,16 +129,17 @@ for index, row in model_answers_df.iterrows():
     true_count = 0
     for i in range(number_of_repetitions):
         print(f"Repetition {i+1}...", flush=True, end=" ")
-
-        # response = openai.ChatCompletion.create(
-        #             model="gpt-4o",
-        #             messages=[
-        #                 {"role": "user", "content": query}
-        #             ],
-        #             temperature=0.0
-        #         )["choices"][0]["message"]["content"]
-
-        response = client.generate(model_name, query).response
+        if model_name == "gpt-4o-mini":
+            response = client.chat.completions.create(
+                        model="gpt-4o-mini",
+                        messages=[
+                            {"role": "user", "content": query}
+                        ],
+                        # temperature=0.0
+                    ).choices[0].message.content
+            print(f"Response: {response}", flush=True)
+        else:
+            response = client.generate(model_name, query).response
 
         try:
             if "</think>" in response:
