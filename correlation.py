@@ -1,65 +1,60 @@
 import os
 import sys
-
 import pandas as pd
 
-if len(sys.argv) != 5:
+if len(sys.argv) < 4:
     print(
-        "Usage: python correlation.py <model_name> <datafile-name> <base_data_path> <test_data_path>"
+        "Usage: python correlation.py <model_name> <dataset_file> <output_file>"
     )
     sys.exit(1)
 
 model_name = sys.argv[1]
-datafile_name = sys.argv[2]
-base_path = sys.argv[3]
-test_path = sys.argv[4]
+dataset_file_name = sys.argv[2]
+output_file_name = sys.argv[3]
 
-base_path = os.path.join(os.path.dirname(__file__), base_path)
-if not os.path.exists(base_path):
-    print(f"Path {base_path} does not exist")
+datasets_path = os.path.join(os.path.dirname(__file__), "datasets")
+output_path = os.path.join(os.path.dirname(__file__), "output")
+
+data_file = os.path.join(datasets_path, f"{dataset_file_name}.csv")
+if not os.path.exists(data_file):
+    print(f"File {dataset_file_name}.csv not found in {datasets_path}")
     sys.exit(1)
+data_df = pd.read_csv(data_file)
 
-test_path = os.path.join(os.path.dirname(__file__), test_path)
-if not os.path.exists(test_path):
-    print(f"Path {test_path} does not exist")
+
+output_file = os.path.join(output_path, f"{model_name}_translation.csv")
+if not os.path.exists(output_file):
+    print(f"File {model_name}_translation.csv not found in {output_path}")
     sys.exit(1)
+output_df = pd.read_csv(output_file)
 
-base_file = os.path.join(base_path, f"{datafile_name}.csv")
-print(f"Base file: {base_file}")
-base_df = pd.read_csv(base_file)
+pearson_correlations = []
+spearman_correlations = []
 
-test_file = os.path.join(test_path, f"{model_name}_{datafile_name}_pw.csv")
-print(f"Test file: {test_file}")
-test_df = pd.read_csv(test_file)
+output_scores = output_df["result"]
+data_scores = pd.cut(
+    data_df['raw'],
+    bins=[0, 20, 40, 60, 80, 100],
+    labels=[1, 2, 3, 4, 5],
+    include_lowest=True
+).astype(int)
+  
+pearson = data_scores.corr(output_scores, method="pearson")
 
-one_one = 0
-one_two = 0
-two_two = 0
-two_one = 0
-no_answer = 0
-for i in range(len(base_df)):
-    if str(base_df.iloc[i]["winner"]).strip().lower() == "model_a":
-        if test_df.iloc[i]["result"] == 1:
-            one_one += 1
-        elif test_df.iloc[i]["result"] == 2:
-            one_two += 1
-        else:
-            no_answer += 1
-    else:
-        if test_df.iloc[i]["result"] == 2:
-            two_two += 1
-        elif test_df.iloc[i]["result"] == 1:
-            two_one += 1
-        else:
-            no_answer += 1
-true_count = one_one + two_two
-false_count = one_two + two_one
+spearman = data_scores.corr(output_scores, method="spearman")
 
-print(f"model chose 1: {two_one + one_one}")
-print(f"model chose 2: {one_two + two_two}")
-print(f"1-2: {one_two}")
-print(f"2-1: {two_one}")
-print(f"1-1: {one_one}")
-print(f"2-2: {two_two}")
-print(f"no_answer: {no_answer}")
-print(f"Accuracy: {true_count / len(base_df) * 100:.2f}%")
+print(f"Pearson correlation: {pearson}")
+print(f"Spearman correlation: {spearman}")
+# pearson_correlations_df = pd.DataFrame(
+#     pearson_correlations, columns=["model", "pearson"]
+# )
+
+# spearman_correlations_df = pd.DataFrame(
+#     spearman_correlations, columns=["model", "spearman"]
+# )
+
+# print("Spearman Correlations")
+# print(spearman_correlations_df)
+
+# print("Pearson Correlations")
+# print(pearson_correlations_df)

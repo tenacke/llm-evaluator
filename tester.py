@@ -6,43 +6,108 @@ import pandas as pd
 
 # openai.api_key = os.getenv("OPENAI_API_KEY")
 
+# You are a professional English-to-Turkish translation evaluator. You will be given two sentences:
 
-# prompt_100 = """
-# You are a professional translation evaluator. You will be given 2 sentences:
+# Source sentence (English): The original English sentence.
+# Translated sentence (Turkish): A Turkish sentence that is claimed to be a faithful translation of the source.
+# Your task is to assign an integer score from 1 to 5, based on the overall translation quality. You must evaluate the translation using the following three criteria, weighted equally:
 
-# - Source sentence (English): The original English sentence.
-# - Translated sentence (Turkish): A sentence that is claimed to be its translation.
-# Your task is to give a score from 0 to 100 as 100 being the highest, based on how good the Turkish translation is. Focus on the following:
+# Evaluation Criteria:
+# 1. Meaning Accuracy:
+# - Does the Turkish sentence preserve all essential meaning of the English source sentence?
+# - Are there any additions, omissions, or changes in meaning?
+# 2. Fluency and Naturalness
+# - Does the translation sound natural and idiomatic to a native Turkish speaker?
+# - Is it contextually and stylistically appropriate?
+# 3.Grammar, Syntax, and Spelling
+# - Are there any grammatical errors, unnatural word order, or spelling mistakes?
+# - Is the sentence structurally correct?
 
-# Does the translation accurately convey the meaning?
-# - Is it fluent and natural in Turkish?
-# - Are there any mistakes, unnatural phrases, or missing parts?
-# - Do not just translate back into English — judge the Turkish sentence as a native Turkish speaker would.
+# Scoring Rubric (Only integer values allowed):
+# 5 - Excellent: All meaning preserved. Fluent, natural, idiomatic Turkish. No grammar or spelling errors. Comparable to professional human translation.
+# 4 - Good: Meaning preserved. Minor issues in fluency or grammar that do not significantly impact readability.
+# 3 - Fair: Understandable, but there are clear issues with fluency, grammar, or partial meaning loss.
+# 2 - Poor: Significant issues with accuracy, fluency, or grammar. Translation may be hard to follow.
+# 1 - Unacceptable: Translation is misleading, incorrect, or incoherent. Does not preserve the original meaning.
 
-# Use your expert judgment. A perfect or near-perfect translation would get close to 100, while incorrect, broken, or misleading translations would get a much lower score.
+# Common Error Types to Consider:
+# - Meaning distortion due to incorrect translation
+# - Missing or added information not present in the source
+# - Word-for-word or literal phrasing that sounds unnatural
+# - Grammar mistakes (e.g., verb tense, case, agreement)
+# - Unidiomatic or awkward expressions
+# - Spelling or punctuation errors
+
+
+# You are a professional English-to-Turkish translation evaluator. You will be given two sentences:
+
+# Source sentence (English): The original English sentence.
+# Translated sentence (Turkish): A sentence that is claimed to be its correct translation.
+# Your task is to evaluate how accurate, fluent, and grammatically correct the Turkish sentence is, using the following three equally important criteria:
+
+# Evaluation Criteria:
+# Meaning Preservation: Does the Turkish sentence convey the full and correct meaning of the English sentence?
+# Fluency and Naturalness: Does the Turkish sentence sound natural and idiomatic to a native speaker?
+# Grammar and Spelling: Is the sentence free from grammatical errors, awkward constructions, or spelling mistakes?
+# Scoring (Only integers: 1 to 5):
+# 5 (Excellent): Meaning is perfectly preserved; sentence is fluent and grammatically flawless. Professional-quality translation.
+# 4 (Good): Small issues in word choice or fluency, but meaning is clear and no serious errors.
+# 3 (Adequate): Understandable but has some meaning loss or unnatural phrasing. Noticeable grammatical or stylistic issues.
+# 2 (Poor): Major meaning inaccuracies or awkward, incorrect language. Hard to read naturally.
+# 1 (Very Poor): Completely incorrect, misleading, or incomprehensible translation.
 
 # Return your output in this format:
-# Score: [number between 0 and 100]
+# Score: [number between 1 and 5]
 # Reason: [Brief explanation of your decision]
-# """
+prompt = """
+You are a professional English-to-Turkish translation evaluator. You will be given two sentences:
 
-prompt_5 = """
-You are a professional translation evaluator. You will be given 2 sentences:
+Source sentence (English): The original English sentence.
+Translated sentence (Turkish): A sentence that is claimed to be its correct translation.
+Your task is to evaluate how accurate, fluent, and grammatically correct the Turkish sentence is, using the following three equally important criteria:
 
-- Source sentence (English): The original English sentence.
-- Translated sentence (Turkish): A sentence that is claimed to be its translation.
-Your task is to give a score from 1 to 5 as 5 being the highest, based on how good the Turkish translation is. Focus on the following:
+Evaluation Criteria:
 
-Does the translation accurately convey the meaning?
-- Is it fluent and natural in Turkish?
-- Are there any mistakes, unnatural phrases, or missing parts?
-- Do not just translate back into English — judge the Turkish sentence as a native Turkish speaker would.
+1. Meaning Preservation: 
+- Does the Turkish sentence convey the full and correct meaning of the English sentence?
+- Are there any additions, omissions, or changes in meaning?
+2. Fluency and Naturalness:
+- Does the Turkish sentence sound idiomatic, natural, and fluent to a native speaker?
+- Would a Turkish reader find the sentence stylistically appropriate and contextually coherent?
+3. Grammar and Spelling:
+- Is the sentence free from grammar errors, unnatural constructions, incorrect word order, or spelling mistakes?
+- Is the sentence structurally well-formed and professionally written?
 
-Use your expert judgment. A perfect or near-perfect translation would get close to 5, while incorrect, broken, or misleading translations would get a lower score.
+Scoring (Only integers: 1 to 5):
+5 (Excellent):
+- Meaning is perfectly preserved.
+- The sentence is fluent, idiomatic, and natural to a native speaker.
+- No grammatical, stylistic, or spelling errors.
+- All three criteria (meaning, fluency, grammar) are fully satisfied.
+4 (Good):
+- The meaning is accurately preserved.
+- The sentence reads naturally overall, but there may be minor fluency or style issues.
+- One minor grammar or phrasing issue may be present, but it does not affect understanding.
+- Satisfies all three criteria, with only minor flaws.
+3 (Adequate):
+- The sentence is understandable, but some meaning may be lost or slightly distorted.
+- Fluency may be uneven, and parts of the sentence may feel unnatural or awkward.
+- Grammar or spelling issues are noticeable but do not render the sentence incomprehensible.
+- At least one of the three criteria is weakly satisfied.
+2 (Poor):
+- Meaning is partially preserved but with significant loss, distortion, or ambiguity.
+- The sentence reads unnaturally and may be difficult for a native speaker to process smoothly.
+- Contains major grammatical issues or multiple minor ones that affect readability.
+- At most one criterion is moderately satisfied.
+1 (Very Poor):
+- The translation is misleading, severely inaccurate, or mostly incomprehensible.
+- Meaning is not preserved.
+- The sentence is ungrammatical, unnatural, and difficult or impossible to understand.
+- Fails to meet any of the three evaluation criteria.
 
-Return your output in this format:
-Score: [number between 1 and 5]
-Reason: [Brief explanation of your decision]
+Output Format (strictly follow this structure):
+Score: [1-5]
+Reason: [Clear and concise explanation citing strengths and weaknesses in terms of the three evaluation criteria]
 """
 
 def get_models():
@@ -106,21 +171,17 @@ client = ollama.Client()
 log_file_name = f"{model_name}_logs.csv"
 log_file = open(os.path.join(logs_path, log_file_name), "w")
 
-results = pd.DataFrame(columns=["result_100", "result_5"])
+results = pd.DataFrame(columns=["result"])
 
-print(f'Evaluating with prompt:\n{prompt_5}', flush=True)
+print(f'Evaluating with prompt:\n{prompt}', flush=True)
 
 for index, row in input_df.iterrows():
     print(f"Evaluating index {index+1}...", flush=True)
     if index == 500:
         print("Reached 1000 iterations, stopping...", flush=True)
         break
-    # for i in range(2):
-    #     if i == 0:
-    #         query = prompt_100 + f"\nSource sentence (English): {row['src']}\n" + f"Translated sentence (Turkish): {row['mt']}\n"
-    #     else:
-    query = prompt_5 + f"\nSource sentence (English): {row['src']}\n" + f"Translated sentence (Turkish): {row['mt']}\n"
-    repetition_results = {"result_100": 0, "result_5": 0}
+    query = prompt + f"\nSource sentence (English): {row['src']}\n" + f"Translated sentence (Turkish): {row['mt']}\n"
+    repetition_results = {"result": 0}
     count = 0
     exception_ = False
     for i in range(number_of_repetitions):
@@ -141,8 +202,7 @@ for index, row in input_df.iterrows():
                 response = response.split("</think>")[1]
             score = response.split("Score: ")[1][0]
             print(f"Score: {score}", flush=True)
-            repetition_results["result_100"] = 0
-            repetition_results["result_5"] += int(score)
+            repetition_results["result"] += int(score)
             count += 1
         except:
             print(
@@ -156,9 +216,7 @@ for index, row in input_df.iterrows():
         if not exception_:
             print(f"Successfully evaluated index {index+1}", flush=True)
 
-        # repetition_results["result_100"] /= count
-        repetition_results["result_5"] /= count
-
+        repetition_results["result"] /= count
         results.loc[index] = repetition_results
 
 results.to_csv(
