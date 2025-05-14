@@ -91,12 +91,12 @@ class Pairwise(BaseTask):
                     )
                 if explain:
                     explanation = response.split("Explanation: ")[1].strip()
-            except IndexError or ValueError:
+            except IndexError or ValueError as e:
                 timeout -= 1
-                # if timeout == 0:
-                #     raise InternalModelTiredError(
-                #         f"Timeout while waiting for the correct response. Please check the model and the connection."
-                #     )
+                if timeout == 0:
+                    raise InternalModelTiredError(
+                        f"Timeout while waiting for the correct response. Please check the model and the connection."
+                    )
                 continue
             except BaseConnectionError as e:
                 # TODO : Add error handling for connection issues

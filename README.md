@@ -70,7 +70,7 @@ from evaluator import LLMEvaluator
 import os
 
 # Initialize the Evaluator with OpenAI
-evaluator = Evaluator(connection="openai", model="gpt-3.5-turbo", api_key=os.getenv("OPENAI_API_KEY"), task="summarization")
+evaluator = Evaluator(connection="openai", model="gpt-4o-mini", api_key=os.getenv("OPENAI_API_KEY"), task="summarization")
 
 # Evaluate a task
 result = evaluator.evaluate(

@@ -36,7 +36,7 @@ class LLMEvaluator:
         connection: str,
         task: str,
         repetition: int = 1,
-        tireness: int = 5,
+        tireness: int = 3,
         **kwargs,
     ):
         if connection not in CONNECTION_MAP:

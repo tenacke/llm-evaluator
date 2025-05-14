@@ -2,6 +2,7 @@ from .base import BaseConnection
 from ..exceptions import OpenAIResponseError, OpenAIConnectionError
 
 from openai import OpenAI
+import os
 
 
 class OpenAIConnection(BaseConnection):
@@ -12,13 +13,19 @@ class OpenAIConnection(BaseConnection):
     def __init__(
         self,
         *,
-        api_key: str,
-        model: str = "gpt-3.5-turbo",
+        api_key: str | None = None,
+        model: str = "gpt-4o-mini",
         **kwargs,
     ):
         self.model = model
         # Initialize the OpenAI client
         try:
+            if api_key is None and "OPENAI_API_KEY" in os.environ:
+                api_key = os.environ["OPENAI_API_KEY"]
+            elif api_key is None:
+                raise OpenAIConnectionError(
+                    "API key is required for OpenAI connection."
+                )
             self.client = OpenAI(api_key=api_key)
         except Exception as e:
             raise OpenAIConnectionError(
@@ -37,12 +44,17 @@ class OpenAIConnection(BaseConnection):
         # Send the request to the LLM
         try:
             response = (
-                self.client.chat.completions.create(
-                    model=self.config.model,
-                    messages=[{"role": "user", "content": query}],
-                )
-                .choices[0]
-                .message.content
+                self.client.responses.create(
+                    model=self.model,
+                    input=query,
+                    **kwargs,
+                ).output_text
+                # self.client.chat.completions.create(
+                #     model=self.config.model,
+                #     messages=[{"role": "user", "content": query}],
+                # )
+                # .choices[0]
+                # .message.content
             )
         except Exception as e:
             raise OpenAIResponseError(
