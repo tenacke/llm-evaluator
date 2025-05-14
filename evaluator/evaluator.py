@@ -8,6 +8,7 @@ from .tasks.base import BaseTask
 from .tasks.summarization import Summarization
 from .tasks.nli import NLI
 from .tasks.pairwise import Pairwise
+from .tasks.translation import Translation
 
 from .exceptions import BaseConnectionError, InvalidTaskError, ConnectionTypeError
 
@@ -22,6 +23,7 @@ TASK_MAP = {
     "summarization": Summarization,
     "nli": NLI,
     "pairwise": Pairwise,
+    "translation": Translation,
 }
 
 
@@ -61,6 +63,7 @@ class LLMEvaluator:
 
     def evaluate(
         self,
+        custom_prompt: str | None = None,
         *args,
         **kwargs,
     ) -> Any:
@@ -70,7 +73,9 @@ class LLMEvaluator:
         # Evaluate the model with the given prompt
         # TODO : Add error handling for evaluation issues
         try:
-            result = self.evaluator.perform(*args, **kwargs)
+            result = self.evaluator.perform(
+                custom_prompt=custom_prompt, *args, **kwargs
+            )
             return result
 
         except Exception as e:

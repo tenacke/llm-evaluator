@@ -1,5 +1,5 @@
 from .base import BaseTask
-from .prompts import NLI_TEMPLATE, NLI_CRITERIA
+from .prompts import TRANSLATION_TEMPLATE, TRANSLATION_CRITERIA
 from ..exceptions import BaseConnectionError, InternalModelTiredError
 
 from dataclasses import dataclass
@@ -7,62 +7,54 @@ from beartype.typing import Any, List, Union
 
 
 @dataclass
-class NLIOutput:
+class TranslationOutput:
     """
-    Output for the NLI task.
+    Output for the Translation task.
     """
 
     # The passed or failed status of the evaluation
-    status: bool
+    score: Union[int, float]
 
     # The explanation of the evaluation
     explanation: Union[str, None] = None
 
 
-class NLI(BaseTask):
+class Translation(BaseTask):
     """
-    A class to perform Natural Language Inference (NLI) tasks using a language model.
+    A class to perform Machine Translation tasks using a language model.
     """
 
     def perform(
         self,
         *,
-        premise: str,
-        hypothesis: str,
-        label: str,
+        source: str,
+        translation: str,
         explain: bool = True,
         custom_prompt: str | None = None,
         **kwargs,
-    ) -> NLIOutput:
+    ) -> TranslationOutput:
         """
         Perform NLI task with the model and given input.
         """
         # TODO : Add error handling for evaluation issues
 
-        prompt = NLI_TEMPLATE.format(
-            criteria=custom_prompt or NLI_CRITERIA,
-            premise=premise,
-            hypothesis=hypothesis,
-            label=label,
+        prompt = TRANSLATION_TEMPLATE.format(
+            criteria=custom_prompt or TRANSLATION_CRITERIA,
+            source=source,
+            translation=translation,
         )
-        true_count = 0
-        status = False
+        total_score = 0
         for _ in range(self.repetition):
-            output = self._perform(
+            response = self._perform(
                 prompt=prompt,
                 explain=explain,
                 **kwargs,
             )
-            if output.status:
-                true_count += 1
+            total_score += response.score
 
-        if true_count > self.repetition / 2:
-            # If more than half of the responses are true, consider it a pass
-            status = True
-
-        return NLIOutput(
-            explanation=output.explanation,
-            status=status,
+        return TranslationOutput(
+            explanation=response.explanation,
+            score=total_score / self.repetition,
         )
 
     def _perform(
@@ -71,7 +63,7 @@ class NLI(BaseTask):
         prompt: str,
         explain: bool = True,
         **kwargs,
-    ) -> NLIOutput:
+    ) -> TranslationOutput:
         timeout = self.timeout
         while True:
             try:
@@ -79,14 +71,11 @@ class NLI(BaseTask):
                     query=prompt,
                     **kwargs,
                 )
-                answer = (
-                    "true"
-                    in response.split("Answer: ")[1].split("\n")[0].strip().lower()
-                )
+                score = int(response.split("Score: ")[1][0])
                 if explain:
                     explanation = response.split("Explanation: ")[1].strip()
-
-            except IndexError:
+            except IndexError or ValueError:
+                # Retry if the response format is not as expected
                 timeout -= 1
                 if timeout == 0:
                     raise InternalModelTiredError(
@@ -94,12 +83,11 @@ class NLI(BaseTask):
                     )
                 continue
             except BaseConnectionError as e:
-                # TODO : Add error handling for connection issues
+                # TODO Handle connection errors
                 raise e
             else:
                 break
-
-        return NLIOutput(
+        return TranslationOutput(
             explanation=explanation if explain else None,
-            status=answer,
+            score=score,
         )

@@ -1,9 +1,10 @@
 from .base import BaseTask
 from .prompts import (
-    COHERENCE_PROMPT,
-    RELEVANCE_PROMPT,
-    FLUENCY_PROMPT,
-    CONSISTENCY_PROMPT,
+    SUMMARIZATION_TEMPLATE,
+    COHERENCE_CRITERIA,
+    RELEVANCE_CRITERIA,
+    FLUENCY_CRITERIA,
+    CONSISTENCY_CRITERIA,
 )
 from ..exceptions import (
     BaseConnectionError,
@@ -22,10 +23,10 @@ METRICS = [
 ]
 
 PROMPT_MAPPER = {
-    "coherence": COHERENCE_PROMPT,
-    "relevance": RELEVANCE_PROMPT,
-    "fluency": FLUENCY_PROMPT,
-    "consistency": CONSISTENCY_PROMPT,
+    "coherence": COHERENCE_CRITERIA,
+    "relevance": RELEVANCE_CRITERIA,
+    "fluency": FLUENCY_CRITERIA,
+    "consistency": CONSISTENCY_CRITERIA,
 }
 
 
@@ -49,6 +50,19 @@ class Summarization(BaseTask):
     A class to perform summarization tasks using a language model.
     """
 
+    def _get_prompt(
+        self,
+        metric: str,
+    ) -> str:
+        """
+        Get the prompt for the specified metric.
+        """
+        if metric not in PROMPT_MAPPER:
+            raise MetricNotFoundError(
+                f"Metric '{metric}' not found. Available metrics are: {', '.join(METRICS)}"
+            )
+        return PROMPT_MAPPER[metric]
+
     def perform(
         self,
         *,
@@ -58,6 +72,7 @@ class Summarization(BaseTask):
             "coherence", "relevance", "fluency", "consistency", "all"
         ] = "all",
         explain: bool = True,
+        custom_prompt: str | None = None,
         **kwargs,
     ) -> Union[SummarizationOutput, List[SummarizationOutput]]:
         """
@@ -74,6 +89,7 @@ class Summarization(BaseTask):
                     summary=summary,
                     metric=metric,
                     explain=explain,
+                    custom_prompt=custom_prompt,
                     **kwargs,
                 )
                 total_output.append(output)
@@ -84,6 +100,7 @@ class Summarization(BaseTask):
                 summary=summary,
                 metric=metric,
                 explain=explain,
+                custom_prompt=custom_prompt,
                 **kwargs,
             )
 
@@ -94,6 +111,7 @@ class Summarization(BaseTask):
         summary: str,
         metric: str,
         explain: bool = True,
+        custom_prompt: str | None = None,
         **kwargs,
     ) -> SummarizationOutput:
         """
@@ -102,7 +120,11 @@ class Summarization(BaseTask):
         output = self._run_repetitions(
             text=text,
             summary=summary,
-            prompt=PROMPT_MAPPER[metric],
+            prompt=(
+                self._get_prompt(metric=metric)
+                if custom_prompt is None
+                else custom_prompt
+            ),
             explain=explain,
             **kwargs,
         )
@@ -153,7 +175,8 @@ class Summarization(BaseTask):
         while True:
             try:
                 response = self.connection.send(
-                    query=prompt.format(
+                    query=SUMMARIZATION_TEMPLATE.format(
+                        criteria=prompt,
                         text=text,
                         summary=summary,
                     ),

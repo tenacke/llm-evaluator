@@ -1,5 +1,5 @@
 from .base import BaseTask
-from .prompts import PAIRWISE_PROMPT
+from .prompts import PAIRWISE_TEMPLATE, PAIRWISE_CRITERIA
 from ..exceptions import BaseConnectionError, InternalModelTiredError
 
 from dataclasses import dataclass
@@ -31,6 +31,7 @@ class Pairwise(BaseTask):
         output1: str,
         output2: str,
         explain: bool = True,
+        custom_prompt: str | None = None,
         **kwargs,
     ) -> PairwiseOutput:
         """
@@ -38,7 +39,8 @@ class Pairwise(BaseTask):
         """
         # TODO : Add error handling for evaluation issues
 
-        prompt = PAIRWISE_PROMPT.format(
+        prompt = PAIRWISE_TEMPLATE.format(
+            criteria=custom_prompt or PAIRWISE_CRITERIA,
             question=question,
             answer_1=output1,
             answer_2=output2,

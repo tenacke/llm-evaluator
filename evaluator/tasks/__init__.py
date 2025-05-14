@@ -2,13 +2,12 @@ from .base import BaseTask
 from .summarization import Summarization, SummarizationOutput
 from .nli import NLI, NLIOutput
 from .pairwise import Pairwise, PairwiseOutput
+from .translation import Translation, TranslationOutput
 from .prompts import (
-    COHERENCE_PROMPT,
-    RELEVANCE_PROMPT,
-    FLUENCY_PROMPT,
-    CONSISTENCY_PROMPT,
-    PAIRWISE_PROMPT,
-    NLI_PROMPT,
+    SUMMARIZATION_TEMPLATE,
+    NLI_TEMPLATE,
+    PAIRWISE_TEMPLATE,
+    TRANSLATION_TEMPLATE,
 )
 
 __all__ = [
@@ -16,13 +15,13 @@ __all__ = [
     "Summarization",
     "NLI",
     "Pairwise",
+    "Translation",
     "SummarizationOutput",
     "NLIOutput",
     "PairwiseOutput",
-    "COHERENCE_PROMPT",
-    "RELEVANCE_PROMPT",
-    "FLUENCY_PROMPT",
-    "CONSISTENCY_PROMPT",
-    "PAIRWISE_PROMPT",
-    "NLI_PROMPT",
+    "TranslationOutput",
+    "SUMMARIZATION_TEMPLATE",
+    "NLI_TEMPLATE",
+    "PAIRWISE_TEMPLATE",
+    "TRANSLATION_TEMPLATE",
 ]

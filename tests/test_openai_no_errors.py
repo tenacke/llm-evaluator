@@ -1,5 +1,10 @@
 from evaluator import LLMEvaluator
-from evaluator.tasks import PairwiseOutput, NLIOutput, SummarizationOutput
+from evaluator.tasks import (
+    PairwiseOutput,
+    NLIOutput,
+    SummarizationOutput,
+    TranslationOutput,
+)
 import logging
 
 logger = logging.getLogger(__name__)
@@ -132,3 +137,34 @@ def test_summarization():
         assert isinstance(r.explanation, str)
 
     logger.info("Summarization evaluation completed successfully.")
+
+
+def test_translation():
+    evaluator = LLMEvaluator(
+        connection="openai", model="gpt-4o-mini", task="translation", repetition=1
+    )
+
+    example_source = "Hello, how are you doing today? I heard you are going to the party tonight. I hope you have a great time!"
+    example_translation = "Merhaba, bugün nasılsın? Partiye gideceğini duydum. Umarım harika bir zaman geçirirsin!"
+
+    logger.info("Starting translation evaluation...")
+    logger.info(f"Source: {example_source}")
+    logger.info(f"Translation: {example_translation}")
+
+    logger.info(
+        "Expecting the evaluator to grade the translation with a score from 1 to 5..."
+    )
+    logger.info("Evaluating...")
+
+    result = evaluator.evaluate(
+        source=example_source,
+        translation=example_translation,
+        explain=True,
+    )
+
+    assert result is not None
+    assert isinstance(result, TranslationOutput)
+    assert isinstance(result.score, float)
+    assert isinstance(result.explanation, str)
+
+    logger.info("Translation evaluation completed successfully.")

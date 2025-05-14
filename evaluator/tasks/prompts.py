@@ -1,9 +1,23 @@
-COHERENCE_PROMPT = """
+SUMMARIZATION_TEMPLATE = """
 You will be given one summary written for a news article. Your task is to
 rate the summary on one metric. Please make sure you read and understand
 these instructions carefully.
 
 Evaluation Criteria:
+{criteria}
+
+Please rate the summary based on the above metrics and provide your scores and explanations in the response box. 
+Please use the following format for your response: 
+Score: point 
+Explanation: explanation
+
+Here is the input:
+Summary: {summary}
+Text: {text}
+"""
+
+
+COHERENCE_CRITERIA = """
 Coherence: It measures the quality of all sentences collectively, 
 do they make sense as a whole, with the context organized and connected logically.
 Score 5: Entirely coherent, with good context-relatedness among all the sentences.
@@ -19,21 +33,9 @@ Check if the summary covers the main topic and key points of the news article, a
 3. Assign a score for the metric on a scale of 1 to 5, where 1 is the lowest and 5 is the highest based on the Evaluation Criteria.
 4. Provide the scores for coherence in the response box.
 5. Provide a brief explanation for each score in the response box.
-
-Please rate the summary based on the above metrics and provide your scores and explanations in the response box. 
-Please use the following format for your response: 
-Score: point 
-Explanation: explanation
-Summary: {summary}
-Text: {text}
 """
 
-RELEVANCE_PROMPT = """
-You will be given one summary written for a news article. Your task is to
-rate the summary on one metric. Please make sure you read and understand
-these instructions carefully.
-
-Evaluation Criteria:
+RELEVANCE_CRITERIA = """
 Relevance: It measures the quality of the summary in terms of how well it covers the main topic and key points of the news article.
 Score 5: Entirely relevant, covering all the main topics and key points of the news article.
 Score 4: Only containing some minor irrelevant parts that basically do not affect overall relevance.
@@ -48,21 +50,9 @@ Check if the summary covers the main topic and key points of the news article, a
 3. Assign a score for the metric on a scale of 1 to 5, where 1 is the lowest and 5 is the highest based on the Evaluation Criteria.
 4. Provide the scores for coherence in the response box.
 5. Provide a brief explanation for each score in the response box.
-
-Please rate the summary based on the above metrics and provide your scores and explanations in the response box. 
-Please use the following format for your response: 
-Score: point 
-Explanation: explanation
-Summary: {summary}
-Text: {text}
 """
 
-FLUENCY_PROMPT = """
-You will be given one summary written for a news article. Your task is to
-rate the summary on one metric. Please make sure you read and understand
-these instructions carefully.
-
-Evaluation Criteria:
+FLUENCY_CRITERIA = """
 Fluency: It measures the quality of individual sentences, are they grammatically correct, 
 non-repetitive, and in accord with common English usage, with clear meanings.
 Score 5: Entirely fluent, grammatically correct, and well-written.
@@ -78,21 +68,9 @@ Check if the summary covers the main topic and key points of the news article, a
 3. Assign a score for the metric on a scale of 1 to 5, where 1 is the lowest and 5 is the highest based on the Evaluation Criteria.
 4. Provide the scores for coherence in the response box.
 5. Provide a brief explanation for each score in the response box.
-
-Please rate the summary based on the above metrics and provide your scores and explanations in the response box. 
-Please use the following format for your response: 
-Score: point 
-Explanation: explanation
-Summary: {summary}
-Text: {text}
 """
 
-CONSISTENCY_PROMPT = """
-You will be given one summary written for a news article. Your task is to
-rate the summary on one metric. Please make sure you read and understand
-these instructions carefully.
-
-Evaluation Criteria:
+CONSISTENCY_CRITERIA = """
 Consistency: It measures the quality of the summary in terms of how well it maintains the same tone and style throughout the text.
 Score 5: Entirely consistent, with the same tone and style maintained throughout the text.
 Score 4: Only containing some minor inconsistent parts that basically do not affect overall consistency.
@@ -107,27 +85,16 @@ Check if the summary covers the main topic and key points of the news article, a
 3. Assign a score for the metric on a scale of 1 to 5, where 1 is the lowest and 5 is the highest based on the Evaluation Criteria.
 4. Provide the scores for coherence in the response box.
 5. Provide a brief explanation for each score in the response box.
-
-Please rate the summary based on the above metrics and provide your scores and explanations in the response box. 
-Please use the following format for your response: 
-Score: point 
-Explanation: explanation
-Summary: {summary}
-Text: {text}
 """
 
-NLI_PROMPT = """
+NLI_TEMPLATE = """
 You are given a Natural Language Inference (NLI) task output to evaluate. You will receive:
 
 - A premise: the original statement
 - A hypothesis: a statement that may or may not logically follow from the premise
 - A label: the model's predicted relationship between the premise and the hypothesis ("entailment", "contradiction", or "neutral")
 
-Below you can see the definitions and examples for each one of the possible answers
-
-Entailment: The Hypothesis is a logical consequence of the Premise. The information in the Hypothesis must be true if the Premise is true. (E.g., specific to general, part to whole, synonyms, paraphrasing)
-Contradiction: The Hypothesis directly conflicts with the Premise. If the Premise is true, the Hypothesis cannot be true. (E.g., opposite meanings, factual disagreements, mutually exclusive statements)
-Neutral: The Hypothesis is plausible but not guaranteed by the Premise. The Premise provides insufficient information to determine the truth of the Hypothesis. (E.g., additional details, unrelated content, implications that are not certain)
+{criteria}
 
 Your task is to evaluate the model's label and return "True" if the label is correct and "False" if the label is incorrect. You should also provide an explanation of why the label is correct or incorrect, based strictly on the logical relationship between the premise and hypothesis.
 
@@ -157,26 +124,70 @@ Return your output in the following format:
 Answer: [True/False]  
 Explanation: [Your explanation why the answer is correct or incorrect, based strictly on the logical relationship between the premise and hypothesis]
 
-Here is the data:
+Here is the input:
 Premise: {premise}
 Hypothesis: {hypothesis}
 Label: {label}
 """
 
-PAIRWISE_PROMPT = """
+NLI_CRITERIA = """
+Below you can see the definitions and examples for each one of the possible answers
+
+Entailment: The Hypothesis is a logical consequence of the Premise. The information in the Hypothesis must be true if the Premise is true. (E.g., specific to general, part to whole, synonyms, paraphrasing)
+Contradiction: The Hypothesis directly conflicts with the Premise. If the Premise is true, the Hypothesis cannot be true. (E.g., opposite meanings, factual disagreements, mutually exclusive statements)
+Neutral: The Hypothesis is plausible but not guaranteed by the Premise. The Premise provides insufficient information to determine the truth of the Hypothesis. (E.g., additional details, unrelated content, implications that are not certain)
+"""
+
+PAIRWISE_TEMPLATE = """
 You are given a question and two different answers provided by two separate AI models. Your task is to carefully compare both answers and decide which one is better.
 You should consider the following criteria in your evaluation:
 
-Relevance: How well does the answer address the question?
-Correctness: Is the answer factually and logically accurate?
-Clarity: Is the answer clear, well-structured, and easy to understand?
-Depth: Does the answer show reasoning or deeper insight when appropriate?
+{criteria}
 Please return your judgment in the following format:
 
 Better Answer: [Answer 1 / Answer 2]
 Explanation: [A detailed explanation of why you chose that answer, referring to the criteria above]
+
 Here is the input:
 Question: {question}
 Answer 1: {answer_1}
 Answer 2: {answer_2}
+"""
+
+PAIRWISE_CRITERIA = """
+Relevance: How well does the answer address the question?
+Correctness: Is the answer factually and logically accurate?
+Clarity: Is the answer clear, well-structured, and easy to understand?
+Depth: Does the answer show reasoning or deeper insight when appropriate?
+"""
+
+TRANSLATION_TEMPLATE = """
+You are a professional English-to-Turkish translation evaluator. You will be given two sentences:
+
+Source sentence (English): The original English sentence.
+Translated sentence (Turkish): A sentence that is claimed to be its correct translation.
+Your task is to evaluate how accurate, fluent, and grammatically correct the Turkish sentence is, using the following three equally important criteria:
+
+Evaluation Criteria:
+{criteria}
+
+Output Format (strictly follow this structure):
+Score: [1-5]
+Explanation: [Clear and concise explanation citing strengths and weaknesses in terms of the three evaluation criteria]
+
+Here is the input:
+Source sentence (English): {source}
+Translated sentence (Turkish): {translation}
+"""
+
+TRANSLATION_CRITERIA = """
+Meaning Preservation: Does the Turkish sentence convey the full and correct meaning of the English sentence?
+Fluency and Naturalness: Does the Turkish sentence sound natural and idiomatic to a native speaker?
+Grammar and Spelling: Is the sentence free from grammatical errors, awkward constructions, or spelling mistakes?
+Scoring (Only integers: 1 to 5):
+5 (Excellent): Meaning is perfectly preserved; sentence is fluent and grammatically flawless. Professional-quality translation.
+4 (Good): Small issues in word choice or fluency, but meaning is clear and no serious errors.
+3 (Adequate): Understandable but has some meaning loss or unnatural phrasing. Noticeable grammatical or stylistic issues.
+2 (Poor): Major meaning inaccuracies or awkward, incorrect language. Hard to read naturally.
+1 (Very Poor): Completely incorrect, misleading, or incomprehensible translation.
 """
