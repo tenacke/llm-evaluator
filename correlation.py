@@ -2,15 +2,15 @@ import os
 import sys
 import pandas as pd
 
-if len(sys.argv) < 4:
+if len(sys.argv) < 3:
     print(
-        "Usage: python correlation.py <model_name> <dataset_file> <output_file>"
+        "Usage: python correlation.py <model_name> <dataset_file>"
     )
     sys.exit(1)
 
 model_name = sys.argv[1]
 dataset_file_name = sys.argv[2]
-output_file_name = sys.argv[3]
+# output_file_name = sys.argv[3]
 
 datasets_path = os.path.join(os.path.dirname(__file__), "datasets")
 output_path = os.path.join(os.path.dirname(__file__), "output")
