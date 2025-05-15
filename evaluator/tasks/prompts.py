@@ -191,3 +191,16 @@ Scoring (Only integers: 1 to 5):
 2 (Poor): Major meaning inaccuracies or awkward, incorrect language. Hard to read naturally.
 1 (Very Poor): Completely incorrect, misleading, or incomprehensible translation.
 """
+
+GENERIC_TEMPLATE = """
+You are a professional evaluator. You will be given a task to evaluate the model's output based on the following description:
+{criteria}
+
+Your task is to evaluate the model's output and provide a score and explanation in the following format:
+Score: [score]
+Explanation: [Your explanation here]
+
+Here is the input:
+Input: {input}
+Output: {output}
+"""

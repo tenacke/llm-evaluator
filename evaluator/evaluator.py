@@ -9,6 +9,7 @@ from .tasks.summarization import Summarization
 from .tasks.nli import NLI
 from .tasks.pairwise import Pairwise
 from .tasks.translation import Translation
+from .tasks.generic import Generic
 
 from .exceptions import BaseConnectionError, InvalidTaskError, ConnectionTypeError
 
@@ -24,6 +25,7 @@ TASK_MAP = {
     "nli": NLI,
     "pairwise": Pairwise,
     "translation": Translation,
+    "generic": Generic,
 }
 
 

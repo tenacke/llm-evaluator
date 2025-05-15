@@ -8,6 +8,7 @@ from .prompts import (
     NLI_TEMPLATE,
     PAIRWISE_TEMPLATE,
     TRANSLATION_TEMPLATE,
+    GENERIC_TEMPLATE,
 )
 
 __all__ = [
@@ -24,4 +25,5 @@ __all__ = [
     "NLI_TEMPLATE",
     "PAIRWISE_TEMPLATE",
     "TRANSLATION_TEMPLATE",
+    "GENERIC_TEMPLATE",
 ]
