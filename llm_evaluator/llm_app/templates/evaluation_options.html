@@ -13,7 +13,7 @@
 
         function selectModel(selectedElement) {
             // Remove 'selected' class from all options
-            const options = document.querySelectorAll('.option');
+            const options = document.querySelectorAll('.model_option');
             options.forEach(option => option.classList.remove('selected'));
 
             // Add 'selected' class to the clicked element
@@ -504,8 +504,8 @@
     </header>
     <main>
         <h1>Select an Evaluator Model</h1>
-        <div class="option selected" onclick="selectModel(this)">llama 3.1 8b</div>
-        <div class="option" onclick="selectModel(this)">GPT 4o Mini</div>
+        <div class="model_option selected" onclick="selectModel(this)">llama 3.1 8b</div>
+        <div class="model_option" onclick="selectModel(this)">GPT 4o Mini</div>
 
         <h1>Select an Evaluation Type</h1>
         <button onclick="showText('option1')">Pointwise Evaluation (Summary)</button>

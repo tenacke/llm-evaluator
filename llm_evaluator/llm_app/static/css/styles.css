@@ -74,6 +74,19 @@ button:hover {
 .option:hover {
     background: #eaeaea;
 }
+.model_option {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.model_option:hover {
+    background: #eaeaea;
+    cursor: pointer; /* Changes cursor to a hand on hover */
+
+}
 .option2 {
     padding: 10px;
     margin: 10px 0;
