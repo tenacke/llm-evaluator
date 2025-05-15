@@ -6,7 +6,7 @@ import csv
 from django.http import JsonResponse, HttpResponseNotFound
 from django.conf import settings
 
-from evaluator import LLMEvaluator
+# from evaluator import LLMEvaluator
 
 
 def evaluation_options(request):
@@ -146,9 +146,9 @@ def get_pairwise(request):
         return JsonResponse({"error": f"Encoding error: {str(e)}"}, status=500)
 
 
-def evaluate_summary(request, story, summary):
+def evaluate_summary(request, model, story, summary):
     evaluator = LLMEvaluator(
-        connection="openai",
+        connection=model,
         task="summarization",
         repetition=1,
     )
@@ -166,9 +166,9 @@ def evaluate_summary(request, story, summary):
     return JsonResponse(result)
 
 
-def evaluate_nli(request, premise, hypothesis, label):
+def evaluate_nli(request, model, premise, hypothesis, label):
     evaluator = LLMEvaluator(
-        connection="openai",
+        connection=model,
         task="nli",
         repetition=1,
     )
@@ -181,9 +181,9 @@ def evaluate_nli(request, premise, hypothesis, label):
     return JsonResponse({"status": result.status, "explanation": result.explanation})
 
 
-def evaluate_pairwise(request, question, example1, example2, label):
+def evaluate_pairwise(request, model, question, example1, example2, label):
     evaluator = LLMEvaluator(
-        connection="openai",
+        connection=model,
         task="pairwise",
         repetition=1,
     )
@@ -196,9 +196,9 @@ def evaluate_pairwise(request, question, example1, example2, label):
     return JsonResponse({"choice": result.choice, "explanation": result.explanation})
 
 
-def evaluate_translation(request, eng, tur):
+def evaluate_translation(request, model, eng, tur):
     evaluator = LLMEvaluator(
-        connection="openai",
+        connection=model,
         task="translation",
         repetition=1,
     )
@@ -210,9 +210,9 @@ def evaluate_translation(request, eng, tur):
     return JsonResponse({"score": result.score, "explanation": result.explanation})
 
 
-def evaluate_generic(request, prompt, input, output):
+def evaluate_generic(request, model, prompt, input, output):
     evaluator = LLMEvaluator(
-        connection="openai",
+        connection=model,
         task="generic",
         repetition=1,
     )

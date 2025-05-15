@@ -9,6 +9,21 @@
 
     <script>
         let currentLineData = {};
+        let model = 'ollama';
+
+        function selectModel(selectedElement) {
+            // Remove 'selected' class from all options
+            const options = document.querySelectorAll('.option');
+            options.forEach(option => option.classList.remove('selected'));
+
+            // Add 'selected' class to the clicked element
+            selectedElement.classList.add('selected');
+            if (selectedElement.innerText === 'llama 3.1 8b') {
+                model = 'ollama';
+            } else if (selectedElement.innerText === 'GPT 4o Mini') {
+                model = 'openai';
+            }
+        }
 
         function showText(option) {
             // Hide all text containers
@@ -251,7 +266,7 @@
             // const premise = document.getElementById('option2-premise').innerText;
             // const hypothesis = document.getElementById('option2-hypothesis').innerText;
 
-            fetch(`/evaluate_nli/${encodeURIComponent(premise)}/${encodeURIComponent(hypothesis)}/${encodeURIComponent(selectedText)}/`)
+            fetch(`/evaluate_nli/${encodeURIComponent(model)}/encodeURIComponent(premise)}/${encodeURIComponent(hypothesis)}/${encodeURIComponent(selectedText)}/`)
             .then(response => response.json())
             .then(data => {
                 const result = document.getElementById('nli-result');
@@ -291,7 +306,7 @@
             } else {
                 story = document.getElementById('user-story').value;
             }
-            fetch(`/evaluate_summary/${encodeURIComponent(story)}/${encodeURIComponent(user_summary)}/`)
+            fetch(`/evaluate_summary/${encodeURIComponent(model)}/${encodeURIComponent(story)}/${encodeURIComponent(user_summary)}/`)
             .then(response => response.json())
             .then(data => {
                 const result = document.getElementById('summary-result');
@@ -324,7 +339,7 @@
             } else {
                 user_translation = document.getElementById('user-translation').value;
             }
-            fetch(`/evaluate_translation/${encodeURIComponent(englishText)}/${encodeURIComponent(user_translation)}/`)
+            fetch(`/evaluate_translation/${encodeURIComponent(model)}/${encodeURIComponent(englishText)}/${encodeURIComponent(user_translation)}/`)
             .then(response => response.json())
             .then(data => {
                 const result = document.getElementById('translation-result');
@@ -362,7 +377,7 @@
                     answer1 = answer1Container.innerText;
                     answer2 = answer2Container.innerText;
                 }
-                fetch(`/evaluate_pairwise/${encodeURIComponent(question)}/${encodeURIComponent(answer1)}/${encodeURIComponent(answer2)}/${encodeURIComponent(selectedText)}/`)
+                fetch(`/evaluate_pairwise/${encodeURIComponent(model)}/${encodeURIComponent(question)}/${encodeURIComponent(answer1)}/${encodeURIComponent(answer2)}/${encodeURIComponent(selectedText)}/`)
                 .then(response => response.json())
                 .then(data => {
                     const result = document.getElementById('pairwise-result');
@@ -389,7 +404,7 @@
             const inputText = document.getElementById('generic-input').value;
             const outputText = document.getElementById('generic-output').value;
 
-            fetch(`/evaluate_generic/${encodeURIComponent(prompt)}/${encodeURIComponent(inputText)}/${encodeURIComponent(outputText)}/`)
+            fetch(`/evaluate_generic/${encodeURIComponent(model)}/${encodeURIComponent(prompt)}/${encodeURIComponent(inputText)}/${encodeURIComponent(outputText)}/`)
                 .then(response => response.json())
                 .then(data => {
                     const result = document.getElementById('generic-result');
@@ -488,6 +503,10 @@
         LLM-Evaluator
     </header>
     <main>
+        <h1>Select an Evaluator Model</h1>
+        <div class="option selected" onclick="selectModel(this)">llama 3.1 8b</div>
+        <div class="option" onclick="selectModel(this)">GPT 4o Mini</div>
+
         <h1>Select an Evaluation Type</h1>
         <button onclick="showText('option1')">Pointwise Evaluation (Summary)</button>
         <button onclick="showText('option4')">Pointwise Evaluation (Translation)</button>
@@ -498,7 +517,6 @@
         <div id="option1" class="box hidden">
             <h2>Pointwise Evaluation - Summary</h2>
             <p>In this task our evaluator gives a score on a story summary's coherence, consistency, fluency, and relevance. </p>
-            <i>Evaluated by lama3.1:8b</i><br>
             <div class="styled-box">
                 <h3>Story:</h3>
                 <p id="option1-story">Loading...</p>
