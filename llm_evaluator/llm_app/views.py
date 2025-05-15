@@ -6,7 +6,7 @@ import csv
 from django.http import JsonResponse, HttpResponseNotFound
 from django.conf import settings
 
-# from evaluator import LLMEvaluator
+from evaluator import LLMEvaluator
 
 
 def evaluation_options(request):
@@ -32,6 +32,7 @@ def get_random_line(request):
         return JsonResponse({"error": str(e)}, status=500)
 
     return JsonResponse({"error": "Line not found"}, status=404)
+
 
 def get_random_translation(request):
     try:
@@ -147,7 +148,7 @@ def get_pairwise(request):
 
 def evaluate_summary(request, story, summary):
     evaluator = LLMEvaluator(
-        connection="ollama",
+        connection="openai",
         task="summarization",
         repetition=1,
     )
@@ -167,7 +168,7 @@ def evaluate_summary(request, story, summary):
 
 def evaluate_nli(request, premise, hypothesis, label):
     evaluator = LLMEvaluator(
-        connection="ollama",
+        connection="openai",
         task="nli",
         repetition=1,
     )
@@ -182,7 +183,7 @@ def evaluate_nli(request, premise, hypothesis, label):
 
 def evaluate_pairwise(request, question, example1, example2, label):
     evaluator = LLMEvaluator(
-        connection="ollama",
+        connection="openai",
         task="pairwise",
         repetition=1,
     )
@@ -194,29 +195,31 @@ def evaluate_pairwise(request, question, example1, example2, label):
     )
     return JsonResponse({"choice": result.choice, "explanation": result.explanation})
 
+
 def evaluate_translation(request, eng, tur):
     evaluator = LLMEvaluator(
-        connection="ollama",
+        connection="openai",
         task="translation",
         repetition=1,
     )
     result = evaluator.evaluate(
-        text=eng,
+        source=eng,
         translation=tur,
         explain=True,
     )
-    return JsonResponse({"status": result.status, "explanation": result.explanation})
+    return JsonResponse({"score": result.score, "explanation": result.explanation})
+
 
 def evaluate_generic(request, prompt, input, output):
     evaluator = LLMEvaluator(
-        connection="ollama",
+        connection="openai",
         task="generic",
         repetition=1,
     )
     result = evaluator.evaluate(
-        prompt=prompt,
+        custom_prompt=prompt,
         input=input,
         output=output,
         explain=True,
     )
-    return JsonResponse({"status": result.status, "explanation": result.explanation})
+    return JsonResponse({"score": result.score, "explanation": result.explanation})
