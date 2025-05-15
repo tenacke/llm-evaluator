@@ -62,6 +62,7 @@
             if (option === 'option2') {
                 const options = document.querySelectorAll('.option');
                 options.forEach(option => option.classList.remove('selected'));
+                const nli_res = document.querySelector
                 fetch('/get-random-nli/')
                     .then(response => response.json())
                     .then(data => {
@@ -406,6 +407,8 @@
         function writeYourOwnStory() {
         // Replace story container with a large textarea
         const storyContainer = document.getElementById('option1-story');
+        const summ_result = document.getElementById('summary-result');
+        summ_result.innerHTML = ``;
         storyContainer.innerHTML = `
             <textarea id="user-story" rows="10" cols="100" placeholder="Write your story here..."></textarea>
         `;
@@ -424,6 +427,8 @@
         // Replace premise and hypothesis containers with textareas
         const premiseContainer = document.getElementById('option2-premise');
         const hypothesisContainer = document.getElementById('option2-hypothesis');
+        const nli_result = document.getElementById('nli-result');
+        nli_result.innerHTML = ``;
         premiseContainer.innerHTML = `
             <textarea id="user-premise" rows="4" cols="100" placeholder="Write your premise here..."></textarea>
         `;
@@ -436,6 +441,8 @@
         const questionContainer = document.getElementById('question');
         const answer1Container = document.getElementById('answer1');
         const answer2Container = document.getElementById('answer2');
+        const pairwise_result = document.getElementById('pairwise-result');
+        pairwise_result.innerHTML = ``;
         questionContainer.innerHTML = `
             <textarea id="user-question" rows="4" cols="80" placeholder="Write your question here..."></textarea>
         `;
@@ -458,6 +465,8 @@
         storyContainer.innerHTML = `
             <textarea id="user-eng" rows="10" cols="80" placeholder="Write your example in English here..."></textarea>
         `;
+        const translation_result = document.getElementById('translation-result');
+        translation_result.innerHTML = ``;
 
         // Hide the "Try Our Translation" button
         const translationButton = document.getElementById('translation-button');
