@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evaluation Options</title>
+    <title>LLM Evaluator</title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 
     <script>
@@ -504,9 +504,12 @@
     </header>
     <main>
         <h1>Select an Evaluator Model</h1>
-        <div class="model_option selected" onclick="selectModel(this)">llama 3.1 8b</div>
+        <div>
+            <div class="model_option selected" onclick="selectModel(this)">llama 3.1 8b</div>
         <div class="model_option" onclick="selectModel(this)">GPT 4o Mini</div>
 
+        </div>
+        
         <h1>Select an Evaluation Type</h1>
         <button onclick="showText('option1')">Pointwise Evaluation (Summary)</button>
         <button onclick="showText('option4')">Pointwise Evaluation (Translation)</button>
