@@ -6,7 +6,7 @@ import csv
 from django.http import JsonResponse, HttpResponseNotFound
 from django.conf import settings
 
-from evaluator import LLMEvaluator
+# from evaluator import LLMEvaluator
 
 
 def evaluation_options(request):
