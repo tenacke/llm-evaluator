@@ -71,7 +71,7 @@
                         option1Paragraph.innerText = 'Error fetching data.';
                     });
                     const summaryDisplay = document.getElementById('summary');
-                    summaryDisplay.innerHTML = `<textarea id="user-answer" rows="4" cols="250" placeholder="Type your answer here..."></textarea>`;
+                    summaryDisplay.innerHTML = `<textarea id="user-answer"  style="width: 100%; box-sizing: border-box; min-height: 150px; resize: vertical; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Type your answer here..."></textarea>`;
 
             }
             if (option === 'option2') {
@@ -143,7 +143,7 @@
                         option4Paragraph.innerText = 'Error fetching data.';
                     });
                     const summaryDisplay = document.getElementById('tur-text');
-                    summaryDisplay.innerHTML = `<textarea id="user-translation" rows="4" cols="250" placeholder="Type your answer here..."></textarea>`;
+                    summaryDisplay.innerHTML = `<textarea id="user-translation" style="width: 100%; box-sizing: border-box; min-height: 150px; resize: vertical; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Type your answer here..."></textarea>`;
             }
             if (option === 'option5') {
                 const genericResult = document.getElementById('generic-result');
@@ -185,7 +185,7 @@
         summaryButton.innerText = "Try Our Summary";
 
         // Restore the textarea for user's own summary
-        summaryDisplay.innerHTML = `<textarea id="user-answer" rows="4" cols="250" placeholder="Type your answer here..."></textarea>`;
+        summaryDisplay.innerHTML = `<textarea id="user-answer" style="width: 100%; box-sizing: border-box; min-height: 150px; resize: vertical; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Type your answer here..."></textarea>`;
         const exp_res_display = document.getElementById('exp_res');
         exp_res_display.innerHTML = ``;
    
@@ -211,7 +211,7 @@
         translationButton.innerText = "Try Our Translation";
 
         // Restore the textarea for user's own summary
-        translationDisplay.innerHTML = `<textarea id="user-translation" rows="4" cols="250" placeholder="Type your answer here..."></textarea>`;
+        translationDisplay.innerHTML = `<textarea id="user-translation" style="width: 100%; box-sizing: border-box; min-height: 150px; resize: vertical; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Type your answer here..."></textarea>`;
         const exp_res_display = document.getElementById('exp_res_tr');
         exp_res_display.innerHTML = ``;
     }
@@ -266,7 +266,7 @@
             // const premise = document.getElementById('option2-premise').innerText;
             // const hypothesis = document.getElementById('option2-hypothesis').innerText;
 
-            fetch(`/evaluate_nli/${encodeURIComponent(model)}/encodeURIComponent(premise)}/${encodeURIComponent(hypothesis)}/${encodeURIComponent(selectedText)}/`)
+            fetch(`/evaluate_nli/${encodeURIComponent(model)}/${encodeURIComponent(premise)}/${encodeURIComponent(hypothesis)}/${encodeURIComponent(selectedText)}/`)
             .then(response => response.json())
             .then(data => {
                 const result = document.getElementById('nli-result');
@@ -425,7 +425,7 @@
         const summ_result = document.getElementById('summary-result');
         summ_result.innerHTML = ``;
         storyContainer.innerHTML = `
-            <textarea id="user-story" rows="10" cols="100" placeholder="Write your story here..."></textarea>
+            <textarea id="user-story" style="width: 100%; box-sizing: border-box; min-height: 150px; resize: vertical; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Write your story here..."></textarea>
         `;
 
         // Hide the "Try Our Summary" button
@@ -434,7 +434,7 @@
         
         // Add a textbox for the summary
         const summaryDisplay = document.getElementById('summary');
-        summaryDisplay.innerHTML = `<textarea id="user-answer" rows="4" cols="250" placeholder="Type your answer here..."></textarea>`;
+        summaryDisplay.innerHTML = `<textarea id="user-answer" style="width: 100%; box-sizing: border-box; min-height: 150px; resize: vertical; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Type your answer here..."></textarea>`;
         const exp_res_display = document.getElementById('exp_res');
         exp_res_display.innerHTML = ``;
         }
@@ -445,10 +445,10 @@
         const nli_result = document.getElementById('nli-result');
         nli_result.innerHTML = ``;
         premiseContainer.innerHTML = `
-            <textarea id="user-premise" rows="4" cols="100" placeholder="Write your premise here..."></textarea>
+            <textarea id="user-premise" style="width: 100%; box-sizing: border-box; min-height: 150px; resize: vertical; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Write your premise here..."></textarea>
         `;
         hypothesisContainer.innerHTML = `
-            <textarea id="user-hypothesis" rows="4" cols="100" placeholder="Write your hypothesis here..."></textarea>
+            <textarea id="user-hypothesis" style="width: 100%; box-sizing: border-box; min-height: 150px; resize: vertical; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Write your hypothesis here..."></textarea>
         `;
         }
         function writeYourOwnpairwise() {
@@ -459,13 +459,13 @@
         const pairwise_result = document.getElementById('pairwise-result');
         pairwise_result.innerHTML = ``;
         questionContainer.innerHTML = `
-            <textarea id="user-question" rows="4" cols="80" placeholder="Write your question here..."></textarea>
+            <textarea id="user-question" style="width: 100%; box-sizing: border-box; min-height: 150px; resize: vertical; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Write your question here..."></textarea>
         `;
         answer1Container.innerHTML = `
-            <textarea id="user-answer1" rows="20" cols="80" placeholder="Write your first answer here..."></textarea>
+            <textarea id="user-answer1" style="width: 100%; box-sizing: border-box; min-height: 150px; resize: vertical; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Write your first answer here..."></textarea>
         `;
         answer2Container.innerHTML = `
-            <textarea id="user-answer2" rows="20" cols="80" placeholder="Write your second answer here..."></textarea>
+            <textarea id="user-answer2" style="width: 100%; box-sizing: border-box; min-height: 150px; resize: vertical; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Write your second answer here..."></textarea>
         `;
         // hide the models
         const model1 = document.getElementById('model1-div');
@@ -478,7 +478,7 @@
         // Replace story container with a large textarea
         const storyContainer = document.getElementById('option4-eng');
         storyContainer.innerHTML = `
-            <textarea id="user-eng" rows="10" cols="80" placeholder="Write your example in English here..."></textarea>
+            <textarea id="user-eng" style="width: 100%; box-sizing: border-box; min-height: 150px; resize: vertical; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Write your example in English here..."></textarea>
         `;
         const translation_result = document.getElementById('translation-result');
         translation_result.innerHTML = ``;
@@ -489,7 +489,7 @@
         
         // Add a textbox for the translation
         const translationDisplay = document.getElementById('tur-text');
-        translationDisplay.innerHTML = `<textarea id="user-translation" rows="4" cols="80" placeholder="Type your translation to Turkish here..."></textarea>
+        translationDisplay.innerHTML = `<textarea id="user-translation" style="width: 100%; box-sizing: border-box; min-height: 150px; resize: vertical; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Type your translation to Turkish here..."></textarea>
 `;
         const exp_res_display = document.getElementById('exp_res_tr');
         exp_res_display.innerHTML = ``;
@@ -529,7 +529,7 @@
 
             </div>
             <div id="summary">
-                <textarea id="user-answer" rows="4" cols="250" placeholder="Type your answer here..."></textarea>
+                <textarea id="user-answer" style="width: 100%; box-sizing: border-box; min-height: 150px; resize: vertical; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Type your answer here..."></textarea>
             </div>
             <p id="exp_res"></p>
             <button id="summary-button" onclick="displaySummary()">Try Our Summary</button>
@@ -552,7 +552,7 @@
 
             </div>
             <div id="tur-text">
-                <textarea id="user-translation" rows="4" cols="250" placeholder="Type your answer here..."></textarea>
+                <textarea id="user-translation" style="width: 100%; box-sizing: border-box; min-height: 150px; resize: vertical; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Type your answer here..."></textarea>
             </div>
             <p id="exp_res_tr"></p>
             <button id="translation-button" onclick="displayTranslation()">Try Our Translation</button>
@@ -625,11 +625,11 @@
             <p>In this task our evaluator evaluates a user written prompt, text and response according to the given description</p>
             <p>This section is used as a playground for prompt engineering. The prompts are not refined and therefore might not have as good of results as in the rest of the tasks.</p>
             <h3>Prompt:</h3>
-            <textarea id="generic-prompt" rows="10" cols="100" placeholder="Write your prompt here..."></textarea>
+            <textarea id="generic-prompt" style="width: 100%; box-sizing: border-box; min-height: 150px; resize: vertical; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Write your prompt here..."></textarea>
             <h3>Input Text:</h3>
-            <textarea id="generic-input" rows="10" cols="100" placeholder="Write your input text here..."></textarea>
+            <textarea id="generic-input" style="width: 100%; box-sizing: border-box; min-height: 150px; resize: vertical; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Write your input text here..."></textarea>
             <h3>Output Text:</h3>
-            <textarea id="generic-output" rows="10" cols="100" placeholder="Write your output text to be evaluated here..."></textarea>
+            <textarea id="generic-output" style="width: 100%; box-sizing: border-box; min-height: 150px; resize: vertical; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Write your output text to be evaluated here..."></textarea>
             <br><button onclick="showText('option5')">Clear All</button>
             <button id="evaluate-generic" onclick="evaluate_generic()">Evaluate</button>
             <p id="generic-result"></p>
