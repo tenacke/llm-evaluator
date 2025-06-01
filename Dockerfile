@@ -1,29 +1,28 @@
-FROM ollama/ollama
+# Use a base image
+FROM python:3.12-alpine
 
-RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends \
-        git \
-        wget \
-        cmake \
-        ninja-build \
-        build-essential \
-        python3 \
-        python3-dev \
-        python3-pip \
-        python3-venv \
-        python-is-python3 \
-    && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/* 
+# Set working directory
+WORKDIR /app
 
-RUN git clone https://github.com/tenacke/llm-evaluator.git /opt/llm-evaluator
+# Copy requirements and install dependencies
+COPY requirements.txt .
 
-WORKDIR /opt/llm-evaluator
+RUN python3 -m venv venv
+RUN . venv/bin/activate
 
-RUN python3 -m pip install --upgrade pip && \
-    python3 -m venv venv
+RUN pip install --upgrade pip
+RUN pip install --no-cache-dir -r requirements.txt
 
-RUN venv/bin/pip install --no-cache-dir -r requirements.txt
+# Copy the rest of the application
+COPY . .
 
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+ENV DJANGO_SETTINGS_MODULE=llm_evaluator.settings
 
-ENTRYPOINT ["/entrypoint.sh"]
+# Expose port that Django runs on
+EXPOSE 8000
+
+# Run Django server
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
