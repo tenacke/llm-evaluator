@@ -1,9 +1,9 @@
-name: Build and Push Docker Image
+name: Build and Push UI Docker Image
 
 on:
   push:
     branches:
-      - main
+      - ui
   workflow_dispatch:
 
 jobs:
