@@ -266,7 +266,7 @@
             // const premise = document.getElementById('option2-premise').innerText;
             // const hypothesis = document.getElementById('option2-hypothesis').innerText;
 
-            fetch(`/evaluate_nli/${encodeURIComponent(model)}/encodeURIComponent(premise)}/${encodeURIComponent(hypothesis)}/${encodeURIComponent(selectedText)}/`)
+            fetch(`/evaluate_nli/${encodeURIComponent(model)}/${encodeURIComponent(premise)}/${encodeURIComponent(hypothesis)}/${encodeURIComponent(selectedText)}/`)
             .then(response => response.json())
             .then(data => {
                 const result = document.getElementById('nli-result');
