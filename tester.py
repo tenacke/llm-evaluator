@@ -1,99 +1,127 @@
 import os
 import sys
 import pandas as pd
-
 import ollama
+from openai import OpenAI
+from dotenv import load_dotenv
+load_dotenv()
 
 coherence_prompt = """
-You will be given one summary written for a news article.
-Your task is to rate the summary on one metric.
-Please make sure you read and understand these instructions carefully.
+You will be given one summary written for a news article. Your task is to
+rate the summary on one metric. Please make sure you read and understand
+these instructions carefully.
 
 Evaluation Criteria:
-Coherence:  (1-5) - the collective quality of all sentences. 
-We align this dimension with the DUC quality question of structure and coherence whereby "the summary should be well-structured and well-organized.
-The summary should not just be a heap of related information, but should build from sentence to a coherent body of information about a topic."
+Coherence: It measures the quality of all sentences collectively, 
+do they make sense as a whole, with the context organized and connected logically.
+Score 5: Entirely coherent, with good context-relatedness among all the sentences.
+Score 4: Only containing some minor illogical parts that basically do not affect overall coherency.
+Score 3: Coherent in general, with some obvious conflicting logical or inconsistent problems. 
+Score 2: There are major unreasonable logic and semantic inconsistencies, but at least the related topic.
+Score 1: Not coherent at all, full of self-contradictory or unrelated content.
 
 Evaluation Steps:
 1. Read the news article carefully and identify the main topic and key points.
-2. Read the summary and compare it to the news article. Check if the summary covers the main topic and key points of the news article, and if it presents them in a clear and logical order.
-3. Assign a score for coherence on a scale of 1 to 5, where 1 is the lowest and 5 is the highest based on the Evaluation Criteria.
+2. Read the summary and compare it to the news article. 
+Check if the summary covers the main topic and key points of the news article, and if it presents them in a clear and logical order.
+3. Assign a score for the metric on a scale of 1 to 5, where 1 is the lowest and 5 is the highest based on the Evaluation Criteria.
+4. Provide the scores for coherence in the response box.
+5. Provide a brief explanation for each score in the response box.
 
-Question:
-How coherent is the summary? That is, how well do the sentences in the summary fit together? (On a scale of 1-5, with 1 being the lowest)
-
-Please rate the summary based on the above metrics and provide your scores and explanations in the response box.
-Please use the following format for your response:
-Score: point
+Please rate the summary based on the above metrics and provide your scores and explanations in the response box. 
+Please use the following format for your response: 
+Score: point 
 Explanation: explanation
+
+Here is the input:
 """
 
 consistency_prompt = """
-You will be given one summary written for a news article.
-Your task is to rate the summary on one metric.
-Please make sure you read and understand these instructions carefully.
+You will be given one summary written for a news article. Your task is to
+rate the summary on one metric. Please make sure you read and understand
+these instructions carefully.
 
 Evaluation Criteria:
-Consistency (1-5) - the factual alignment between the summary and the summarized source.
-A factually consistent summary contains only statements that are entailed by the source document.
-Annotators were also asked to penalize summaries that contained hallucinated facts.
+Consistency: It measures the quality of the summary in terms of how well it maintains the same tone and style throughout the text.
+Score 5: Entirely consistent, with the same tone and style maintained throughout the text.
+Score 4: Only containing some minor inconsistent parts that basically do not affect overall consistency.
+Score 3: Consistent in general, with some obvious conflicting tone and style problems.
+Score 2: There are major inconsistent tone and style, but at least the related topic.
+Score 1: Not consistent at all, full of self-contradictory or unrelated tone and style.
 
 Evaluation Steps:
-1. Read the news article carefully and identify the main facts and details it presents.
-2. Read the summary and compare it to the news article. Check if the summary contains any factual errors that are not supported by the article.
-3. Assign a score for consistency based on the Evaluation Criteria.
+1. Read the news article carefully and identify the main topic and key points.
+2. Read the summary and compare it to the news article. 
+Check if the summary covers the main topic and key points of the news article, and if it presents them in a clear and logical order.
+3. Assign a score for the metric on a scale of 1 to 5, where 1 is the lowest and 5 is the highest based on the Evaluation Criteria.
+4. Provide the scores for coherence in the response box.
+5. Provide a brief explanation for each score in the response box.
 
-Question:
-How consistent is the summary with the source document in terms of the factual alignment? (On a scale of 1-5, with 1 being the lowest)
-
-Please rate the summary based on the above metrics and provide your scores and explanations in the response box.
-Please use the following format for your response:
-Score: point
+Please rate the summary based on the above metrics and provide your scores and explanations in the response box. 
+Please use the following format for your response: 
+Score: point 
 Explanation: explanation
+
+Here is the input:
 """
 
 fluency_prompt = """
-You will be given one summary written for a news article.
-Your task is to rate the summary on one metric.
-Please make sure you read and understand these instructions carefully.
+You will be given one summary written for a news article. Your task is to
+rate the summary on one metric. Please make sure you read and understand
+these instructions carefully.
 
-Fluency (1-5): This rating measures the quality of individual sentences, are they well-written and grammatically correct.
-Consider the quality of individual sentences.
+Evaluation Criteria:
+Fluency: It measures the quality of individual sentences, are they grammatically correct, 
+non-repetitive, and in accord with common English usage, with clear meanings.
+Score 5: Entirely fluent, grammatically correct, and well-written.
+Score 4: Only containing some minor non-fluent parts or grammatical errors that basically have no effect on fluency.
+Score 3: Fluent in general, with some obvious grammatical errors and unfamiliar phrases. 
+Score 2: There are major grammatical errors, duplication, unfamiliar phrases and syntactic structures, and missing components, but some fluent segments.
+Score 1: Not fluent at all, full of meaningless fragments and unclear contents.
 
-Evaluation steps:
-1. Read the given summary.
-2. Evaluate the fluency of the summary on a scale of 1-5 based on the criteria provided.
-3. Provide the rating.
+Evaluation Steps:
+1. Read the news article carefully and identify the main topic and key points.
+2. Read the summary and compare it to the news article. 
+Check if the summary covers the main topic and key points of the news article, and if it presents them in a clear and logical order.
+3. Assign a score for the metric on a scale of 1 to 5, where 1 is the lowest and 5 is the highest based on the Evaluation Criteria.
+4. Provide the scores for coherence in the response box.
+5. Provide a brief explanation for each score in the response box.
 
-Question:
-Based on the evaluation criteria, how fluent is the summary? (On a scale of 1-5, with 1 being the lowest)
-
-Please rate the summary based on the above metrics and provide your scores and explanations in the response box.
-Please use the following format for your response:
-Score: point
+Please rate the summary based on the above metrics and provide your scores and explanations in the response box. 
+Please use the following format for your response: 
+Score: point 
 Explanation: explanation
+
+Here is the input:
 """
 
 relevance_prompt = """
-You will be given one summary written for a news article.
-Your task is to rate the summary on one metric.
-Please make sure you read and understand these instructions carefully.
+You will be given one summary written for a news article. Your task is to
+rate the summary on one metric. Please make sure you read and understand
+these instructions carefully.
 
 Evaluation Criteria:
-Relevance (1-5) - selection of important content from the source.
-The summary should include only important information from the source document. 
-Annotators were instructed to penalize summaries which contained redundancies and excess
+Relevance: It measures the quality of the summary in terms of how well it covers the main topic and key points of the news article.
+Score 5: Entirely relevant, covering all the main topics and key points of the news article.
+Score 4: Only containing some minor irrelevant parts that basically do not affect overall relevance.
+Score 3: Relevant in general, with some obvious conflicting logical or inconsistent problems.
+Score 2: There are major irrelevant parts, but at least the related topic.
+Score 1: Not relevant at all, full of self-contradictory or unrelated content.
 
 Evaluation Steps:
-1. Read the summary and the source
-2. Compare the summary to the source document and identify the main points of the article.
-3. Assess how well the summary covers the main points of the article, and how much irrelevant or redundant information it contains.
-4. Assign a relevance score from 1 to 5.
+1. Read the news article carefully and identify the main topic and key points.
+2. Read the summary and compare it to the news article. 
+Check if the summary covers the main topic and key points of the news article, and if it presents them in a clear and logical order.
+3. Assign a score for the metric on a scale of 1 to 5, where 1 is the lowest and 5 is the highest based on the Evaluation Criteria.
+4. Provide the scores for coherence in the response box.
+5. Provide a brief explanation for each score in the response box.
 
-Please rate the summary based on the above metrics and provide your scores and explanations in the response box.
-Please use the following format for your response:
-Score: point
+Please rate the summary based on the above metrics and provide your scores and explanations in the response box. 
+Please use the following format for your response: 
+Score: point 
 Explanation: explanation
+
+Here is the input:
 """
 
 
@@ -116,23 +144,23 @@ if not os.path.exists(output_path):
 # Check if command line arguments are provided
 if len(sys.argv) < 5:
     print(
-        "Usage: python tester.py <model_name> [powerful|poor|average] <number_of_repetitions>"
+        "Usage: python tester.py <model_name> [powerful|poor|average] <number_of_repetitions> <metric>"
     )
     sys.exit()
 
 if sys.argv[1] == "--help":
     print(
-        "Usage: python tester.py <model_name> [powerful|poor|average] <number_of_repetitions>"
+        "Usage: python tester.py <model_name> [powerful|poor|average] <number_of_repetitions> <metric>"
     )
     sys.exit()
 
 # Get the model name from the command line arguments
 model_name = sys.argv[1]
-if ":" not in model_name:
-    print(
-        "Invalid model name format. Please provide a valid model name. Example: evallm:v3"
-    )
-    sys.exit()
+# if ":" not in model_name:
+#     print(
+#         "Invalid model name format. Please provide a valid model name. Example: evallm:v3"
+#     )
+#     sys.exit()
 # model_base_name = model_name.split(":")[0]
 # model_version = model_name.split(":")[1]
 
@@ -155,9 +183,7 @@ if metric not in ["coherence", "fluency", "relevance", "consistency"]:
     )
     sys.exit()
 
-# model_name = f"{model_base_name}-{metric}:{model_version}"
-if model_name not in get_models():
-    # if model_name not in get_models():
+if model_name not in get_models() and model_name != "gpt-4o-mini":
     print("Invalid model name. Please provide a valid model name.")
     sys.exit()
 
@@ -171,7 +197,11 @@ except:
     print("Error loading the test data.")
     sys.exit()
 
-client = ollama.Client()
+if model_name == "gpt-4o-mini":
+    api_key = os.getenv("OPENAI_API_KEY")
+    client = OpenAI(api_key=api_key)
+else:
+    client = ollama.Client()
 
 exception_count = 0
 log_file_name = f"{model_name}{metric}{evaluation_type}_logs.csv"
@@ -196,14 +226,22 @@ for index, row in test_data.iterrows():
     with open(os.path.join(datasets_path, text_file), "r") as f:
         text = f.read()
 
-    query = prompt + "Summary\n" + row["decoded"] + "\n\nText\n" + text
+    query = f'{prompt}\nSummary: {row["decoded"]}\nText: {text}'
 
     repetition_results = {"result": 0}
     count = 0
     for i in range(number_of_repetitions):
         print(f"Repetition {i+1}...", flush=True)
         exception_ = False
-        response = client.generate(model_name, query).response
+        if model_name == "gpt-4o-mini":
+            response = client.chat.completions.create(
+                        model="gpt-4o-mini",
+                        messages=[
+                            {"role": "user", "content": query}
+                        ],
+                    ).choices[0].message.content
+        else:
+            response = client.generate(model_name, query).response
         try:
             if "</think>" in response:
                 response = response.split("</think>")[1]

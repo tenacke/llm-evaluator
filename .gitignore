@@ -185,3 +185,4 @@ excluded/
 
 # logs
 logs/
+output/

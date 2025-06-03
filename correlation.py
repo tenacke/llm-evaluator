@@ -41,7 +41,7 @@ for model in models:
 
     for metric in metrics:
         results_df_path = os.path.join(
-            path, f"{model_name}_{metric}_{model}_results.csv"
+            path, f"{model_name}{metric}{model}_results.csv"
         )
         if not os.path.exists(results_df_path):
             print(f"File {results_df_path} does not exist")
